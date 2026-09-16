@@ -1,0 +1,84 @@
+[
+  {
+    "id": "official-documents",
+    "title": "الوثائق والإجراءات الإدارية",
+    "description": "ابدأ من البوابة الرسمية لوزارة الداخلية وتحقق من شروط الإجراء في ولايتك أو بلديتك.",
+    "icon": "<i class=\"fa-solid fa-id-card\"></i>",
+    "sourceName": "وزارة الداخلية والجماعات المحلية والنقل",
+    "sourceUrl": "https://www.interieur.gov.dz/",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "حدد الوثيقة أو الإجراء المطلوب",
+      "راجع الشروط والوثائق في المصدر الرسمي",
+      "جهّز نسخًا رقمية واضحة عند توفر خدمة إلكترونية",
+      "تحقق من الجهة والمواعيد قبل التنقل"
+    ],
+    "relatedTools": [
+      "image-compressor",
+      "pdf-tools",
+      "qr-generator"
+    ],
+    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+  },
+  {
+    "id": "postal-services",
+    "title": "الخدمات البريدية والمالية",
+    "description": "وصول آمن إلى خدمات بريد الجزائر ومعلومات الحساب والبطاقة الذهبية.",
+    "icon": "<i class=\"fa-solid fa-envelope\"></i>",
+    "sourceName": "بريد الجزائر",
+    "sourceUrl": "https://www.poste.dz/",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "اختر الخدمة من الموقع الرسمي",
+      "لا تشارك الرمز السري أو رمز SMS",
+      "تأكد من اسم النطاق قبل إدخال أي بيانات",
+      "احتفظ بوصل العملية عند الحاجة"
+    ],
+    "relatedTools": [
+      "qr-generator",
+      "image-compressor"
+    ],
+    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+  },
+  {
+    "id": "higher-education",
+    "title": "الدراسة والخدمات الجامعية",
+    "description": "نقطة بداية للمنصات والإعلانات الرسمية الخاصة بالتعليم العالي.",
+    "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
+    "sourceName": "وزارة التعليم العالي والبحث العلمي",
+    "sourceUrl": "https://www.mesrs.dz/",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "حدد نوع الخدمة الجامعية",
+      "راجع إعلان المؤسسة أو الوزارة",
+      "تحقق من الآجال قبل تجهيز الملف",
+      "احفظ نسخة من الوثائق والإيصالات"
+    ],
+    "relatedTools": [
+      "cv-builder",
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "متاح وقت الفحص"
+  },
+  {
+    "id": "justice-services",
+    "title": "الخدمات القضائية",
+    "description": "الوصول إلى بوابة وزارة العدل والخدمات الإلكترونية المنشورة رسميًا.",
+    "icon": "<i class=\"fa-solid fa-scale-balanced\"></i>",
+    "sourceName": "وزارة العدل",
+    "sourceUrl": "https://www.mjustice.dz/",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة الرسمية",
+      "اختر الخدمة الإلكترونية المناسبة",
+      "اقرأ شروط الخدمة والخصوصية",
+      "لا تعتمد على وسيط أو رابط غير رسمي"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+  }
+]

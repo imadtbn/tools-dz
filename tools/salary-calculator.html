@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta property="og:title" content="Tools DZ">
-    <meta property="og:description" content="منصة أدوات رقمية مجانية">
+    <meta property="og:title" content="حاسبة الراتب - Tools DZ">
+    <meta property="og:description" content="احسب راتبك الصافي في الجزائر مع اقتطاعات الضمان والضريبة (IRG و SS) وفقاً لأحدث القوانين.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -17,7 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حاسبة الراتب - Tools DZ</title>
+    <meta property="og:url" content="https://imadtbn.github.io/tools-dz/tools/salary-calculator.html">
     <meta name="description" content="احسب راتبك الصافي في الجزائر مع اقتطاعات الضمان والضريبة (IRG و SS) وفقاً لأحدث القوانين.">
+    <link rel="canonical" href="https://imadtbn.github.io/tools-dz/tools/salary-calculator.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -96,7 +98,8 @@
             try {
                 const res = await fetch(resolveUrl('/data/salary-rules.json'));
                 salaryRules = await res.json();
-                document.getElementById('rules-status').textContent = 'تم تحميل القواعد بنجاح. (' + salaryRules.meta.lastUpdated + ')';
+                document.getElementById('rules-status').innerHTML = `تنبيه: هذه نتيجة تقديرية. آخر تحقق من القواعد: <strong>${salaryRules.meta.lastVerified}</strong>. <a href="${salaryRules.meta.sourceUrl}" target="_blank" rel="noopener">المصدر الرسمي</a>`;
+                document.getElementById('rules-status').style.color = 'var(--accent-color)';
                 document.getElementById('calc-btn').disabled = false;
             } catch (e) {
                 document.getElementById('rules-status').textContent = 'فشل في تحميل قواعد الراتب. يرجى التأكد من الاتصال.';
@@ -150,7 +153,7 @@
             document.getElementById('ss-deduction').textContent = ssDeduction.toFixed(2);
             document.getElementById('base-irg').textContent = baseIrg.toFixed(2);
             document.getElementById('irg-deduction').textContent = irgDeduction.toFixed(2);
-            document.getElementById('rule-source').textContent = 'المصدر: ' + salaryRules.meta.source;
+            document.getElementById('rule-source').innerHTML = `المصدر: <a href="${salaryRules.meta.sourceUrl}" target="_blank" rel="noopener">${salaryRules.meta.sourceName}</a> — آخر تحقق: ${salaryRules.meta.lastVerified}. النتيجة تقديرية وليست كشف راتب رسميًا.`;
 
             document.getElementById('result').classList.remove('hidden');
         });

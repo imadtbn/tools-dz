@@ -1,6 +1,7 @@
 /* Mobile Responsive CSS */
 
 @media screen and (max-width: 768px) {
+    .mobile-menu-toggle { display: block; }
     #main-header .container {
         flex-wrap: wrap;
     }
@@ -47,6 +48,9 @@
     .grid-container {
         grid-template-columns: 1fr;
     }
+
+    .assistant-banner { flex-direction: column; align-items: stretch; }
+    .assistant-banner .btn { width: 100%; }
 
     #main-footer .container {
         grid-template-columns: 1fr;

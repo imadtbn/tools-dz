@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta property="og:title" content="Tools DZ">
-    <meta property="og:description" content="منصة أدوات رقمية مجانية">
+    <meta property="og:title" content="تحويل العملات - Tools DZ">
+    <meta property="og:description" content="حول بين الدينار الجزائري والعملات العالمية بأسعار محدثة.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -17,6 +17,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تحويل العملات - Tools DZ</title>
+    <link rel="canonical" href="https://imadtbn.github.io/tools-dz/tools/currency-converter.html">
+    <meta property="og:url" content="https://imadtbn.github.io/tools-dz/tools/currency-converter.html">
     <meta name="description" content="حول بين الدينار الجزائري والعملات العالمية بأسعار محدثة.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -122,19 +124,11 @@
                     throw new Error('API Error');
                 }
             } catch (e) {
-                // Fallback to static rates if API fails and no cache
+                // Never present hard-coded fallback values as current exchange rates.
                 console.error('Failed to fetch rates', e);
-                statusDiv.textContent = 'تعذر الاتصال بالشبكة. يتم استخدام أسعار تقريبية.';
+                statusDiv.textContent = 'تعذر جلب أسعار حديثة. أعد المحاولة عند توفر الاتصال؛ لم تُعرض أسعار قديمة حفاظًا على الدقة.';
                 statusDiv.style.color = 'var(--error-color)';
-
-                exchangeRates = {
-                    USD: 1,
-                    EUR: 0.92,
-                    GBP: 0.79,
-                    CAD: 1.35,
-                    DZD: 134.50
-                };
-                calculate();
+                resultInput.value = 'غير متاح';
             }
         }
 

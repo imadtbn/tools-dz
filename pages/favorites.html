@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta property="og:title" content="Tools DZ">
-    <meta property="og:description" content="منصة أدوات رقمية مجانية">
+    <meta property="og:title" content="المفضلة - Tools DZ">
+    <meta property="og:description" content="المفضلة - Tools DZ ضمن منصة Tools DZ للأدوات الرقمية المجانية الموجهة للمستخدم الجزائري.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المفضلة - Tools DZ</title>
+    <link rel="canonical" href="https://imadtbn.github.io/tools-dz/pages/favorites.html">
+    <meta property="og:url" content="https://imadtbn.github.io/tools-dz/pages/favorites.html">
+    <meta name="description" content="المفضلة - Tools DZ ضمن منصة Tools DZ للأدوات الرقمية المجانية الموجهة للمستخدم الجزائري.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -38,52 +41,7 @@
 
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/favorites.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            const container = document.getElementById('favorites-container');
-            const favIds = Favorites.getAll();
-
-            if (favIds.length === 0) {
-                container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-muted);">لا توجد أدوات في المفضلة حالياً. قم بإضافة أدوات من الصفحة الرئيسية.</p>';
-                return;
-            }
-
-            try {
-                const res = await fetch(resolveUrl('/data/tools.json'));
-                const tools = await res.json();
-
-                const favTools = tools.filter(t => favIds.includes(t.id));
-
-                container.innerHTML = favTools.map(tool => `
-                    <div class="card tool-card">
-                        <div class="card-icon">${tool.icon}</div>
-                        <h4>${tool.name}</h4>
-                        <p>${tool.description}</p>
-                        <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
-                            <a href="${resolveUrl(tool.url)}" class="btn">استخدام الأداة</a>
-                            <button class="fav-btn" data-id="${tool.id}" title="إزالة من المفضلة" style="background:none; border:none; cursor:pointer; font-size:1.2rem;">⭐</button>
-                        </div>
-                    </div>
-                `).join('');
-
-                // Add listener to remove from favorites dynamically
-                container.addEventListener('click', (e) => {
-                    if (e.target.closest('.fav-btn')) {
-                        const btn = e.target.closest('.fav-btn');
-                        const toolId = btn.getAttribute('data-id');
-                        Favorites.remove(toolId);
-                        btn.closest('.tool-card').remove();
-                        if(Favorites.getAll().length === 0) {
-                             container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-muted);">لا توجد أدوات في المفضلة حالياً.</p>';
-                        }
-                    }
-                });
-
-            } catch (e) {
-                container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--error-color);">حدث خطأ أثناء تحميل البيانات.</p>';
-            }
-        });
-    </script>
+    <script src="../assets/js/tools.js"></script>
     <footer id="main-footer">
         <div class="container">
             <div class="footer-info">

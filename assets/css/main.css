@@ -222,6 +222,110 @@ ul {
     flex-direction: column;
 }
 
+.tool-card-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
+.tool-badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.tool-badge {
+    background: rgba(46, 125, 50, 0.12);
+    color: var(--primary-color);
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.tool-badge-new { background: var(--accent-color); color: #fff; }
+.tool-card-actions {
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+.fav-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+.category-link { margin-top: auto; }
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    padding: var(--spacing-lg);
+}
+.error-state { color: var(--error-color); }
+
+.citizen-assistant-section { padding: var(--spacing-lg) 0 4rem; }
+.assistant-banner {
+    background: linear-gradient(135deg, var(--primary-color), #124d25);
+    color: #fff;
+    border-radius: calc(var(--border-radius) * 1.5);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+.assistant-banner h3 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0.25rem 0; }
+.assistant-banner .btn { background: #fff; color: var(--primary-color); white-space: nowrap; }
+.eyebrow { display: inline-block; color: var(--accent-color); font-weight: 800; font-size: 0.85rem; }
+.procedures-page { padding-top: 2rem; padding-bottom: 4rem; }
+.page-intro { max-width: 760px; margin-bottom: 2rem; }
+.page-intro h2 { font-size: clamp(2rem, 5vw, 3rem); margin: 0.3rem 0; }
+.notice-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 143, 0, 0.1);
+    border-right: 4px solid var(--accent-color);
+    border-radius: var(--border-radius);
+}
+.procedure-card { gap: 0.8rem; }
+.procedure-steps { display: grid; gap: 0.55rem; margin: 0.5rem 0; }
+.procedure-step { display: flex; gap: 0.65rem; align-items: flex-start; cursor: pointer; }
+.procedure-step input { width: 1.15rem; height: 1.15rem; margin-top: 0.2rem; accent-color: var(--primary-color); }
+.procedure-step input:checked + span { text-decoration: line-through; color: var(--text-muted); }
+.procedure-tools { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+.procedure-tool { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 999px; padding: 0.25rem 0.65rem; font-size: 0.85rem; }
+.procedure-card small { color: var(--text-muted); }
+
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.pwa-update-notice {
+    position: fixed;
+    inset-inline: 1rem;
+    bottom: 1rem;
+    z-index: 2000;
+    max-width: 520px;
+    margin-inline: auto;
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--hover-shadow);
+}
+.pwa-update-notice button { border: 0; border-radius: 8px; padding: 0.55rem 0.8rem; cursor: pointer; font-weight: 700; }
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);

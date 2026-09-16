@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta property="og:title" content="Tools DZ">
-    <meta property="og:description" content="منصة أدوات رقمية مجانية">
+    <meta property="og:title" content="اتصل بنا - Tools DZ">
+    <meta property="og:description" content="تواصل معنا لأي استفسارات أو اقتراحات لتطوير منصة Tools DZ.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -16,6 +16,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اتصل بنا - Tools DZ</title>
+    <link rel="canonical" href="https://imadtbn.github.io/tools-dz/pages/contact.html">
+    <meta property="og:url" content="https://imadtbn.github.io/tools-dz/pages/contact.html">
     <meta name="description" content="تواصل معنا لأي استفسارات أو اقتراحات لتطوير منصة Tools DZ.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -43,18 +45,14 @@
             <h2 style="color: var(--primary-color); margin-bottom: 20px;">اتصل بنا 📩</h2>
             <p style="margin-bottom: 20px;">نحن دائماً سعداء بالاستماع إليكم! إذا كان لديكم أي اقتراحات لأدوات جديدة، أو واجهتم مشكلة تقنية، لا تترددوا في مراسلتنا.</p>
 
-            <form id="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! شكراً لتواصلك معنا.'); this.reset();">
+            <form id="contact-form">
                 <div class="form-group">
                     <label>الاسم</label>
-                    <input type="text" required placeholder="اسمك الكريم">
-                </div>
-                <div class="form-group">
-                    <label>البريد الإلكتروني</label>
-                    <input type="email" required placeholder="example@email.com">
+                    <input type="text" name="name" required placeholder="اسمك الكريم" autocomplete="name">
                 </div>
                 <div class="form-group">
                     <label>الموضوع</label>
-                    <select>
+                    <select name="subject">
                         <option>اقتراح أداة جديدة</option>
                         <option>الإبلاغ عن مشكلة</option>
                         <option>استفسار عام</option>
@@ -62,12 +60,25 @@
                 </div>
                 <div class="form-group">
                     <label>الرسالة</label>
-                    <textarea rows="5" required style="width: 100%; padding: 10px; border-radius: var(--border-radius); border: 1px solid var(--border-color); font-family: inherit;"></textarea>
+                    <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border-radius: var(--border-radius); border: 1px solid var(--border-color); font-family: inherit;"></textarea>
                 </div>
-                <button type="submit" class="btn" style="width: 100%;">إرسال الرسالة</button>
+                <button type="submit" class="btn" style="width: 100%;">متابعة الإرسال عبر GitHub</button>
+                <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.9rem;">سيتم فتح صفحة بلاغ عامة في مستودع المشروع بعد تجهيز رسالتك؛ لا تضع معلومات شخصية أو حساسة.</p>
             </form>
         </div>
     </main>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', event => {
+            event.preventDefault();
+            const data = new FormData(event.currentTarget);
+            const title = `[Tools DZ] ${data.get('subject')}`;
+            const body = `الاسم: ${data.get('name')}\n\nالرسالة:\n${data.get('message')}`;
+            const issueUrl = new URL('https://github.com/imadtbn/tools-dz/issues/new');
+            issueUrl.searchParams.set('title', title);
+            issueUrl.searchParams.set('body', body);
+            window.location.href = issueUrl.toString();
+        });
+    </script>
     <footer id="main-footer">
         <div class="container">
             <div class="footer-info">

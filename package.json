@@ -1,0 +1,12 @@
+{
+  "name": "tools-dz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "منصة أدوات رقمية للمستخدم الجزائري",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "seo": "node scripts/enhance-seo.mjs",
+    "test": "npm run validate"
+  }
+}

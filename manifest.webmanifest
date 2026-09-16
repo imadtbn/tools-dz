@@ -2,11 +2,16 @@
   "name": "Tools DZ - منصة الأدوات الجزائرية",
   "short_name": "Tools DZ",
   "description": "منصة أدوات رقمية مجانية مصممة لتسهيل حياتك اليومية، العمل، الدراسة، وإدارة المصاريف.",
-  "start_url": ".",
+  "id": "/tools-dz/",
+  "start_url": "/tools-dz/",
+  "scope": "/tools-dz/",
   "display": "standalone",
   "background_color": "#f5f7fa",
   "theme_color": "#2e7d32",
-  "orientation": "portrait",
+  "orientation": "any",
+  "lang": "ar-DZ",
+  "dir": "rtl",
+  "categories": ["utilities", "productivity", "finance"],
   "icons": [
     {
       "src": "icon-192.png",
