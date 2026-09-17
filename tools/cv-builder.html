@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta property="og:title" content="مولد السيرة الذاتية - Tools DZ">
-    <meta property="og:description" content="أنشئ سيرة ذاتية احترافية (CV) للتقديم على الوظائف واطبعها أو احفظها كـ PDF.">
+    <meta property="og:description"
+        content="أنشئ سيرة ذاتية احترافية (CV) للتقديم على الوظائف واطبعها أو احفظها كـ PDF.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -23,36 +25,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ads.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
     <style>
         .cv-container {
             background: #fff;
             padding: 40px;
             border-radius: var(--border-radius);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: #333;
-            max-width: 21cm; /* A4 width */
+            max-width: 21cm;
+            /* A4 width */
             margin: 0 auto;
-            min-height: 29.7cm; /* A4 height */
+            min-height: 29.7cm;
+            /* A4 height */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         .cv-header {
             text-align: center;
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
+
         .cv-header input {
             text-align: center;
             border: none;
             background: transparent;
             width: 100%;
         }
-        .cv-name { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); margin-bottom: 5px; }
-        .cv-title { font-size: 1.2rem; color: #666; margin-bottom: 10px; }
-        .cv-contact input { width: auto; min-width: 200px; }
 
-        .cv-section { margin-bottom: 25px; }
+        .cv-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .cv-title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .cv-contact input {
+            width: auto;
+            min-width: 200px;
+        }
+
+        .cv-section {
+            margin-bottom: 25px;
+        }
+
         .cv-section-title {
             color: var(--primary-color);
             border-bottom: 1px solid #ddd;
@@ -60,6 +85,7 @@
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
+
         .editable-area {
             width: 100%;
             min-height: 100px;
@@ -70,19 +96,85 @@
 
         /* Print Styles */
         @media print {
-            body * { visibility: hidden; }
-            #print-area, #print-area * { visibility: visible; }
-            #print-area {
-                position: absolute; left: 0; top: 0; width: 100%;
+            body * {
+                visibility: hidden;
             }
-            .no-print { display: none !important; }
-            .cv-container { box-shadow: none; padding: 0; margin: 0; width: 100%; }
-            .editable-area { border: none; background: transparent; padding: 0; }
-            input { border: none !important; background: transparent !important; }
+
+            #print-area,
+            #print-area * {
+                visibility: visible;
+            }
+
+            #print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+            .editable-area {
+                border: none;
+                background: transparent;
+                padding: 0;
+            }
+
+            input {
+                border: none !important;
+                background: transparent !important;
+            }
         }
     </style>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FG97932S6"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1FG97932S6');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
+
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG6CX4F5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
     <header id="main-header" class="no-print">
         <div class="container">
             <div class="logo">
@@ -104,11 +196,27 @@
                 </div>
             </div>
 
+            <section class="ads-container ads-container--content" aria-label="إعلان">
+                <span class="ads-label">إعلان</span>
+                <div class="ads-box ads-box--responsive">
+                    <!-- إعلانات صورية 03 -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+                        data-ad-slot="5508509362" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
             <div id="print-area">
                 <div class="cv-container">
                     <div class="cv-header">
                         <input type="text" class="cv-name" value="الاسم واللقب" placeholder="اسمك الكامل">
-                        <input type="text" class="cv-title" value="المسمى الوظيفي (مثال: مهندس برمجيات)" placeholder="المسمى الوظيفي">
+                        <input type="text" class="cv-title" value="المسمى الوظيفي (مثال: مهندس برمجيات)"
+                            placeholder="المسمى الوظيفي">
                         <div class="cv-contact">
                             <input type="text" value="📱 الهاتف: +213 555 000 000" placeholder="الهاتف"> |
                             <input type="text" value="📧 البريد: email@example.com" placeholder="البريد"> |
@@ -179,4 +287,5 @@
         </div>
     </main>
 </body>
+
 </html>

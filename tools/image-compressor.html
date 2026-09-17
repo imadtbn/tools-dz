@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta property="og:title" content="ضغط الصور - Tools DZ">
-    <meta property="og:description" content="قلل حجم الصور مع الحفاظ على جودتها محلياً داخل المتصفح من أجل سرعة وأمان أفضل.">
+    <meta property="og:description"
+        content="قلل حجم الصور مع الحفاظ على جودتها محلياً داخل المتصفح من أجل سرعة وأمان أفضل.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -23,10 +25,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ads.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
-    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FG97932S6"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1FG97932S6');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
+
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG6CX4F5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header id="main-header">
         <div class="container">
             <div class="logo">
@@ -44,9 +84,25 @@
                 <p>قم بتصغير حجم الصور لتوفير المساحة أو تسريع رفعها. العملية تتم محلياً 100%.</p>
             </div>
 
+            <section class="ads-container ads-container--content" aria-label="إعلان">
+                <span class="ads-label">إعلان</span>
+                <div class="ads-box ads-box--responsive">
+                    <!-- إعلانات صورية 03 -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+                        data-ad-slot="5508509362" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
             <div class="tool-wrapper text-center">
                 <div class="form-group">
-                    <label for="image-input" class="btn" style="cursor: pointer; display: inline-block; margin-bottom: 10px;">
+                    <label for="image-input" class="btn"
+                        style="cursor: pointer; display: inline-block; margin-bottom: 10px;">
                         اختر صورة 📁
                     </label>
                     <input type="file" id="image-input" accept="image/jpeg, image/png, image/webp" class="hidden">
@@ -63,30 +119,37 @@
 
                 <div id="status" style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
 
-                <div id="result" class="hidden" style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div style="border: 1px solid var(--border-color); padding: 10px; border-radius: var(--border-radius);">
+                <div id="result" class="hidden"
+                    style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div
+                        style="border: 1px solid var(--border-color); padding: 10px; border-radius: var(--border-radius);">
                         <h4>الصورة الأصلية</h4>
                         <img id="orig-img" style="max-width: 100%; max-height: 200px; margin: 10px 0;">
                         <p>الحجم: <strong id="orig-size">0</strong></p>
                     </div>
-                    <div style="border: 1px solid var(--border-color); padding: 10px; border-radius: var(--border-radius);">
+                    <div
+                        style="border: 1px solid var(--border-color); padding: 10px; border-radius: var(--border-radius);">
                         <h4>بعد الضغط</h4>
                         <img id="comp-img" style="max-width: 100%; max-height: 200px; margin: 10px 0;">
                         <p>الحجم: <strong id="comp-size">0</strong></p>
                         <p style="color: var(--success-color);">نسبة التوفير: <strong id="saving">0</strong>%</p>
-                        <a id="download-link" class="btn btn-secondary" style="display: block; margin-top: 10px;" download="compressed_image.jpg">تحميل</a>
+                        <a id="download-link" class="btn btn-secondary" style="display: block; margin-top: 10px;"
+                            download="compressed_image.jpg">تحميل</a>
                     </div>
                 </div>
             </div>
 
             <div class="tool-content-section">
                 <h3>لماذا تستخدم هذه الأداة؟</h3>
-                <p>جميع عمليات الضغط تتم داخل متصفحك (Client-side)، مما يعني أن صورك الخاصة لا يتم رفعها إلى أي خادم خارجي، مما يضمن أمان وخصوصية ملفاتك وسرعة العملية دون استهلاك باقة الإنترنت الخاصة بك للرفع والتنزيل.</p>
+                <p>جميع عمليات الضغط تتم داخل متصفحك (Client-side)، مما يعني أن صورك الخاصة لا يتم رفعها إلى أي خادم
+                    خارجي، مما يضمن أمان وخصوصية ملفاتك وسرعة العملية دون استهلاك باقة الإنترنت الخاصة بك للرفع
+                    والتنزيل.</p>
 
                 <h3 style="margin-top: 2rem;">خطوات الاستخدام</h3>
                 <ol style="margin-right: 1.5rem; margin-bottom: 1rem; line-height: 1.8;">
                     <li>اضغط على زر "اختر صورة" وحدد الصورة من جهازك.</li>
-                    <li>اختر "الجودة المستهدفة" باستخدام الشريط المنزلق (80% يعتبر ممتازاً للتوازن بين الحجم والجودة).</li>
+                    <li>اختر "الجودة المستهدفة" باستخدام الشريط المنزلق (80% يعتبر ممتازاً للتوازن بين الحجم والجودة).
+                    </li>
                     <li>اضغط على "ضغط الصورة".</li>
                     <li>قارن بين الصورة الأصلية والمضغوطة وحمل النتيجة.</li>
                 </ol>
@@ -125,7 +188,7 @@
             qualityVal.textContent = e.target.value;
         });
 
-        imageInput.addEventListener('change', function(event) {
+        imageInput.addEventListener('change', function (event) {
             const file = event.target.files[0];
             if (!file) return;
 
@@ -189,7 +252,8 @@
         <div class="container">
             <div class="footer-info">
                 <h4 style="color: #4caf50;">Tools DZ</h4>
-                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.</p>
+                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.
+                </p>
                 <div style="margin-top: 20px; display: flex; gap: 15px; font-size: 1.5rem;">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -211,4 +275,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta property="og:title" content="أدوات PDF - Tools DZ">
     <meta property="og:description" content="دمج، تقسيم، واستخراج صفحات PDF محلياً في متصفحك مجاناً.">
@@ -23,11 +24,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ads.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
     <!-- Using pdf-lib for client side pdf manipulation -->
     <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FG97932S6"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1FG97932S6');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
+
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG6CX4F5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
     <header id="main-header">
         <div class="container">
             <div class="logo">
@@ -45,10 +85,27 @@
                 <p>تعامل مع ملفات الـ PDF بأمان تام دون رفعها لأي خادم خارجي.</p>
             </div>
 
+            <section class="ads-container ads-container--content" aria-label="إعلان">
+                <span class="ads-label">إعلان</span>
+                <div class="ads-box ads-box--responsive">
+                    <!-- إعلانات صورية 03 -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+                        data-ad-slot="5508509362" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+
             <div class="tool-wrapper">
                 <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;">
                     <button class="btn" onclick="switchTab('merge')" id="btn-merge">دمج PDF</button>
-                    <button class="btn btn-secondary" onclick="switchTab('split')" id="btn-split">تقسيم / استخراج</button>
+                    <button class="btn btn-secondary" onclick="switchTab('split')" id="btn-split">تقسيم /
+                        استخراج</button>
                 </div>
 
                 <!-- Merge Section -->
@@ -60,7 +117,8 @@
                         </label>
                         <input type="file" id="merge-input" accept="application/pdf" multiple class="hidden">
                     </div>
-                    <ul id="merge-list" style="margin: 15px 0; max-height: 200px; overflow-y: auto; background: var(--bg-color); padding: 10px; border-radius: var(--border-radius);">
+                    <ul id="merge-list"
+                        style="margin: 15px 0; max-height: 200px; overflow-y: auto; background: var(--bg-color); padding: 10px; border-radius: var(--border-radius);">
                         <li style="color:var(--text-muted); text-align:center;">لم يتم اختيار ملفات</li>
                     </ul>
                     <button id="do-merge-btn" class="btn" style="width: 100%;" disabled>دمج الملفات الآن</button>
@@ -86,16 +144,19 @@
                     </div>
                 </div>
 
-                <div id="status" class="text-center" style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
+                <div id="status" class="text-center"
+                    style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
 
                 <div id="download-area" class="text-center hidden" style="margin-top: 20px;">
-                    <a id="download-link" class="btn" style="background-color: var(--success-color);">تحميل النتيجة ↓</a>
+                    <a id="download-link" class="btn" style="background-color: var(--success-color);">تحميل النتيجة
+                        ↓</a>
                 </div>
             </div>
 
             <div class="tool-content-section">
                 <h3>حماية الخصوصية</h3>
-                <p>تتم معالجة جميع ملفات PDF داخل متصفحك (محلياً) باستخدام تقنيات JavaScript المتقدمة. لن يتم إرسال أو تخزين مستنداتك الحساسة على خوادمنا نهائياً.</p>
+                <p>تتم معالجة جميع ملفات PDF داخل متصفحك (محلياً) باستخدام تقنيات JavaScript المتقدمة. لن يتم إرسال أو
+                    تخزين مستنداتك الحساسة على خوادمنا نهائياً.</p>
             </div>
         </div>
     </main>
@@ -127,9 +188,9 @@
         mergeInput.addEventListener('change', (e) => {
             filesToMerge = Array.from(e.target.files);
             if (filesToMerge.length > 0) {
-                mergeList.innerHTML = filesToMerge.map((f, i) => `<li>${i+1}. ${f.name}</li>`).join('');
+                mergeList.innerHTML = filesToMerge.map((f, i) => `<li>${i + 1}. ${f.name}</li>`).join('');
                 doMergeBtn.disabled = filesToMerge.length < 2;
-                if(filesToMerge.length < 2) {
+                if (filesToMerge.length < 2) {
                     mergeList.innerHTML += `<li style="color:var(--error-color);">الرجاء اختيار ملفين على الأقل للدمج.</li>`;
                 }
             } else {
@@ -208,8 +269,8 @@
                 // Validate pages
                 const validPages = pagesToExtract.filter(p => p < totalPages);
 
-                if(validPages.length === 0) {
-                     throw new Error("أرقام الصفحات تتجاوز عدد صفحات الملف");
+                if (validPages.length === 0) {
+                    throw new Error("أرقام الصفحات تتجاوز عدد صفحات الملف");
                 }
 
                 const newPdf = await PDFDocument.create();
@@ -245,7 +306,8 @@
         <div class="container">
             <div class="footer-info">
                 <h4 style="color: #4caf50;">Tools DZ</h4>
-                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.</p>
+                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.
+                </p>
                 <div style="margin-top: 20px; display: flex; gap: 15px; font-size: 1.5rem;">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -267,4 +329,5 @@
         </div>
     </footer>
 </body>
+
 </html>

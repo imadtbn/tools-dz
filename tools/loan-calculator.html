@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta property="og:title" content="حساب القرض - Tools DZ">
     <meta property="og:description" content="احسب الأقساط الشهرية وإجمالي الفائدة لقرضك المالي بسهولة.">
@@ -23,9 +24,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ads.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FG97932S6"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1FG97932S6');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
+
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG6CX4F5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
     <header id="main-header">
         <div class="container">
             <div class="logo">
@@ -42,6 +82,22 @@
                 <h2>حساب القرض 💰</h2>
                 <p>احسب قيمة الأقساط الشهرية وإجمالي الفوائد لقرضك.</p>
             </div>
+
+
+            <section class="ads-container ads-container--content" aria-label="إعلان">
+                <span class="ads-label">إعلان</span>
+                <div class="ads-box ads-box--responsive">
+                    <!-- إعلانات صورية 03 -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+                        data-ad-slot="5508509362" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 
             <div class="tool-wrapper">
                 <form id="loan-form">
@@ -62,17 +118,19 @@
 
                 <div id="result" class="tool-result hidden">
                     <h3 class="text-center">النتيجة</h3>
-                    <p style="font-size: 1.2rem;">القسط الشهري: <strong id="monthly-payment" style="color:var(--primary-color);">0</strong> دج</p>
+                    <p style="font-size: 1.2rem;">القسط الشهري: <strong id="monthly-payment"
+                            style="color:var(--primary-color);">0</strong> دج</p>
                     <p>إجمالي الفائدة: <strong id="total-interest">0</strong> دج</p>
                     <p>المبلغ الإجمالي للسداد: <strong id="total-payment">0</strong> دج</p>
-                    <p style="font-size: 0.85rem; color: var(--error-color); margin-top: 10px;">* تنبيه: هذه النتائج تقديرية وليست استشارة مالية رسمية من البنك.</p>
+                    <p style="font-size: 0.85rem; color: var(--error-color); margin-top: 10px;">* تنبيه: هذه النتائج
+                        تقديرية وليست استشارة مالية رسمية من البنك.</p>
                 </div>
             </div>
         </div>
     </main>
 
     <script>
-        document.getElementById('loan-form').addEventListener('submit', function(e) {
+        document.getElementById('loan-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
             const amount = parseFloat(document.getElementById('amount').value);
@@ -103,7 +161,8 @@
         <div class="container">
             <div class="footer-info">
                 <h4 style="color: #4caf50;">Tools DZ</h4>
-                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.</p>
+                <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.
+                </p>
                 <div style="margin-top: 20px; display: flex; gap: 15px; font-size: 1.5rem;">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -125,4 +184,5 @@
         </div>
     </footer>
 </body>
+
 </html>
