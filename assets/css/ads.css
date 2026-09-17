@@ -1,0 +1,144 @@
+/* =========================================================
+   Tools DZ - Google AdSense Container
+   File: assets/css/ads.css
+   ========================================================= */
+
+.ads-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 28px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    clear: both;
+}
+
+/* الحاوية الفعلية للإعلان */
+.ads-box {
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background: transparent;
+}
+
+/* عنوان صغير اختياري */
+.ads-label {
+    display: block;
+    margin-bottom: 8px;
+
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #777;
+}
+
+/* منع الإعلان من تجاوز عرض الصفحة */
+.ads-box .adsbygoogle {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100%;
+}
+
+/* ---------------------------------------------------------
+   مكان مخصص داخل محتوى الصفحة
+   --------------------------------------------------------- */
+
+.ads-container--content {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/* إعلان قبل الفوتر */
+.ads-container--footer {
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------------
+   تقليل CLS
+   نحجز مساحة تقريبية قبل تحميل الإعلان
+   --------------------------------------------------------- */
+
+.ads-box--responsive {
+    min-height: 120px;
+}
+
+@media (min-width: 768px) {
+    .ads-box--responsive {
+        min-height: 140px;
+    }
+}
+
+/* ---------------------------------------------------------
+   الهواتف
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    .ads-container {
+        margin: 22px auto;
+        padding: 0 10px;
+    }
+
+    .ads-box {
+        min-height: 100px;
+    }
+
+    .ads-label {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+}
+
+/* ---------------------------------------------------------
+   الشاشات الصغيرة جدًا
+   --------------------------------------------------------- */
+
+@media (max-width: 360px) {
+    .ads-container {
+        padding: 0 6px;
+    }
+}
+
+/* ---------------------------------------------------------
+   دعم الوضع الداكن للموقع
+   --------------------------------------------------------- */
+
+[data-theme="dark"] .ads-label,
+.dark-mode .ads-label {
+    color: #999;
+}
+
+/* ---------------------------------------------------------
+   حماية الهيدر
+   الإعلان يبقى داخل تدفق الصفحة ولا يصبح fixed/sticky
+   --------------------------------------------------------- */
+
+.ads-container,
+.ads-box {
+    position: relative;
+    z-index: 1;
+}
+
+/* عدم إظهار مساحة بيضاء ضخمة إذا أخفى AdSense الإعلان */
+.adsbygoogle[data-ad-status="unfilled"] {
+    display: none !important;
+}
+
+.ads-box:has(.adsbygoogle[data-ad-status="unfilled"]) {
+    min-height: 0;
+}
+
+/* fallback للمتصفحات التي لا تدعم :has */
+.ads-box.is-empty {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
