@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة غير موجودة - Tools DZ</title>
     <!-- Use inline styles or absolute path scripts to ensure 404 works anywhere -->
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f5f7fa; color: #263238; }
-        h1 { color: #2e7d32; }
-        .btn { display: inline-block; background-color: #2e7d32; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f5f7fa;
+            color: #263238;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2e7d32;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
     </style>
     <!-- Try to load main css assuming github pages root or standard relative -->
-    <link rel="stylesheet" href="/tools-dz/assets/css/main.css" onerror="this.onerror=null;this.href='/assets/css/main.css';">
+    <link rel="stylesheet" href="/tools-dz/assets/css/main.css"
+        onerror="this.onerror=null;this.href='/assets/css/main.css';">
 </head>
+
 <body>
     <header id="main-header">
         <div class="container">
@@ -26,10 +47,27 @@
     <main class="container text-center">
         <h2>عذرًا، لم نجد هذه الصفحة</h2>
         <p>قد تكون الصفحة التي تبحث عنها قد تم نقلها أو حذفها.</p>
+
+        <section class="ads-container ads-container--content" aria-label="إعلان">
+            <span class="ads-label">إعلان</span>
+            <div class="ads-box ads-box--responsive">
+                <!-- إعلانات صورية 03 -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+                    data-ad-slot="5508509362" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
         <div class="actions">
             <a href="./index.html" class="btn">العودة للرئيسية</a>
             <a href="./pages/tools.html" class="btn btn-secondary">عرض أشهر الأدوات</a>
         </div>
     </main>
 </body>
+
 </html>
