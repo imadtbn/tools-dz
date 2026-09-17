@@ -5,7 +5,7 @@
     "description": "ابدأ من البوابة الرسمية لوزارة الداخلية وتحقق من شروط الإجراء في ولايتك أو بلديتك.",
     "icon": "<i class=\"fa-solid fa-id-card\"></i>",
     "sourceName": "وزارة الداخلية والجماعات المحلية والنقل",
-    "sourceUrl": "https://www.interieur.gov.dz/",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/interieur.html",
     "lastVerified": "2026-09-16",
     "steps": [
       "حدد الوثيقة أو الإجراء المطلوب",
@@ -26,7 +26,7 @@
     "description": "وصول آمن إلى خدمات بريد الجزائر ومعلومات الحساب والبطاقة الذهبية.",
     "icon": "<i class=\"fa-solid fa-envelope\"></i>",
     "sourceName": "بريد الجزائر",
-    "sourceUrl": "https://www.poste.dz/",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/poste.html",
     "lastVerified": "2026-09-16",
     "steps": [
       "اختر الخدمة من الموقع الرسمي",
@@ -42,11 +42,11 @@
   },
   {
     "id": "higher-education",
-    "title": "الدراسة والخدمات الجامعية",
-    "description": "نقطة بداية للمنصات والإعلانات الرسمية الخاصة بالتعليم العالي.",
+    "title": "الخدمات الجامعية",
+    "description": "نقطة بداية للمنصات  الرسمية الخاصة بالخدمات الجامعية.",
     "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
-    "sourceName": "وزارة التعليم العالي والبحث العلمي",
-    "sourceUrl": "https://www.mesrs.dz/",
+    "sourceName": "الخدمات الجامعية",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html",
     "lastVerified": "2026-09-16",
     "steps": [
       "حدد نوع الخدمة الجامعية",
@@ -62,18 +62,95 @@
     "availabilityStatus": "متاح وقت الفحص"
   },
   {
+    "id": "higher-education",
+    "title": "الدراسة والخدمات الجامعية",
+    "description": "نقطة بداية للمنصات والإعلانات الرسمية الخاصة بالتعليم العالي.",
+    "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
+    "sourceName": "وزارة التعليم العالي والبحث العلمي",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/mesrs.dz.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "حدد نوع الخدمة الجامعية",
+      "راجع إعلان المؤسسة أو الوزارة",
+      "تحقق من الآجال قبل تجهيز الملف",
+      "احفظ نسخة من الوثائق والإيصالات"
+    ],
+    "relatedTools": [
+      "cv-builder",
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "متاح وقت الفحص"
+  },
+  {
+    "id": "higher-education",
+    "title": "مساعد الطالب الجامعي",
+    "description": "كل ما يحتاجه الطالب الجزائري في مكان واحد.",
+    "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
+    "sourceName": "student-dz",
+    "sourceUrl": "https://imadtbn.github.io/student-dz/",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "حدد نوع المساعدة",
+      "حدد نوع الأداة",
+      "حدد نوع البحث",
+      "حدد الموقع الجغرافي"
+    ],
+    "relatedTools": [
+      "cv-builder",
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "متاح وقت الفحص"
+  },
+  {
     "id": "justice-services",
     "title": "الخدمات القضائية",
     "description": "الوصول إلى بوابة وزارة العدل والخدمات الإلكترونية المنشورة رسميًا.",
     "icon": "<i class=\"fa-solid fa-scale-balanced\"></i>",
     "sourceName": "وزارة العدل",
-    "sourceUrl": "https://www.mjustice.dz/",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html",
     "lastVerified": "2026-09-16",
     "steps": [
       "ابدأ من البوابة الرسمية",
       "اختر الخدمة الإلكترونية المناسبة",
-      "اقرأ شروط الخدمة والخصوصية",
-      "لا تعتمد على وسيط أو رابط غير رسمي"
+      "اقرأ شروط الخدمة والخصوصية"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+  },
+  {
+    "id": "sntf-services",
+    "title": "الخدمات النقل",
+    "description": "الوصول إلى مواقيت سير القطارات والخدمات الإلكترونية المنشورة رسميًا من SNTF.",
+    "icon": "<i class=\"fa-solid fa-train\"></i>",
+    "sourceName": "وزارة العدل",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/sntf.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة الرسمية",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+  },
+  {
+    "id": "telephon-services",
+    "title": "الخدمات الهاتف",
+    "description": "مجموعة من الخدمات الرقمية عن بعد، من تطبيقات الهاتف، شحن الرصيد،.",
+    "icon": "<i class=\"fa-solid fa-phone\"></i>",
+    "sourceName": "إتصالات وخدمات الهاتف",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/telephon.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة الرسمية",
+      "اختر الخدمة الإلكترونية المناسبة"
     ],
     "relatedTools": [
       "pdf-tools",
