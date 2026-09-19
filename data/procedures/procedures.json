@@ -18,7 +18,7 @@
       "pdf-tools",
       "qr-generator"
     ],
-    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "postal-services",
@@ -38,7 +38,7 @@
       "qr-generator",
       "image-compressor"
     ],
-    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "higher-education",
@@ -59,11 +59,11 @@
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "متاح وقت الفحص"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "higher-education",
-    "title": "الدراسة والخدمات الجامعية",
+    "title": "وزارة التعليم العالي والبحث العلمي",
     "description": "نقطة بداية للمنصات والإعلانات الرسمية الخاصة بالتعليم العالي.",
     "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
     "sourceName": "وزارة التعليم العالي والبحث العلمي",
@@ -80,7 +80,7 @@
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "متاح وقت الفحص"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "higher-education",
@@ -101,7 +101,7 @@
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "متاح وقت الفحص"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "justice-services",
@@ -112,7 +112,7 @@
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html",
     "lastVerified": "2026-09-16",
     "steps": [
-      "ابدأ من البوابة الرسمية",
+      "ابدأ من البوابة ",
       "اختر الخدمة الإلكترونية المناسبة",
       "اقرأ شروط الخدمة والخصوصية"
     ],
@@ -120,7 +120,7 @@
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "sntf-services",
@@ -131,14 +131,34 @@
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/sntf.html",
     "lastVerified": "2026-09-16",
     "steps": [
-      "ابدأ من البوابة الرسمية",
+      "ابدأ من البوابة ",
       "اختر الخدمة الإلكترونية المناسبة"
     ],
     "relatedTools": [
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "sntf-services",
+    "title": "النقل والمواصلات في الجزائر",
+    "description": "اكتشف مجموعة من الخدمات الرقمية والتطبيقات المتعلقة بالنقل والمواصلات في الجزائر.",
+    "icon": "<i class=\"fa-solid fa-bus\"></i>",
+    "sourceName": "النقل",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/transport.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "جداول الحافلات والقطارات",
+      "تطبيقات",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "cv-builder",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
     "id": "telephon-services",
@@ -149,13 +169,85 @@
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/telephon.html",
     "lastVerified": "2026-09-16",
     "steps": [
-      "ابدأ من البوابة الرسمية",
+      "ابدأ من البوابة ",
       "اختر الخدمة الإلكترونية المناسبة"
     ],
     "relatedTools": [
       "pdf-tools",
       "image-compressor"
     ],
-    "availabilityStatus": "تعذر الوصول وقت الفحص؛ قد يكون الموقع متوقفًا مؤقتًا"
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "دفع فواتير المياه، الكهرباء والغاز",
+    "description": "مجموعة من الخدمات الرقمية عن بعد، دفع فواتير المياه، الكهرباء والغاز.",
+    "icon": "<i class=\"fa-solid fa-id-card\"></i>",
+    "sourceName": "تسديد الفواتير الماء ، الكهرباء والغاز",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/facteur.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "التشغيل والضمان الإجتماعي",
+    "description": "مجموعة من الخدمات الرقمية عن التشغيل والضمان الإجتماعي في الجزائر.",
+    "icon": "<i class=\"fa-solid fa-file\"></i>",
+    "sourceName": "شهادة الإنتساب، محاكاة المعاش، التقاعد، التشغيل ، منحة البطالة",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/mtess.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "دفع فواتير السكن والكراء",
+    "description": "مجموعة من الخدمات الرقمية عن بعد، دفع فواتير كراء السكن.",
+    "icon": "<i class=\"fa-solid fa-id-card\"></i>",
+    "sourceName": "تسديد مستحقات كراء السكن",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/facture_loyer.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "halp-services",
+    "title": "أرقام النجدة والطوارئ",
+    "description": "أرقام النجدة والطوارئ، المساعدة، الإسعاف، التبليغ.",
+    "icon": "<i class=\"fa-solid fa-phone\"></i>",
+    "sourceName": "أرقام النجدة والطوارئ",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/emergency.html",
+    "lastVerified": "2026-09-16",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   }
 ]
