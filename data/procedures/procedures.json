@@ -233,7 +233,7 @@
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
-    "id": "halp-services",
+    "id": "help-services",
     "title": "أرقام النجدة والطوارئ",
     "description": "أرقام النجدة والطوارئ، المساعدة، الإسعاف، التبليغ.",
     "icon": "<i class=\"fa-solid fa-phone\"></i>",
@@ -249,5 +249,114 @@
       "image-compressor"
     ],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "فضاء الأولياء",
+    "description": "مجموعة من الخدمات الرقمية التي تتيح لأولياء التلاميذ متابعة مسار الدراسي لأبنائهم.",
+    "icon": "<i class=\"fa-solid fa-laptop\"></i>",
+    "sourceName": "وزارة التربية - فضاء الأولياء",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "pdf-tools",
+      "image-compressor"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "مركبتي",
+    "description": "منصة فحص المركبات - مركبتي DZ.",
+    "icon": "<i class=\"fa-solid fa-car\"></i>",
+    "sourceName": "منصة فحص المركبات - مركبتي DZ لأخذ موعد من أجل فحص السيارات",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "fuel-calculator",
+      "car-cost-calculator"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "قسيمة السيارات",
+    "description": "قسيمتك - قسيمة السيارات.",
+    "icon": "<i class=\"fa-solid fa-car\"></i>",
+    "sourceName": "قسيمك، تتيح للمواطنين إجراء عمليات إقناء قسيمة السيارات، كل ذلك بكل راحة من منزلك",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "fuel-calculator",
+      "car-cost-calculator"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "طابعكم",
+    "description": "طابعكم - الطابع الجبائي.",
+    "icon": "<i class=\"fa-solid fa-car\"></i>",
+    "sourceName": " طابعكم، مجموعة من الخدمات الرقمية عن بعد، تتيح للمواطنين إجراء عمليات شراء الطوابع الجبائية عن بعد، خاصة ببطافة التعريف الوطنية، رخصة السياقة، عقود  السفر، كل",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/tabioucom.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "fuel-calculator",
+      "car-cost-calculator"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "خدمات الأملاك العقارية",
+    "description": "فضاء الجزائر - خدمات الأملاك العقارية.",
+    "icon": "<i class=\"fa-solid fa-home\"></i>",
+    "sourceName": " مديرية الأملاك العقارية، مجموعة من الخدمات الرقمية عن بعد - مسح الأراضي - عقارات",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "fuel-calculator",
+      "car-cost-calculator"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "E-services",
+    "title": "البوابة الجزائرية للخدمات الرقمية",
+    "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد.",
+    "icon": "<i class=\"fa-solid fa-globl\"></i>",
+    "sourceName": " منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/",
+    "lastVerified": "2026-09-19",
+    "steps": [
+      "ابدأ من البوابة ",
+      "اختر الخدمة الإلكترونية المناسبة"
+    ],
+    "relatedTools": [
+      "fuel-calculator",
+      "car-cost-calculator"
+    ],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   }
+
 ]
