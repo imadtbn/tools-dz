@@ -37,7 +37,7 @@
                     <h3>${procedure.title}</h3><p>${procedure.description}</p>
                     <div class="procedure-steps">${steps}</div>
                     <div class="procedure-tools"><strong>أدوات مساعدة:</strong>${related}</div>
-                    <a class="btn" href="${procedure.sourceUrl}" target="_blank" rel="noopener noreferrer">فتح المصدر الرسمي</a>
+                    <a class="btn" href="${procedure.sourceUrl}" target="_blank" rel="noopener noreferrer">فتح المنصة</a>
                     <small>فحص الرابط: ${procedure.lastVerified} — ${procedure.availabilityStatus}</small>
                 </article>`;
             }).join('');
