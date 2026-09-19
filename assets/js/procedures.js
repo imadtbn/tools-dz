@@ -23,6 +23,7 @@
             const procedures = await proceduresResponse.json();
             const tools = await toolsResponse.json();
             const toolMap = new Map(tools.map(tool => [tool.id, tool]));
+            window.initSearch?.(tools, procedures);
             const progress = loadProgress();
 
             container.innerHTML = procedures.map(procedure => {

@@ -2,6 +2,7 @@
     'use strict';
     let toolsPromise;
     let categoriesPromise;
+    let proceduresPromise;
 
     async function fetchJson(path) {
         const response = await fetch(resolveUrl(path));
@@ -17,6 +18,11 @@
     function getCategories() {
         categoriesPromise ||= fetchJson('/data/categories.json');
         return categoriesPromise;
+    }
+
+    function getProcedures() {
+        proceduresPromise ||= fetchJson('/data/procedures/procedures.json');
+        return proceduresPromise;
     }
 
     function createToolCard(tool) {
@@ -51,7 +57,7 @@
 
     async function initPage() {
         try {
-            const [tools, categories] = await Promise.all([getTools(), getCategories()]);
+            const [tools, categories, procedures] = await Promise.all([getTools(), getCategories(), getProcedures()]);
             window.TOOLS_DATA = tools;
             const categoriesContainer = document.getElementById('categories-container');
             if (categoriesContainer) categoriesContainer.innerHTML = categories.map(createCategoryCard).join('');
@@ -76,7 +82,7 @@
                 renderTools(favoritesContainer, tools.filter(tool => ids.includes(tool.id)),
                     'لا توجد أدوات في المفضلة حاليًا. أضف ما تستخدمه كثيرًا لتجده هنا بسرعة.');
             }
-            window.initSearch?.(tools);
+            window.initSearch?.(tools, procedures);
         } catch (error) {
             console.error('Failed to initialize tool registry', error);
             document.querySelectorAll('#categories-container, #popular-tools-container, #new-tools-container, #all-tools-container, #favorites-container').forEach(container => {
