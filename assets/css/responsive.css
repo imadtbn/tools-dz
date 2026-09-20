@@ -83,3 +83,10 @@
         margin-bottom: var(--spacing-sm);
     }
 }
+
+
+@media (max-width: 768px) {
+    .tool-wrapper[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+}
