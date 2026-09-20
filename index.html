@@ -48,9 +48,6 @@
     <meta name="twitter:image" content="https://imadtbn.github.io/tools-dz/icon-512.png">
     <meta name="twitter:image:alt" content="شعار Tools DZ - منصة الأدوات الجزائرية">
 
-    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
-    <link rel="apple-touch-icon" href="./icon-192.png">
-
     <!-- ===== Structured Data ===== -->
     <script type="application/ld+json">
 {
@@ -60,7 +57,7 @@
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/tools-dz/#organization",
       "name": "Tools DZ",
-      "alternateName": "منصة الأدوات الجزائرية",
+      "alternateName": ["منصة الأدوات الجزائرية", "Tools DZ - أدوات رقمية جزائرية"],
       "url": "https://imadtbn.github.io/tools-dz/",
       "logo": {
         "@type": "ImageObject",
@@ -69,17 +66,21 @@
         "contentUrl": "https://imadtbn.github.io/tools-dz/icon-512.png",
         "width": 512,
         "height": 512,
-        "caption": "Tools DZ"
+        "caption": "شعار Tools DZ"
       },
       "image": { "@id": "https://imadtbn.github.io/tools-dz/#logo" },
-      "description": "منصة أدوات رقمية جزائرية مجانية لتسهيل الحياة اليومية، العمل، الدراسة، السيارة وإدارة المصاريف.",
+      "description": "منصة أدوات رقمية جزائرية مجانية تجمع الحاسبات، التحويلات، أدوات العمل والدراسة، السيارة، وإدارة المصاريف في مكان واحد، بدون تسجيل ومع معالجة محلية للبيانات.",
       "foundingDate": "2024",
+      "slogan": "كل الأدوات التي تحتاجها في مكان واحد",
       "areaServed": {
         "@type": "Country",
-        "name": "Algeria"
+        "name": "Algeria",
+        "identifier": "DZ"
       },
       "knowsLanguage": ["ar", "fr", "en"],
-      "slogan": "كل الأدوات التي تحتاجها في مكان واحد",
+      "email": "tabaniimadeddine@gmail.com",
+      "telephone": "+213697743721",
+      "founder": { "@id": "https://imadtbn.github.io/tools-dz/#founder" },
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -89,10 +90,35 @@
           "url": "https://imadtbn.github.io/tools-dz/pages/contact.html",
           "availableLanguage": ["ar", "fr", "en"],
           "areaServed": "DZ"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "tabaniimadeddine@gmail.com",
+          "url": "https://github.com/imadtbn/tools-dz/issues/new",
+          "availableLanguage": ["ar", "fr", "en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "tabaniimadeddine@gmail.com",
+          "url": "https://imadtbn.github.io/tools-dz/pages/privacy.html",
+          "availableLanguage": ["ar", "fr", "en"]
         }
       ],
       "sameAs": [
         "https://github.com/imadtbn/tools-dz"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://imadtbn.github.io/tools-dz/#founder",
+      "name": "Imad Eddine Tabani",
+      "email": "tabaniimadeddine@gmail.com",
+      "url": "https://github.com/imadtbn",
+      "worksFor": { "@id": "https://imadtbn.github.io/tools-dz/#organization" },
+      "sameAs": [
+        "https://github.com/imadtbn"
       ]
     },
     {
@@ -101,9 +127,10 @@
       "url": "https://imadtbn.github.io/tools-dz/",
       "name": "Tools DZ",
       "alternateName": "منصة الأدوات الجزائرية",
-      "description": "منصة أدوات رقمية مجانية مصممة لتسهيل حياتك اليومية، العمل، الدراسة، السيارة وإدارة المصاريف.",
+      "description": "منصة أدوات رقمية جزائرية مجانية لتسهيل الحياة اليومية، العمل، الدراسة، السيارة وإدارة المصاريف.",
       "inLanguage": "ar",
       "publisher": { "@id": "https://imadtbn.github.io/tools-dz/#organization" },
+      "copyrightHolder": { "@id": "https://imadtbn.github.io/tools-dz/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -126,7 +153,16 @@
       "image": { "@id": "https://imadtbn.github.io/tools-dz/#primaryimage" },
       "datePublished": "2024-01-01",
       "dateModified": "2026-09-20",
-      "inLanguage": "ar"
+      "inLanguage": "ar",
+      "isAccessibleForFree": true,
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "المستخدم الجزائري",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "Algeria"
+        }
+      }
     },
     {
       "@type": "ImageObject",
@@ -136,6 +172,77 @@
       "width": 512,
       "height": 512,
       "caption": "Tools DZ - منصة الأدوات الجزائرية"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/tools-dz/#sitenavigation",
+      "name": "قائمة التنقل الرئيسية في Tools DZ",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "الرئيسية",
+          "url": "https://imadtbn.github.io/tools-dz/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "جميع الأدوات",
+          "url": "https://imadtbn.github.io/tools-dz/pages/tools.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "التصنيفات",
+          "url": "https://imadtbn.github.io/tools-dz/pages/categories.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "منصات وخدمات رقمية",
+          "url": "https://imadtbn.github.io/tools-dz/pages/procedures.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "المفضلة",
+          "url": "https://imadtbn.github.io/tools-dz/pages/favorites.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://imadtbn.github.io/tools-dz/#webapp",
+      "url": "https://imadtbn.github.io/tools-dz/",
+      "name": "Tools DZ - منصة الأدوات الجزائرية",
+      "description": "منصة ويب تجمع مجموعة من الأدوات الرقمية المجانية (حاسبات، تحويلات، أدوات ملفات) الموجهة للمستخدم الجزائري، تعمل محليًا في المتصفح وبدون تسجيل.",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "أدوات رقمية متعددة",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "ar",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "DZD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "حاسبات مالية وصحية دقيقة (الراتب، القرض، السعرات الحرارية، العمر)",
+        "أدوات تحويل (العملات، الوحدات)",
+        "أدوات ملفات تعمل محليًا (ضغط الصور، أدوات PDF، مولد QR)",
+        "مولّد السيرة الذاتية والفواتير",
+        "دليل الخدمات الرقمية الجزائرية الرسمية",
+        "معالجة محلية للبيانات وبدون تسجيل"
+      ],
+      "isPartOf": { "@id": "https://imadtbn.github.io/tools-dz/#website" },
+      "publisher": { "@id": "https://imadtbn.github.io/tools-dz/#organization" },
+      "sameAs": [
+        "https://github.com/imadtbn/tools-dz"
+      ]
     }
   ]
 }
