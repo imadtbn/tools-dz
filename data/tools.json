@@ -397,5 +397,40 @@
     "requiresNetwork": false,
     "relatedTools": [],
     "dataSources": []
+  },
+  {
+    "id": "farm-planner",
+    "name": "المساعد الفلاحي - تخطيط غرس الأشجار",
+    "description": "خطط أرضك واحسب الشتلات والصفوف ومياه الري والتكاليف، واحفظ سجل الأعمال الفلاحية.",
+    "category": "agriculture",
+    "url": "/tools/farm-planner.html",
+    "icon": "<i class=\"fa-solid fa-seedling\"></i>",
+    "keywords": [
+      "فلاحة",
+      "فلاح",
+      "غرس",
+      "أشجار",
+      "زيتون",
+      "خروب",
+      "شتلات",
+      "تخطيط الأرض",
+      "ري",
+      "سقي",
+      "هكتار",
+      "agriculture",
+      "farm planner"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "farm-planner",
+    "version": "1.0.0",
+    "updatedAt": "2026-09-22",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "unit-converter"
+    ],
+    "dataSources": []
   }
 ]
