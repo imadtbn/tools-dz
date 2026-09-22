@@ -1,4 +1,4 @@
-const VERSION = 'v4';
+const VERSION = 'v5';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
@@ -7,10 +7,11 @@ const PRECACHE = [
     './', './index.html', OFFLINE_URL, './404.html', './manifest.webmanifest',
     './assets/css/main.css', './assets/css/responsive.css', './assets/css/tools.css',
     './assets/css/currency-converter.css', './assets/js/currency-converter.js',
+    './assets/css/unit-converter.css', './assets/js/unit-converter.js',
     './assets/js/app.js', './assets/js/theme.js', './assets/js/search.js',
     './assets/js/tools.js', './assets/js/favorites.js', './assets/js/procedures.js',
     './data/tools.json', './data/categories.json', './data/procedures/procedures.json',
-    './tools/currency-converter.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
+    './tools/currency-converter.html', './tools/unit-converter.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
     './pages/procedures.html'
 ];
 
