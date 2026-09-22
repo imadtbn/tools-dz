@@ -1,38 +1,44 @@
 [
-    {
-        "id": "daily-life",
-        "name": "المال والحياة اليومية",
-        "icon": "<i class=\"fa-solid fa-house\"></i>",
-        "description": "أدوات تساعدك في تنظيم حياتك ومصاريفك اليومية."
-    },
-    {
-        "id": "finance",
-        "name": "المالية",
-        "icon": "<i class=\"fa-solid fa-chart-line\"></i>",
-        "description": "حاسبات الراتب، القروض، والعملات."
-    },
-    {
-        "id": "cars",
-        "name": "السيارات",
-        "icon": "<i class=\"fa-solid fa-car\"></i>",
-        "description": "أدوات خاصة بتكاليف السيارة والوقود."
-    },
-    {
-        "id": "work",
-        "name": "الإدارة والعمل",
-        "icon": "<i class=\"fa-solid fa-briefcase\"></i>",
-        "description": "أدوات التحويل، PDF، والإنتاجية."
-    },
-    {
-        "id": "business",
-        "name": "أصحاب المحلات",
-        "icon": "<i class=\"fa-solid fa-store\"></i>",
-        "description": "مولد الفواتير وحساب الأرباح."
-    },
-    {
-        "id": "students",
-        "name": "الطلاب",
-        "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
-        "description": "أدوات للدراسة، بناء السيرة الذاتية، وحاسبات علمية."
-    }
+  {
+    "id": "daily-life",
+    "name": "المال والحياة اليومية",
+    "icon": "<i class=\"fa-solid fa-house\"></i>",
+    "description": "أدوات تساعدك في تنظيم حياتك ومصاريفك اليومية."
+  },
+  {
+    "id": "finance",
+    "name": "المالية",
+    "icon": "<i class=\"fa-solid fa-chart-line\"></i>",
+    "description": "حاسبات الراتب، القروض، والعملات."
+  },
+  {
+    "id": "cars",
+    "name": "السيارات",
+    "icon": "<i class=\"fa-solid fa-car\"></i>",
+    "description": "أدوات خاصة بتكاليف السيارة والوقود."
+  },
+  {
+    "id": "work",
+    "name": "الإدارة والعمل",
+    "icon": "<i class=\"fa-solid fa-briefcase\"></i>",
+    "description": "أدوات التحويل، PDF، والإنتاجية."
+  },
+  {
+    "id": "business",
+    "name": "أصحاب المحلات",
+    "icon": "<i class=\"fa-solid fa-store\"></i>",
+    "description": "مولد الفواتير وحساب الأرباح."
+  },
+  {
+    "id": "students",
+    "name": "الطلاب",
+    "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
+    "description": "أدوات للدراسة، بناء السيرة الذاتية، وحاسبات علمية."
+  },
+  {
+    "id": "agriculture",
+    "name": "الفلاحة والبساتين",
+    "icon": "<i class=\"fa-solid fa-tractor\"></i>",
+    "description": "حساب غرس الأشجار وتخطيط الأرض والسقي وتكاليف البستان."
+  }
 ]
