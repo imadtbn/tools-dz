@@ -13,11 +13,7 @@
       "جهّز نسخًا رقمية واضحة عند توفر خدمة إلكترونية",
       "تحقق من الجهة والمواعيد قبل التنقل"
     ],
-    "relatedTools": [
-      "image-compressor",
-      "pdf-tools",
-      "qr-generator"
-    ],
+    "relatedTools": ["image-compressor", "pdf-tools", "qr-generator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -34,10 +30,7 @@
       "تأكد من اسم النطاق قبل إدخال أي بيانات",
       "احتفظ بوصل العملية عند الحاجة"
     ],
-    "relatedTools": [
-      "qr-generator",
-      "image-compressor"
-    ],
+    "relatedTools": ["qr-generator", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -54,11 +47,7 @@
       "تحقق من الآجال قبل تجهيز الملف",
       "احفظ نسخة من الوثائق والإيصالات"
     ],
-    "relatedTools": [
-      "cv-builder",
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "relatedTools": ["cv-builder", "pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -75,11 +64,7 @@
       "تحقق من الآجال قبل تجهيز الملف",
       "احفظ نسخة من الوثائق والإيصالات"
     ],
-    "relatedTools": [
-      "cv-builder",
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "relatedTools": ["cv-builder", "pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -96,11 +81,7 @@
       "حدد نوع البحث",
       "حدد الموقع الجغرافي"
     ],
-    "relatedTools": [
-      "cv-builder",
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "relatedTools": ["cv-builder", "pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -116,10 +97,7 @@
       "اختر الخدمة الإلكترونية المناسبة",
       "اقرأ شروط الخدمة والخصوصية"
     ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -127,15 +105,30 @@
     "title": "الخدمات النقل",
     "description": "الوصول إلى مواقيت سير القطارات والخدمات الإلكترونية المنشورة رسميًا من SNTF.",
     "icon": "<i class=\"fa-solid fa-train\"></i>",
-    "sourceName": "وزارة العدل",
+    "sourceName": "جداول الرحلات",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/sntf.html",
     "lastVerified": "2026-09-16",
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "sntf-services",
+    "title": "دليل القطارات التفاعلي",
+    "description": "دليل القطارات التفاعلي مواقيت سير القطارات SNTF.",
+    "icon": "<i class=\"fa-solid fa-train\"></i>",
+    "sourceName": "دليل القطارات التفاعلي - اللوحة الذكية",
+    "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html",
+    "lastVerified": "2026-10-04",
     "steps": [
       "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
+      "اختر مواقيت سير القطارات",
+      "اختر DZ Rail — دليل القطارات التفاعلي"
     ],
     "relatedTools": [
       "pdf-tools",
+      "cv-builder",
+      "fuel-calculator",
       "image-compressor"
     ],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
@@ -153,12 +146,32 @@
       "تطبيقات",
       "اختر الخدمة الإلكترونية المناسبة"
     ],
+    "relatedTools": ["pdf-tools", "cv-builder", "image-compressor"],
+    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+  },
+  {
+    "id": "sntf-services",
+    "title": "قطارات الجزائر",
+    "description": "دليل القطارات التفاعلي - قطارات الجزائر - مواقيت سير القطارات SNTF.",
+    "icon": "<i class=\"fa-solid fa-train\"></i>",
+    "sourceName": "قطارات الجزائر - اللوحة الذكية - تطبيقية",
+    "sourceUrl": "https://imadtbn.github.io/trains-dz/index.html",
+    "lastVerified": "2026-10-04",
+    "steps": [
+      "إختر الوجهة",
+      "ابحث عن رحلة",
+      "لوحة المحطة",
+      "الخريطة والخطوط",
+      "الجداول والخدمات",
+      "إحفظ المحطات، الجداول والرحلات"
+    ],
     "relatedTools": [
       "pdf-tools",
       "cv-builder",
+      "fuel-calculator",
       "image-compressor"
     ],
-    "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
+    "availabilityStatus": "وجهتك معروفة، خلّي الطريق علينا"
   },
   {
     "id": "telephon-services",
@@ -168,14 +181,8 @@
     "sourceName": "إتصالات وخدمات الهاتف",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/telephon.html",
     "lastVerified": "2026-09-16",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -186,14 +193,8 @@
     "sourceName": "تسديد الفواتير الماء ، الكهرباء والغاز",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/facteur.html",
     "lastVerified": "2026-09-16",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -204,14 +205,8 @@
     "sourceName": "شهادة الإنتساب، محاكاة المعاش، التقاعد، التشغيل ، منحة البطالة",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/mtess.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -222,14 +217,8 @@
     "sourceName": "تسديد مستحقات كراء السكن",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/facture_loyer.html",
     "lastVerified": "2026-09-16",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -240,14 +229,8 @@
     "sourceName": "أرقام النجدة والطوارئ",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/emergency.html",
     "lastVerified": "2026-09-16",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -258,14 +241,8 @@
     "sourceName": "وزارة التربية - فضاء الأولياء",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "pdf-tools",
-      "image-compressor"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["pdf-tools", "image-compressor"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -276,14 +253,8 @@
     "sourceName": "منصة فحص المركبات - مركبتي DZ لأخذ موعد من أجل فحص السيارات",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "fuel-calculator",
-      "car-cost-calculator"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["fuel-calculator", "car-cost-calculator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -294,14 +265,8 @@
     "sourceName": "قسيمك، تتيح للمواطنين إجراء عمليات إقناء قسيمة السيارات، كل ذلك بكل راحة من منزلك",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "fuel-calculator",
-      "car-cost-calculator"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["fuel-calculator", "car-cost-calculator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -312,14 +277,8 @@
     "sourceName": " طابعكم، مجموعة من الخدمات الرقمية عن بعد، تتيح للمواطنين إجراء عمليات شراء الطوابع الجبائية عن بعد، خاصة ببطافة التعريف الوطنية، رخصة السياقة، عقود  السفر، كل",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/tabioucom.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "fuel-calculator",
-      "car-cost-calculator"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["fuel-calculator", "car-cost-calculator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -330,14 +289,8 @@
     "sourceName": " مديرية الأملاك العقارية، مجموعة من الخدمات الرقمية عن بعد - مسح الأراضي - عقارات",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "fuel-calculator",
-      "car-cost-calculator"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["fuel-calculator", "car-cost-calculator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   },
   {
@@ -348,15 +301,8 @@
     "sourceName": " منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد",
     "sourceUrl": "https://imadtbn.github.io/dz_portal/",
     "lastVerified": "2026-09-19",
-    "steps": [
-      "ابدأ من البوابة ",
-      "اختر الخدمة الإلكترونية المناسبة"
-    ],
-    "relatedTools": [
-      "fuel-calculator",
-      "car-cost-calculator"
-    ],
+    "steps": ["ابدأ من البوابة ", "اختر الخدمة الإلكترونية المناسبة"],
+    "relatedTools": ["fuel-calculator", "car-cost-calculator"],
     "availabilityStatus": "إكتشف الخدمات الرقمية الآن"
   }
-
 ]
