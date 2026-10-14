@@ -126,30 +126,81 @@ ul {
     margin: 0;
 }
 
+/* Shared navigation: compact, semantic icons and accessible active states. */
+#main-nav {
+    min-width: 0;
+}
+
 #main-nav ul {
     display: flex;
-    gap: var(--spacing-lg);
+    align-items: center;
+    gap: clamp(0.1rem, 0.45vw, 0.65rem);
 }
 
 #main-nav a {
-    color: var(--text-color);
-    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 42px;
+    padding: 0.42rem 0.52rem;
     position: relative;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: clamp(0.84rem, 0.95vw, 0.95rem);
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: nowrap;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+#main-nav .nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    flex: 0 0 1.7rem;
+    border-radius: 8px;
+    background: rgba(46, 125, 50, 0.09);
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+[data-theme="dark"] #main-nav .nav-icon {
+    background: rgba(76, 175, 80, 0.14);
 }
 
 #main-nav a::after {
     content: '';
     position: absolute;
-    width: 0;
+    inset-inline: 0.65rem;
+    bottom: 2px;
     height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: var(--transition);
+    border-radius: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.2s;
 }
 
-#main-nav a:hover::after {
-    width: 100%;
+#main-nav a:is(:hover, :focus-visible, [aria-current="page"], .nav-parent-active) {
+    background: rgba(46, 125, 50, 0.09);
+    color: var(--primary-color);
+}
+
+#main-nav a:is(:hover, :focus-visible, [aria-current="page"], .nav-parent-active)::after {
+    transform: scaleX(1);
+}
+
+#main-nav a:focus-visible, .mobile-menu-toggle:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+#main-header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
 }
 
 .header-actions button {
