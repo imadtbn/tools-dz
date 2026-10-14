@@ -99,7 +99,7 @@
 .nutri-modal-head h2 { font-size:1.1rem; margin:0; }
 .nutri-modal-head button { color:var(--text-color); background:var(--bg-color); border:1px solid var(--border-color); border-radius:10px; width:38px; height:38px; }
 .nutri-modal-body { padding:1.1rem; overflow:auto; overscroll-behavior:contain; }
-.nutri-food-group { margin-bottom:1.2rem; }
+.nutri-food-group { margin-bottom:1.2rem; padding:0; }
 .nutri-food-group h3 { color:var(--primary-color); font-size:1rem; margin:0 0 .6rem; }
 .nutri-food-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; }
 .nutri-food-item { display:flex; flex-wrap:wrap; gap:.4rem; align-items:baseline; justify-content:space-between; padding:.7rem; background:var(--bg-color); border:1px solid var(--border-color); border-radius:10px; font-size:.82rem; }
