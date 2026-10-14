@@ -48,6 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const year = document.getElementById('current-year');
     if (year) year.textContent = new Date().getFullYear();
 
+    // Use the existing Font Awesome library to enhance shared footer links.
+    const footer = document.getElementById('main-footer');
+    if (footer) {
+        const footerIcons = {
+            'index.html': 'fa-house',
+            'tools.html': 'fa-screwdriver-wrench',
+            'categories.html': 'fa-layer-group',
+            'procedures.html': 'fa-landmark',
+            'favorites.html': 'fa-heart',
+            'about.html': 'fa-circle-info',
+            'contact.html': 'fa-envelope',
+            'privacy.html': 'fa-shield-halved',
+            'terms.html': 'fa-file-contract',
+            'disclaimer.html': 'fa-triangle-exclamation'
+        };
+
+        footer.querySelectorAll('.footer-links a[href]').forEach(link => {
+            const page = new URL(link.getAttribute('href'), document.baseURI).pathname.split('/').pop();
+            const icon = footerIcons[page];
+            if (!icon || link.querySelector('.footer-link-icon')) return;
+
+            const element = document.createElement('i');
+            element.className = `footer-link-icon fa-solid ${icon}`;
+            element.setAttribute('aria-hidden', 'true');
+            link.prepend(element);
+        });
+    }
+
     let nav = document.getElementById('main-nav');
     const headerContainer = document.querySelector('#main-header .container');
     if (!nav && headerContainer) {
