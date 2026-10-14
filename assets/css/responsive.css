@@ -1,37 +1,6 @@
 /* Mobile Responsive CSS */
 
 @media screen and (max-width: 768px) {
-    .mobile-menu-toggle { display: block; }
-    #main-header .container {
-        flex-wrap: wrap;
-    }
-
-    #main-nav {
-        order: 3;
-        width: 100%;
-        margin-top: var(--spacing-md);
-        display: none; /* We'll hide it by default on mobile for a cleaner look */
-    }
-
-    #main-nav.active {
-        display: block; /* Class to toggle via JS if we add a hamburger later */
-    }
-
-    #main-nav ul {
-        flex-direction: column;
-        gap: 0;
-        text-align: center;
-        background: var(--surface-color);
-        border-radius: var(--border-radius);
-        overflow: hidden;
-    }
-
-    #main-nav ul li a {
-        display: block;
-        padding: 15px;
-        border-bottom: 1px solid var(--border-color);
-    }
-
     .hero-section {
         clip-path: none; /* Remove complex clip-path on mobile */
         padding: 4rem 0;
@@ -88,5 +57,92 @@
 @media (max-width: 768px) {
     .tool-wrapper[style*="grid-template-columns: 1fr 1fr"] {
         grid-template-columns: 1fr !important;
+    }
+}
+
+/* Navigation uses a separate breakpoint from content grids to avoid header crowding. */
+@media screen and (max-width: 1100px) {
+    #main-header .container {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+
+    #main-header .logo {
+        min-width: 0;
+        margin-inline-end: auto;
+    }
+
+    #main-header .logo a {
+        min-width: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        background: var(--surface-color);
+        color: var(--primary-color);
+        font-size: 1.35rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .mobile-menu-toggle[aria-expanded="true"] {
+        background: rgba(46, 125, 50, 0.09);
+        border-color: var(--primary-color);
+    }
+
+    #main-nav {
+        display: none;
+        position: absolute;
+        inset-inline: 1rem;
+        top: calc(100% + 1px);
+        width: auto;
+        max-height: calc(100dvh - 85px);
+        overflow-y: auto;
+        margin: 0;
+        padding: 0.4rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        background: var(--surface-color);
+        box-shadow: var(--hover-shadow);
+        z-index: 1001;
+    }
+
+    #main-nav.active {
+        display: block;
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.15rem;
+    }
+
+    #main-nav ul li a {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 48px;
+        padding: 0.65rem 0.8rem;
+        font-size: 0.98rem;
+        white-space: normal;
+        text-align: start;
+    }
+
+    #main-nav a::after {
+        inset-inline: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main-nav a, #main-nav a::after {
+        transition: none;
     }
 }
