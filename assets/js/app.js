@@ -76,6 +76,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Footer enhancements are shared by home, content pages and individual tools.
+    const footer = document.getElementById('main-footer');
+    if (footer) {
+        const footerIcons = {
+            'about.html': 'fa-circle-info',
+            'contact.html': 'fa-envelope',
+            'privacy.html': 'fa-shield-halved',
+            'terms.html': 'fa-file-contract',
+            'disclaimer.html': 'fa-triangle-exclamation',
+            'index.html': 'fa-house',
+            'tools.html': 'fa-screwdriver-wrench',
+            'categories.html': 'fa-layer-group',
+            'procedures.html': 'fa-landmark',
+            'favorites.html': 'fa-heart'
+        };
+
+        footer.querySelectorAll('.footer-links a[href]').forEach(link => {
+            const url = new URL(link.getAttribute('href'), document.baseURI);
+            const page = url.pathname.split('/').pop();
+            link.classList.add('footer-link');
+
+            if (!link.querySelector('.footer-link-icon')) {
+                const icon = document.createElement('i');
+                icon.className = `footer-link-icon fa-solid ${footerIcons[page] || 'fa-link'}`;
+                icon.setAttribute('aria-hidden', 'true');
+                link.prepend(icon);
+            }
+
+            if (url.pathname === window.location.pathname) {
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+
+        // The old Facebook/Twitter/Instagram entries all point to "#".
+        // Replace those dead links with real, relevant destinations.
+        const socialArea = footer.querySelector('.footer-info > div');
+        const socialLinks = socialArea?.querySelectorAll('a[href]');
+        if (socialLinks?.length && Array.from(socialLinks).every(link => link.getAttribute('href') === '#')) {
+            socialArea.classList.add('footer-social');
+            socialArea.replaceChildren();
+            [
+                { href: 'https://github.com/imadtbn/tools-dz', label: 'مستودع المنصة على GitHub', icon: 'fa-brands fa-github' },
+                { href: resolveUrl('/pages/contact.html'), label: 'تواصل معنا', icon: 'fa-solid fa-envelope' }
+            ].forEach(item => {
+                const link = document.createElement('a');
+                link.href = item.href;
+                link.setAttribute('aria-label', item.label);
+                link.title = item.label;
+                const icon = document.createElement('i');
+                icon.className = item.icon;
+                icon.setAttribute('aria-hidden', 'true');
+                link.appendChild(icon);
+                socialArea.appendChild(link);
+            });
+        }
+    }
+
     let nav = document.getElementById('main-nav');
     const headerContainer = document.querySelector('#main-header .container');
     if (!nav && headerContainer) {
