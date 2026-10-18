@@ -43,11 +43,24 @@
   <a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
   <header id="main-header">
     <div class="container">
-      <div class="logo"><a href="../index.html" aria-label="الصفحة الرئيسية Tools DZ"><span>Tools DZ</span></a></div>
-      <nav aria-label="التنقل الرئيسي" class="vax-site-nav">
-        <a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>الرئيسية</span></a>
-        <a href="../pages/tools.html"><i class="fa-solid fa-toolbox" aria-hidden="true"></i><span>جميع الأدوات</span></a>
+      <div class="logo">
+        <a href="../index.html" class="logo-link" aria-label="Tools DZ - الصفحة الرئيسية">
+          <span class="logo-title">Tools DZ</span>
+          <span class="logo-subtitle">منصة الأدوات الجزائرية</span>
+        </a>
+      </div>
+      <nav id="main-nav" aria-label="التنقل الرئيسي">
+        <ul>
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../pages/tools.html">جميع الأدوات</a></li>
+          <li><a href="../pages/categories.html">التصنيفات</a></li>
+          <li><a href="../pages/procedures.html">منصات وخدمات رقمية</a></li>
+          <li><a href="../pages/favorites.html">المفضلة</a></li>
+        </ul>
       </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="تغيير المظهر" type="button">🌙</button>
+      </div>
     </div>
   </header>
 
@@ -143,10 +156,11 @@
 
   <footer id="main-footer" class="vax-footer">
     <div class="container">
-      <div class="footer-info"><strong>Tools DZ</strong><p>أدوات رقمية عملية باللغة العربية.</p></div>
+      <div class="footer-info"><strong>Tools DZ</strong><p>أدوات رقمية عملية باللغة العربية.</p><p>© <span id="current-year"></span> Tools DZ</p></div>
       <div class="footer-links"><a class="footer-link" href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> الرئيسية</a><a class="footer-link" href="../pages/tools.html"><i class="fa-solid fa-toolbox" aria-hidden="true"></i> جميع الأدوات</a><a class="footer-link" href="../pages/privacy.html"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> الخصوصية</a></div>
     </div>
   </footer>
+  <script src="../assets/js/app.js" defer></script>
   <script src="../assets/js/vaccine-tracker.js" defer></script>
   <script src="../assets/js/theme.js" defer></script>
 </body>
