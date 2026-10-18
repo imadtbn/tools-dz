@@ -80,9 +80,6 @@
 .vax-reference-note{display:block;margin-top:1.25rem}
 .vax-reference-note h2{font-size:1.05rem;margin-bottom:.4rem}
 .vax-reference-note a{font-weight:700;text-decoration:underline}
-.vax-site-nav{display:flex;align-items:center;gap:.4rem}
-.vax-site-nav a{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem .7rem;border-radius:9px;font-weight:650;color:var(--text-color)}
-.vax-site-nav a:hover{background:var(--bg-color);color:var(--primary-color)}
 .vax-footer{margin-top:1rem;border-top:1px solid var(--border-color);padding:1.5rem 0;background:var(--surface-color)}
 .vax-footer .container{display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .vax-footer .footer-info p{color:var(--text-muted);font-size:.9rem;margin-top:.2rem}
