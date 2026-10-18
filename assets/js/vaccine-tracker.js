@@ -302,7 +302,7 @@
             const url = URL.createObjectURL(new Blob([data], { type: 'application/json;charset=utf-8' }));
             const link = el('a');
             link.href = url;
-            link.download = 'ri3aya-vaccination-' + dateString(birth) + '.json';
+            link.download = 'tools-dz-vaccination-' + dateString(birth) + '.json';
             document.body.append(link);
             link.click();
             link.remove();
@@ -326,7 +326,7 @@
 
         btn.disabled = true;
         loadSaved();
-        fetch('../content/medical/vaccines/algeria.json')
+        fetch('../data/medical/vaccines/algeria.json')
             .then(response => { if (!response.ok) throw new Error('fetch'); return response.json(); })
             .then(data => {
                 if (!Array.isArray(data.stages) || data.stages.length !== 9 || !data.vaccines)
