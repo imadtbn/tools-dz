@@ -45,6 +45,46 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Apply the official circular Tools DZ icon consistently to every shared header/footer.
+    const siteIconUrl = resolveUrl('/icon-512.png');
+    const headerLogo = document.querySelector('#main-header .logo a');
+    if (headerLogo && !headerLogo.querySelector('.site-brand-icon')) {
+        const icon = document.createElement('img');
+        icon.className = 'site-brand-icon site-brand-icon-header';
+        icon.src = siteIconUrl;
+        icon.alt = '';
+        icon.width = 48;
+        icon.height = 48;
+        icon.decoding = 'async';
+        icon.setAttribute('aria-hidden', 'true');
+        headerLogo.prepend(icon);
+        headerLogo.classList.add('site-brand-link');
+    }
+
+    const footerInfo = document.querySelector('#main-footer .footer-info');
+    if (footerInfo && !footerInfo.querySelector('.site-footer-brand')) {
+        const brand = document.createElement('a');
+        brand.className = 'site-footer-brand';
+        brand.href = resolveUrl('/index.html');
+        brand.setAttribute('aria-label', 'Tools DZ - الصفحة الرئيسية');
+
+        const icon = document.createElement('img');
+        icon.className = 'site-brand-icon site-brand-icon-footer';
+        icon.src = siteIconUrl;
+        icon.alt = '';
+        icon.width = 56;
+        icon.height = 56;
+        icon.decoding = 'async';
+        icon.setAttribute('aria-hidden', 'true');
+
+        const name = document.createElement('span');
+        name.className = 'site-footer-brand-name';
+        name.textContent = 'Tools DZ';
+
+        brand.append(icon, name);
+        footerInfo.prepend(brand);
+    }
+
     const year = document.getElementById('current-year');
     if (year) year.textContent = new Date().getFullYear();
 
