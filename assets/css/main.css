@@ -556,6 +556,123 @@ section {
     box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
+/* Circular site identity in the shared header and footer. */
+#main-header .logo a.site-brand-link {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    min-width: 0;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.site-brand-icon {
+    display: block;
+    flex: 0 0 auto;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid rgba(76, 175, 80, 0.65);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+}
+
+.site-brand-icon-header {
+    width: clamp(38px, 4vw, 48px);
+    height: clamp(38px, 4vw, 48px);
+}
+
+#main-header .logo-link .logo-title,
+#main-header .logo-link .logo-subtitle {
+    display: block;
+    min-width: 0;
+}
+
+#main-header .logo-link .logo-title {
+    color: var(--primary-color);
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+#main-header .logo-link .logo-subtitle {
+    color: var(--text-muted);
+    font-size: clamp(0.72rem, 0.9vw, 0.84rem);
+    line-height: 1.4;
+}
+
+#main-footer .site-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    max-width: 100%;
+    margin-bottom: 0.85rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#main-footer .site-brand-icon-footer {
+    width: clamp(46px, 5vw, 58px);
+    height: clamp(46px, 5vw, 58px);
+    border-color: rgba(129, 199, 132, 0.8);
+}
+
+#main-footer .site-footer-brand-name {
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+}
+
+#main-footer .site-footer-brand:focus-visible {
+    outline: 2px solid #ffb74d;
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #main-header .container {
+        gap: 0.45rem;
+    }
+
+    #main-header .logo {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #main-header .logo a.site-brand-link {
+        gap: 0.5rem;
+    }
+
+    #main-header .logo-link .logo-subtitle {
+        max-width: 32vw;
+        overflow-wrap: anywhere;
+    }
+
+    #main-footer .site-footer-brand {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-brand-icon-header {
+        width: 36px;
+        height: 36px;
+    }
+
+    #main-header .logo-link .logo-title {
+        font-size: 1rem;
+    }
+
+    #main-header .logo-link .logo-subtitle {
+        font-size: 0.68rem;
+    }
+}
+
 /* Footer links enhancement (site-wide) */
 #main-footer {
     padding-block: clamp(2.75rem, 5vw, 4rem) 1.5rem;
