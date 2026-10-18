@@ -432,5 +432,39 @@
       "unit-converter"
     ],
     "dataSources": []
+  },
+  {
+    "id": "vaccine-tracker",
+    "name": "متابعة تلقيح الأطفال",
+    "description": "احسب مواعيد تلقيح طفلك وفق الرزنامة الجزائرية وسجّل الجرعات محليًا.",
+    "category": "health",
+    "url": "/tools/vaccine-tracker.html",
+    "icon": "<i class=\"fa-solid fa-syringe\"></i>",
+    "keywords": [
+      "تلقيح الأطفال",
+      "التطعيم",
+      "رزنامة التلقيح",
+      "لقاحات",
+      "دفتر الصحة",
+      "vaccine"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "vaccine-tracker",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-18",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "age-calculator"
+    ],
+    "dataSources": [
+      {
+        "name": "رزنامة التلقيح الجزائرية – صفحة رعاية الرضع المرجعية",
+        "url": "https://imadtbn.github.io/ri3aya/pages/vaccine.html",
+        "lastVerified": "2026-10-18"
+      }
+    ]
   }
 ]
