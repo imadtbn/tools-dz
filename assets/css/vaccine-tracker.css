@@ -1,0 +1,987 @@
+/* أنماط خاصة بصفحة جدول التلقيح */
+
+/* رأس الصفحة */
+.vaccine-header {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.vaccine-header .header-content h1 {
+    color: #2e7d32;
+}
+
+/* إحصائيات */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #4caf50;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* تبويبات الجدول */
+.schedule-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tab-btn.active {
+    background: #4caf50;
+    color: white;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* جداول التطعيمات */
+.vaccine-table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vaccine-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.vaccine-table th {
+    background: #2e7d32;
+    color: white;
+    padding: 1.2rem;
+    text-align: right;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.vaccine-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+.vaccine-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.vaccine-table tr:hover {
+    background: #e8f5e9;
+}
+
+.importance {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.importance.high {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.importance.medium {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.importance.low {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* ملاحظات التطعيمات */
+.vaccine-notes {
+    background: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    border-right: 4px solid #4caf50;
+}
+
+.vaccine-notes h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.vaccine-notes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vaccine-notes li {
+    margin-bottom: 0.8rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.vaccine-notes li::before {
+    content: '•';
+    position: absolute;
+    right: 0;
+    color: #4caf50;
+    font-size: 1.5rem;
+}
+
+/* بطاقات معلومات التطعيمات */
+.vaccine-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.vaccine-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.vaccine-card:hover {
+    transform: translateY(-5px);
+}
+
+.vaccine-card-header {
+    background: #2e7d32;
+    color: white;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vaccine-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.vaccine-tag {
+    background: white;
+    color: #2e7d32;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.vaccine-card-body {
+    padding: 1.5rem;
+}
+
+.vaccine-card-body p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.vaccine-details {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    color: #666;
+}
+
+.detail-item i {
+    color: #4caf50;
+    margin-left: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* نصائح قبل وبعد */
+.tips-before-after {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card-before {
+    border-right-color: #2196f3;
+}
+
+.card-after {
+    border-right-color: #ff9800;
+}
+
+.tip-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tip-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.tip-number {
+    background: #4caf50;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.card-before .tip-number {
+    background: #2196f3;
+}
+
+.card-after .tip-number {
+    background: #ff9800;
+}
+
+.tip-content h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tip-content p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* الآثار الجانبية */
+.effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.effect-item {
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.effect-item.common {
+    background: #e8f5e9;
+    border-right: 4px solid #4caf50;
+}
+
+.effect-item.rare {
+    background: #ffebee;
+    border-right: 4px solid #f44336;
+}
+
+.effect-item h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.effect-item.common h3 i {
+    color: #4caf50;
+}
+
+.effect-item.rare h3 i {
+    color: #f44336;
+}
+
+.effect-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.effect-item li {
+    margin-bottom: 0.8rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.effect-item.common li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.effect-item.rare li::before {
+    content: '!';
+    position: absolute;
+    right: 0;
+    color: #f44336;
+    font-weight: bold;
+}
+
+.emergency-note {
+    background: #fff3e0;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-right: 4px solid #ff9800;
+}
+
+.emergency-note p {
+    margin: 0;
+    color: #333;
+}
+
+.emergency-note i {
+    color: #ff9800;
+    margin-left: 0.5rem;
+}
+
+/* أداة التذكير */
+.reminder-card {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-right-color: #2196f3;
+}
+
+.reminder-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    margin: 1.5rem 0;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group label i {
+    color: #2196f3;
+    margin-left: 0.5rem;
+}
+
+.date-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: right;
+}
+
+#calculate-vaccines {
+    padding: 0.8rem 1.5rem;
+}
+
+.reminder-result {
+    margin-top: 1.5rem;
+}
+
+.alert {
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    border-right: 4px solid #4caf50;
+    color: #2e7d32;
+}
+
+.alert-warning {
+    background: #fff3e0;
+    border-right: 4px solid #ff9800;
+    color: #ef6c00;
+}
+
+.alert h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.vaccine-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.vaccine-list > li {
+    margin-bottom: 1.2rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.vaccine-list > li::before {
+    content: '💉';
+    position: absolute;
+    right: 0;
+}
+
+.vaccine-list ul {
+    list-style: none;
+    padding-right: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.vaccine-list ul li {
+    margin-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.vaccine-list ul li::before {
+    content: '•';
+    position: absolute;
+    right: 0;
+    color: #4caf50;
+}
+
+.reminder-note {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.reminder-note i {
+    color: #ff9800;
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* التجاوبية */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vaccine-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-before-after {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .effects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vaccine-table th, .vaccine-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reminder-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-group {
+        min-width: auto;
+    }
+    
+    .section-card {
+        padding: 1.2rem;
+    }
+    
+    .vaccine-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+}
+
+
+/* css/vaccine.css - إضافات مخصصة لقسم الأسئلة الشائعة */
+
+/* تحسينات لقسم الأسئلة الشائعة */
+.faq-section .section-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e3f2fd;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(41, 128, 185, 0.08);
+    overflow: hidden;
+}
+
+.faq-section h2 {
+    color: #1a5fb4;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.faq-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to left, #1a5fb4, #4a90e2);
+    border-radius: 2px;
+}
+
+/* تحسينات لأسئلة وأجوبة الـ FAQ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #e0e7ff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.05);
+}
+
+.faq-item:hover {
+    border-color: #4a90e2;
+    box-shadow: 0 6px 12px rgba(41, 128, 185, 0.1);
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 25px;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    border: none;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    color: #1a5fb4;
+}
+
+.faq-question:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.faq-question span {
+    flex: 1;
+    text-align: right;
+    padding-left: 15px;
+}
+
+.faq-question i {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+    color: #1a5fb4;
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer.open {
+    padding: 25px;
+    max-height: 500px;
+    border-top: 1px solid #e0e7ff;
+    background: linear-gradient(to bottom, #fafbff, #ffffff);
+}
+
+.faq-answer p {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    text-align: right;
+    direction: rtl;
+}
+
+.faq-answer p strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* تأثيرات تفاعلية */
+.faq-item.active {
+    border-color: #4a90e2;
+    box-shadow: 0 8px 16px rgba(41, 128, 185, 0.12);
+}
+
+/* تحسينات للعرض على الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .faq-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+    
+    .faq-answer.open {
+        padding: 20px;
+    }
+    
+    .faq-question span {
+        padding-left: 10px;
+    }
+}
+
+/* تحسينات للعرض على الأجهزة اللوحية */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .faq-section .section-card {
+        margin: 0 10px;
+    }
+}
+
+/* إضافة مؤشر للأسئلة */
+.faq-item:before {
+    content: 'Q:';
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    color: #4a90e2;
+    font-weight: bold;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item.active:before {
+    opacity: 1;
+}
+
+.faq-answer:before {
+    content: 'A:';
+    position: absolute;
+    right: 25px;
+    top: 60px;
+    color: #48bb78;
+    font-weight: bold;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s;
+}
+
+.faq-answer.open:before {
+    opacity: 1;
+}
+
+/* تحسينات إضافية للقراءة */
+.faq-answer p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* تحسين التباين للقراءة المريحة */
+.faq-question {
+    color: #1a237e;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.faq-answer {
+    color: #374151;
+    background: #f9fafb;
+}
+
+.faq-answer.open {
+    background: #ffffff;
+    border-left: 4px solid #4a90e2;
+}
+/* Vaccine review card spacing and birth date selection */
+.site-shell .medical-review-status.container { box-sizing:border-box; width:min(calc(100% - 32px),1180px); margin:20px auto 26px; padding:clamp(18px,3vw,26px)!important; border-radius:16px; overflow-wrap:anywhere; }
+.site-shell .medical-review-status.container strong { display:block; line-height:1.9; margin-bottom:10px; }
+.site-shell .medical-review-status.container p { margin:0; line-height:1.95; }
+.site-shell .medical-review-status.container a { overflow-wrap:anywhere; }
+.birth-date-label { display:block; font-weight:700; margin-bottom:10px; }
+.birth-date-fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; width:100%; }
+.birth-date-fields > div { min-width:0; }
+.birth-date-fields label { display:block; margin-bottom:6px; font-size:.9rem; }
+.birth-date-fields select { width:100%; min-width:0; min-height:46px; padding:9px 12px; border:1px solid #b7ced0; border-radius:11px; background:#fff; color:#163b3e; font:inherit; }
+.birth-date-fields select:focus-visible { outline:3px solid #87c9cc; outline-offset:2px; }
+.birth-date-hint { display:block; margin-top:9px; line-height:1.7; }
+.reminder-form .form-group { min-width:0; flex:1 1 320px; }
+@media(max-width:420px) { .site-shell .medical-review-status.container { width:calc(100% - 24px); padding:16px!important; } .birth-date-fields { gap:6px; } .birth-date-fields select { padding:8px 4px; font-size:.9rem; } }
+
+
+/* Algeria vaccination planner — scoped to vaccine page, 2026-10-14 */
+.vax-planner {
+  --vax-teal: #126b70;
+  --vax-dark: #124448;
+  --vax-border: #d7e5e6;
+  --vax-ink: #182f32;
+  --vax-muted: #4c6264;
+  --vax-surface: #fff;
+  --vax-soft: #f1f8f7;
+  margin-block: clamp(24px,4vw,42px);
+  color: var(--vax-ink);
+  min-width: 0;
+}
+.vax-planner :is(.vax-heading,.vax-date-card,.vax-interpretation,.vax-dashboard,.vax-static) { min-width:0; }
+.vax-planner h2,.vax-planner h3,.vax-planner h4 { margin-top:0; line-height:1.45; }
+.vax-planner p { margin-top:0; line-height:1.85; }
+.vax-heading {
+  display:flex; gap:20px; align-items:center; justify-content:space-between;
+  padding:clamp(22px,3.5vw,36px);
+  border-radius:22px;
+  background:linear-gradient(125deg,#e1f3ef 0%,#fff 90%);
+  border:1px solid #b7d6d4;
+  margin-bottom:16px;
+}
+.vax-heading h2 {font-size:clamp(1.35rem,2.5vw,2rem); color:#124448; margin:10px 0;}
+.vax-heading p {margin-bottom:0;max-width:65ch;}
+.vax-eyebrow {font-size:.82rem; font-weight:700;color:#155f62;display:inline-flex;align-items:center;gap:9px;}
+.vax-heading-icon {width:82px;height:82px;display:grid;place-items:center;background:#d7eeeb;color:#126b70;border-radius:25px;flex-shrink:0;font-size:2rem;}
+.vax-source-note {
+ display:flex; align-items:flex-start; gap:12px; margin-bottom:18px;
+ background:#fffbf3; padding:clamp(15px,2.4vw,20px);
+ border:1px solid #eadabc; border-right:4px solid #c58c36; border-radius:14px;
+ overflow-wrap:anywhere; font-size:.93rem; line-height:1.9;
+}
+.vax-source-note > i {color:#9b681e; margin-top:5px;}
+.vax-date-card,.vax-dashboard,.vax-static,.vax-interpretation {
+ border:1px solid var(--vax-border); border-radius:20px;
+ padding:clamp(17px,3vw,28px); background:var(--vax-surface);
+ box-shadow:0 9px 24px rgba(20,70,70,.045);margin-bottom:20px;
+}
+.vax-date-title {display:flex; gap:14px;align-items:center; margin-bottom:18px;}
+.vax-date-title > i {width:44px;height:44px;border-radius:13px;background:#e3f4f0;color:#126b70;display:grid;place-items:center;flex:0 0 44px;}
+.vax-date-title h3 {margin:0 0 3px;font-size:1.2rem;color:var(--vax-dark);}
+.vax-date-title p {margin:0;color:var(--vax-muted);}
+.vax-date-form {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:16px;}
+.vax-birth-input {min-width:0;}
+.vax-planner .birth-date-label {margin-bottom:8px;display:block;font-weight:700;color:var(--vax-dark);}
+.vax-planner .birth-date-fields {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.vax-planner .birth-date-fields>div {min-width:0;}
+.vax-planner .birth-date-fields label {display:block;margin-bottom:6px;font-size:.88rem;color:var(--vax-muted);}
+.vax-planner .birth-date-fields select {display:block;min-width:0;width:100%;height:50px;border:1px solid #b9d2d1;border-radius:12px;padding:8px 10px;background:#fff;color:var(--vax-dark);font-size:1rem;}
+.vax-planner .birth-date-fields select:focus-visible {outline:3px solid #c58c36;outline-offset:2px;}
+.vax-planner .vax-calculate {min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding-inline:20px;max-width:100%;white-space:normal;font-weight:700;}
+.vax-planner .vax-calculate:disabled {opacity:.55;cursor:wait;}
+.vax-form-message {padding:12px 15px;border:1px solid #e0b0a7;border-radius:12px;background:#fff3f0;color:#822d27;margin:14px 0;}
+.vax-privacy {font-size:.87rem;color:var(--vax-muted);margin:14px 0 0 !important;overflow-wrap:anywhere;}
+.vax-privacy i {color:#126b70;margin-left:6px;}
+.vax-static h3 {font-size:1.15rem;color:var(--vax-dark);margin-bottom:15px;}
+.vax-static-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.vax-static-grid article {display:flex;justify-content:space-between;align-items:center;gap:13px;min-width:0;background:#f7faf9;padding:13px 15px;border:1px solid var(--vax-border);border-radius:12px;}
+.vax-static-grid article>b {flex:0 0 auto;color:#145b60;}
+.vax-static-grid article span {min-width:0;overflow-wrap:anywhere;text-align:left;direction:rtl;font-size:.9rem;}
+.vax-static-grid article span small {color:#8c5718;}
+.vax-dashboard[hidden],.vax-static[hidden] {display:none !important;}
+.vax-dashboard-top {display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.vax-dashboard-top h3 {font-size:clamp(1.15rem,2vw,1.55rem);color:var(--vax-dark);margin:0 0 5px;}
+.vax-dashboard-top p {font-size:.92rem;color:var(--vax-muted);margin:0;}
+.vax-dashboard-top button {display:inline-flex;align-items:center;gap:7px;}
+.vax-kpis {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px;}
+.vax-kpi {background:var(--vax-soft);border:1px solid #d0e7e2;border-radius:14px;padding:15px;text-align:center;min-width:0;}
+.vax-kpi:nth-child(2) {background:#fff8ef;border-color:#f1dcc1;}
+.vax-kpi span {display:block;color:var(--vax-muted);font-size:.88rem;line-height:1.5;min-height:2.65em;}
+.vax-kpi strong {display:block;font-size:clamp(1.55rem,3vw,2rem);line-height:1.4;color:#155a5f;font-variant-numeric:tabular-nums;}
+.vax-kpi:nth-child(2) strong {color:#93551e;}
+.vax-progress {margin-bottom:16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.vax-progress-track {height:10px;min-width:100px;background:#e4eded;border-radius:99px;flex:1;overflow:hidden;}
+.vax-progress-track>div {height:100%;width:0;background:linear-gradient(90deg,#29867f,#126b70);border-radius:99px;transition:width .2s;}
+.vax-progress span {font-size:.85rem;color:var(--vax-muted);}
+.vax-filters {display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px;}
+.vax-filter {border:1px solid #c5d9d8;color:#13595d;padding:8px 17px;border-radius:999px;min-height:44px;cursor:pointer;background:#fff;font-weight:700;}
+.vax-filter.is-active {background:#126b70;border-color:#126b70;color:#fff;}
+.vax-timeline {display:grid;gap:15px;min-width:0;}
+.vax-stage {border:1px solid var(--vax-border);border-radius:15px;overflow:hidden;background:#fff;min-width:0;}
+.vax-stage-head {display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:14px 18px;background:#edf7f5;border-bottom:1px solid var(--vax-border);}
+.vax-stage-head h4 {font-size:1.07rem;color:#124448;margin:0;}
+.vax-stage-head p {color:#4d6567;font-size:.87rem;line-height:1.5;margin:3px 0 0;direction:rtl;}
+.vax-2026 {background:#fff0d6;color:#72460c;border:1px solid #dfbb76;border-radius:100px;padding:3px 11px;font-size:.79rem;}
+.vax-dose-list {display:grid;}
+.vax-dose {padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;min-width:0;border-bottom:1px solid #e9f0ef;}
+.vax-dose:last-child {border-bottom:0;}
+.vax-dose.vax-is-done {background:#f5faf8;}
+.vax-dose-main {display:flex;align-items:flex-start;gap:12px;cursor:pointer;min-width:0;margin:0;}
+.vax-dose-main input[type=checkbox] {appearance:auto;flex:0 0 20px;inline-size:20px;block-size:20px;margin:5px 0 0;accent-color:#126b70;}
+.vax-dose-text {min-width:0;line-height:1.55;}
+.vax-dose-text strong {display:block;font-size:.98rem;color:#1a3538;overflow-wrap:anywhere;}
+.vax-code {display:inline-block;font-size:.82rem;color:#126b70;direction:ltr;unicode-bidi:isolate;white-space:normal;}
+.vax-dose-text small {display:block;font-size:.8rem;color:#506668;margin-top:4px;overflow-wrap:anywhere;}
+.vax-dose-text small.vax-updated {color:#855b1e;}
+.vax-status-area {display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:210px;}
+.vax-pill {display:inline-block;border-radius:100px;padding:4px 10px;font-size:.76rem;line-height:1.5;font-weight:700;}
+.vax-pill-done {background:#dff3eb;color:#15573c;}
+.vax-pill-upcoming {background:#eaf0fa;color:#214a7d;}
+.vax-pill-due {background:#fff1cf;color:#7a4b09;}
+.vax-pill-overdue {background:#ffebe7;color:#912f28;}
+.vax-countdown {color:#52696a;font-size:.83rem;line-height:1.6;font-variant-numeric:tabular-nums;}
+.vax-is-overdue .vax-countdown {color:#912f28;}
+.vax-completion-date {grid-column:1/-1;padding:10px 15px;border-radius:10px;background:#ecf6f2;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:.85rem;}
+.vax-completion-date label {flex:1 1 200px;}
+.vax-completion-date input {flex:0 1 180px;max-width:100%;min-height:42px;padding:7px 9px;color:#1b484c;background:#fff;border:1px solid #b6d2ce;border-radius:9px;direction:ltr;text-align:center;}
+.vax-no-results {padding:20px;text-align:center;background:#f7faf9;border-radius:12px;color:var(--vax-muted);}
+.vax-storage-actions {display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.vax-storage-actions button {display:inline-flex;align-items:center;justify-content:center;gap:8px;}
+.vax-delete {background:#fff8f7 !important;border:1px solid #a94d42 !important;color:#92372e !important;}
+#vax-save-message {font-size:.87rem;color:var(--vax-muted);margin:11px 0 0;min-height:1.5em;}
+.vax-interpretation {background:#f7fbfa;}
+.vax-interpretation h3 {font-size:1.1rem;color:var(--vax-dark);}
+.vax-interpretation p {font-size:.94rem;color:#334a4c;}
+.vax-interpretation p:last-child {margin-bottom:0;}
+.vax-interpretation .vax-reference {font-size:.84rem;color:#496265;}
+@media(max-width:800px) {
+  .vax-heading-icon {width:60px;height:60px;flex-basis:60px;font-size:1.6rem;}
+  .vax-date-form {grid-template-columns:1fr;}
+  .vax-date-form .vax-calculate {width:100%;}
+  .vax-static-grid {grid-template-columns:1fr;}
+}
+@media(max-width:560px) {
+  .vax-heading {align-items:flex-start;padding:18px;}
+  .vax-heading-icon {display:none;}
+  .vax-date-card,.vax-dashboard,.vax-static,.vax-interpretation {padding:16px;border-radius:15px;}
+  .vax-planner .birth-date-fields {gap:7px;}
+  .vax-planner .birth-date-fields select {font-size:.9rem;padding:7px 5px;}
+  .vax-kpis {gap:7px;}
+  .vax-kpi {padding:10px 6px;}
+  .vax-kpi span {font-size:.78rem;min-height:3.6em;}
+  .vax-stage-head {padding:12px;}
+  .vax-dose {grid-template-columns:1fr;padding:13px 12px;gap:10px;}
+  .vax-status-area {margin-right:32px;max-width:100%;flex-direction:row;align-items:center;flex-wrap:wrap;}
+  .vax-completion-date {padding:10px;}
+  .vax-storage-actions {display:grid;grid-template-columns:1fr;}
+  .vax-static-grid article {gap:9px;flex-wrap:wrap;}
+}
+@media(prefers-reduced-motion:reduce) {.vax-progress-track>div {transition:none;}}
+
+/* Historic entries that predate the schedule are not overdue. */
+.vax-pill-review { background:#f1f1f1; color:#424f54; border:1px solid #d1d7d9; }
+.vax-is-review .vax-dose-text small { color:#536168; }
+
+/* Three balanced, accessible filter buttons on phones. */
+@media (max-width: 640px) {
+  .vax-planner .vax-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
+    margin: 14px 0 18px;
+  }
+  .vax-planner .vax-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px 5px;
+    border-radius: 12px;
+    font-size: clamp(.76rem, 3.3vw, .94rem);
+    line-height: 1.4;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: normal;
+  }
+}
+
+/* Tools DZ page integration */
+.vaccine-page{max-width:1200px;margin-inline:auto;padding:1rem}.site-hero{margin-bottom:1rem}.medical-review-status{max-width:1200px;margin:1rem auto;padding:1rem;border-inline-start:4px solid #ff9800;border-radius:12px;background:var(--surface-color,#fff);color:var(--text-color,inherit)}.medical-review-status p{margin-top:.5rem}
