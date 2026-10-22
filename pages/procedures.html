@@ -17,7 +17,11 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tools DZ">
-    <meta name="theme-color" content="#4caf50">
+    <meta name="theme-color" content="#187a50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="icon" href="../favicon.ico">
 
     <link rel="canonical" href="https://imadtbn.github.io/tools-dz/pages/procedures.html">
     <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/tools-dz/pages/procedures.html">
@@ -130,6 +134,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/ads.css">
+    <link rel="stylesheet" href="../assets/css/tool-hero.css">
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
@@ -170,43 +175,55 @@
 
     <header id="main-header">
         <div class="container">
-            <div class="logo"><a href="../index.html">
+            <div class="logo">
+                <a href="../index.html">
                     <span>Tools DZ</span>
                     <p>منصة الأدوات الجزائرية</p>
-                </a></div>
-            <nav id="main-nav">
+                </a>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" type="button" aria-label="تفعيل الوضع الداكن" title="تغيير المظهر">🌙</button>
+            </div>
+            <nav id="main-nav" aria-label="التنقل الرئيسي">
                 <ul>
-                    <li><a href="../index.html">الرئيسية</a></li>
                     <li><a href="../index.html">الرئيسية</a></li>
                     <li><a href="tools.html">جميع الأدوات</a></li>
                     <li><a href="categories.html">التصنيفات</a></li>
-                    <li><a href="procedures.html">منصات وخدمات رقمية</a></li>
+                    <li><a href="procedures.html" aria-current="page">منصات وخدمات رقمية</a></li>
                     <li><a href="favorites.html">المفضلة</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="container procedures-page">
-        <section class="page-intro"><span class="eyebrow">نسخة أولية موثوقة</span>
-            <h1>خدمات رقمية DZ</h1>
-            <p>اختر المجال، تابع قائمة التحضير، ثم انتقل إلى المصدر ، أجري معاملتك الإدرارية أو المالية عن بعد وبكل
-                سهولة وأمان.</p>
-
-            <div class="notice-box">منصات رقمية ومعاملات عن بعد، دون الحاجة للتنقل وربح الوقت، لمساعدتك على إنجاز المهام
-                اليومية بأمان .</div>
+        <section class="procedures-hero tool-hero" aria-labelledby="procedures-page-title">
+            <span class="tool-hero-badge"><i class="fa-solid fa-landmark" aria-hidden="true"></i> خدمات رقمية رسمية</span>
+            <h1 id="procedures-page-title">منصات وخدمات رقمية جزائرية</h1>
+            <p>اعثر على المنصة الرسمية المناسبة، جهّز متطلباتك، واتبع خطوات إنجاز المعاملة عن بُعد.</p>
 
             <div class="search-box procedures-search" role="search">
                 <label for="main-search">ابحث داخل المنصات والخدمات الرقمية</label>
-                <div style="position: relative;">
-                    <i class="fa-solid fa-magnifying-glass"
-                        style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.2rem;"
-                        aria-hidden="true"></i>
-                    <input type="search" id="main-search" placeholder="مثال: بطاقة التعريف، الجامعة، الفواتير..."
-                        autocomplete="off" style="padding-right: 50px;">
+                <div class="procedures-search-field">
+                    <i class="fa-solid fa-magnifying-glass procedures-search-icon" aria-hidden="true"></i>
+                    <input type="search" id="main-search"
+                        placeholder="مثال: بطاقة التعريف، الجامعة، الفواتير..."
+                        autocomplete="off" aria-controls="search-results">
                 </div>
-                <div id="search-results" class="search-results-dropdown hidden" aria-live="polite"></div>
+                <div id="search-results" class="search-results-dropdown hidden" role="region"
+                    aria-label="نتائج البحث" aria-live="polite"></div>
             </div>
+
+            <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+                <a href="../index.html">الرئيسية</a>
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <span aria-current="page">منصات وخدمات رقمية</span>
+            </nav>
         </section>
+
+        <div class="notice-box procedures-notice" role="note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>دليل عملي للمنصات الرقمية الجزائرية، يساعدك على التحضير للمعاملة قبل الانتقال إلى الموقع الرسمي.</span>
+        </div>
 
         <section class="ads-container ads-container--content" aria-label="إعلان">
             <span class="ads-label">إعلان</span>
@@ -239,6 +256,7 @@
         </div>
     </footer>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/procedures.js"></script>
 </body>

@@ -266,3 +266,147 @@
     display: none !important;
   }
 }
+
+
+/* Procedures directory: shared green hero with a search panel that stays in flow. */
+.procedures-page {
+  padding-top: .85rem;
+  padding-bottom: 3rem;
+}
+
+.procedures-hero {
+  overflow: hidden;
+}
+
+.procedures-hero .procedures-search {
+  width: 100%;
+  max-width: 760px;
+  margin: 1.1rem 0 0;
+  text-align: right;
+}
+
+.procedures-hero .procedures-search > label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #eafff1;
+  font-size: .94rem;
+  font-weight: 750;
+  line-height: 1.6;
+}
+
+.procedures-search-field {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.procedures-hero .procedures-search .procedures-search-icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 1.1rem;
+  transform: translateY(-50%);
+  color: #397052;
+  font-size: 1.05rem;
+  pointer-events: none;
+}
+
+.procedures-hero .procedures-search input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  padding: .8rem 3rem .8rem 1rem;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 14px;
+  background: #fff;
+  color: #17291e;
+  font: inherit;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.13);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.procedures-hero .procedures-search input::placeholder {
+  color: #66756b;
+  opacity: 1;
+}
+
+.procedures-hero .procedures-search input:focus {
+  outline: 3px solid rgba(255,255,255,.72);
+  outline-offset: 2px;
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.12), 0 8px 20px rgba(0,0,0,.13);
+  transform: none;
+}
+
+.procedures-hero .procedures-search .search-results-dropdown {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  margin-top: .55rem;
+  max-height: min(45vh, 340px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 13px;
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+  z-index: 2;
+}
+
+.procedures-hero .tool-breadcrumb {
+  margin-top: 1rem;
+}
+
+.procedures-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  margin: .25rem 0 1.35rem;
+  padding: .85rem 1rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.procedures-notice > i {
+  flex: 0 0 auto;
+  margin-top: .3rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .procedures-page {
+    padding-top: .4rem;
+  }
+
+  .procedures-hero .procedures-search {
+    margin-top: .9rem;
+  }
+
+  .procedures-hero .procedures-search > label {
+    font-size: .9rem;
+  }
+
+  .procedures-hero .procedures-search input {
+    min-height: 52px;
+    padding-block: .75rem;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .procedures-hero .procedures-search .search-results-dropdown {
+    max-height: min(42vh, 300px);
+  }
+
+  .procedures-notice {
+    margin-bottom: 1rem;
+    padding: .75rem .85rem;
+    font-size: .92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .procedures-hero .procedures-search input {
+    transition: none;
+  }
+}
