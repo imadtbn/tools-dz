@@ -187,3 +187,125 @@
         padding-inline: 0.8rem;
     }
 }
+
+
+/* Unified compact header on tablets and phones: brand, menu, and theme never overlap. */
+@media screen and (max-width: 1100px) {
+  #main-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  #main-header .container {
+    width: 100%;
+    min-height: 64px;
+    padding: .55rem .7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .45rem;
+  }
+
+  #main-header .logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #main-header .logo .site-brand-link,
+  #main-header .logo a {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: .45rem;
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #main-header .site-brand-icon-header {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  #main-header .logo-title,
+  #main-header .logo a > span:not(.site-brand-icon) {
+    font-size: clamp(.9rem, 3.2vw, 1.15rem);
+    line-height: 1.15;
+  }
+
+  #main-header .logo-subtitle,
+  #main-header .logo a > p {
+    font-size: clamp(.58rem, 2.1vw, .72rem);
+    line-height: 1.2;
+    white-space: normal;
+    max-width: 34vw;
+  }
+
+  #main-header .mobile-menu-toggle {
+    order: 2;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--surface-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+
+  #main-header .header-actions {
+    order: 3;
+    flex: 0 0 38px;
+    width: 38px;
+    margin: 0;
+  }
+
+  #main-header #theme-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  #main-header #main-nav {
+    inset-inline: .65rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #main-header .container {
+    gap: .3rem;
+    padding-inline: .45rem;
+  }
+
+  #main-header .site-brand-icon-header {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  #main-header .logo .site-brand-link,
+  #main-header .logo a {
+    gap: .3rem;
+  }
+
+  #main-header .logo-subtitle,
+  #main-header .logo a > p {
+    display: none;
+  }
+
+  #main-header .mobile-menu-toggle,
+  #main-header .header-actions,
+  #main-header #theme-toggle {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+}
