@@ -464,3 +464,51 @@
     scroll-behavior: auto;
   }
 }
+
+
+/* Shared catalog-page hero spacing for the tools and categories indexes. */
+.tools-index-page,
+.categories-index-page {
+  min-width: 0;
+  padding-top: .15rem;
+  padding-bottom: 2.25rem;
+}
+
+.tools-index-page .catalog-hero,
+.categories-index-page .catalog-hero {
+  margin-top: .85rem;
+  margin-bottom: 1rem;
+}
+
+.tools-index-page #all-tools-container,
+.categories-index-page #categories-container {
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.tools-index-page #all-tools-container > *,
+.categories-index-page #categories-container > * {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .tools-index-page,
+  .categories-index-page {
+    padding-inline: .8rem;
+    padding-top: .1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .tools-index-page .catalog-hero,
+  .categories-index-page .catalog-hero {
+    margin-top: .55rem;
+    margin-bottom: .8rem;
+  }
+
+  .tools-index-page #all-tools-container,
+  .categories-index-page #categories-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .9rem;
+    margin-top: .7rem;
+  }
+}
