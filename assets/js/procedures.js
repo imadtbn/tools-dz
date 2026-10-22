@@ -11,6 +11,11 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
     }
 
+    function getFavoriteId(procedure) {
+        // IDs in the source data are reused by several platforms; URLs are unique.
+        return `platform:${encodeURIComponent(procedure.sourceUrl)}`;
+    }
+
     async function init() {
         const container = document.getElementById('procedures-container');
         if (!container) return;
@@ -27,6 +32,8 @@
             const progress = loadProgress();
 
             container.innerHTML = procedures.map(procedure => {
+                const favoriteId = getFavoriteId(procedure);
+                const favorite = window.Favorites?.isFavorite(favoriteId) || false;
                 const steps = procedure.steps.map((step, index) => {
                     const key = `${procedure.id}:${index}`;
                     return `<label class="procedure-step"><input type="checkbox" data-progress-key="${key}" ${progress[key] ? 'checked' : ''}><span>${step}</span></label>`;
@@ -38,7 +45,10 @@
                     <h3>${procedure.title}</h3><p>${procedure.description}</p>
                     <div class="procedure-steps">${steps}</div>
                     <div class="procedure-tools"><strong>أدوات مساعدة:</strong>${related}</div>
-                    <a class="btn" href="${procedure.sourceUrl}" target="_blank" rel="noopener noreferrer">فتح المنصة</a>
+                    <div class="tool-card-actions procedure-card-actions">
+                        <a class="btn" href="${procedure.sourceUrl}" target="_blank" rel="noopener noreferrer">فتح المنصة</a>
+                        <button class="fav-btn" type="button" data-id="${favoriteId}" aria-label="${favorite ? 'إزالة من المفضلة' : 'إضافة المنصة إلى المفضلة'}" aria-pressed="${favorite}">${favorite ? '⭐' : '☆'}</button>
+                    </div>
                     <small>فحص الرابط: ${procedure.lastVerified} — ${procedure.availabilityStatus}</small>
                 </article>`;
             }).join('');
@@ -54,5 +64,15 @@
             container.innerHTML = '<p class="empty-state error-state">تعذر تحميل الأدلة الآن. أعد المحاولة عند توفر الاتصال.</p>';
         }
     }
+
+    document.addEventListener('click', event => {
+        const button = event.target.closest('.fav-btn');
+        if (!button || !window.Favorites || !document.getElementById('procedures-container')?.contains(button)) return;
+        const isFavorite = window.Favorites.toggle(button.dataset.id);
+        button.textContent = isFavorite ? '⭐' : '☆';
+        button.setAttribute('aria-pressed', String(isFavorite));
+        button.setAttribute('aria-label', isFavorite ? 'إزالة من المفضلة' : 'إضافة المنصة إلى المفضلة');
+    });
+
     document.addEventListener('DOMContentLoaded', init);
 })();
