@@ -974,3 +974,27 @@ section {
     transform: none;
   }
 }
+
+
+/* Keep platform actions aligned with the shared tool-card favorites control. */
+.procedure-card-actions {
+    width: 100%;
+    gap: var(--spacing-sm);
+}
+
+.procedure-card-actions .btn {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.procedure-card-actions .fav-btn {
+    flex: 0 0 44px;
+}
+
+@media (max-width: 375px) {
+    .procedure-card-actions .btn {
+        width: auto;
+        margin-bottom: 0;
+        padding-inline: 0.8rem;
+    }
+}
