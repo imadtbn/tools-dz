@@ -25,6 +25,12 @@
         return proceduresPromise;
     }
 
+    // Platform IDs in procedures.json are not unique, so use each official URL
+    // as a stable, namespaced key in the shared favorites list.
+    function getProcedureFavoriteId(procedure) {
+        return `platform:${encodeURIComponent(procedure.sourceUrl)}`;
+    }
+
     function createToolCard(tool) {
         const favorite = window.Favorites?.isFavorite(tool.id) || false;
         const badges = [
@@ -39,6 +45,21 @@
                 <a href="${resolveUrl(tool.url)}" class="btn">استخدام الأداة</a>
                 <button class="fav-btn" type="button" data-id="${tool.id}" aria-label="${favorite ? 'إزالة من المفضلة' : 'إضافة إلى المفضلة'}" aria-pressed="${favorite}">${favorite ? '⭐' : '☆'}</button>
             </div>
+        </article>`;
+    }
+
+    function createFavoriteProcedureCard(procedure) {
+        const favoriteId = getProcedureFavoriteId(procedure);
+        const favorite = window.Favorites?.isFavorite(favoriteId) || false;
+        return `<article class="card procedure-card favorite-procedure-card">
+            <div class="card-icon" aria-hidden="true">${procedure.icon}</div>
+            <h3>${procedure.title}</h3>
+            <p>${procedure.description}</p>
+            <div class="tool-card-actions procedure-card-actions">
+                <a class="btn" href="${procedure.sourceUrl}" target="_blank" rel="noopener noreferrer">فتح المنصة</a>
+                <button class="fav-btn" type="button" data-id="${favoriteId}" aria-label="${favorite ? 'إزالة من المفضلة' : 'إضافة المنصة إلى المفضلة'}" aria-pressed="${favorite}">${favorite ? '⭐' : '☆'}</button>
+            </div>
+            <small>آخر تحقق: ${procedure.lastVerified} — ${procedure.availabilityStatus}</small>
         </article>`;
     }
 
@@ -78,9 +99,15 @@
 
             const favoritesContainer = document.getElementById('favorites-container');
             if (favoritesContainer && window.Favorites) {
-                const ids = Favorites.getAll();
-                renderTools(favoritesContainer, tools.filter(tool => ids.includes(tool.id)),
-                    'لا توجد أدوات في المفضلة حاليًا. أضف ما تستخدمه كثيرًا لتجده هنا بسرعة.');
+                const ids = window.Favorites.getAll();
+                const favoriteTools = tools.filter(tool => ids.includes(tool.id)).map(createToolCard);
+                const favoriteProcedures = procedures
+                    .filter(procedure => ids.includes(getProcedureFavoriteId(procedure)))
+                    .map(createFavoriteProcedureCard);
+                const favoriteCards = [...favoriteTools, ...favoriteProcedures];
+                favoritesContainer.innerHTML = favoriteCards.length
+                    ? favoriteCards.join('')
+                    : '<p class="empty-state">لا توجد عناصر في المفضلة حاليًا. أضف الأدوات والمنصات التي تستخدمها كثيرًا لتجدها هنا بسرعة.</p>';
             }
             window.initSearch?.(tools, procedures);
         } catch (error) {
@@ -94,17 +121,19 @@
     document.addEventListener('click', event => {
         const button = event.target.closest('.fav-btn');
         if (!button || !window.Favorites) return;
-        const isFavorite = Favorites.toggle(button.dataset.id);
+        const isFavorite = window.Favorites.toggle(button.dataset.id);
         button.textContent = isFavorite ? '⭐' : '☆';
         button.setAttribute('aria-pressed', String(isFavorite));
         button.setAttribute('aria-label', isFavorite ? 'إزالة من المفضلة' : 'إضافة إلى المفضلة');
         if (!isFavorite && button.closest('#favorites-container')) {
-            button.closest('.tool-card')?.remove();
+            button.closest('.tool-card, .procedure-card')?.remove();
             const container = document.getElementById('favorites-container');
-            if (container && !container.querySelector('.tool-card')) container.innerHTML = '<p class="empty-state">لا توجد أدوات في المفضلة حاليًا.</p>';
+            if (container && !container.querySelector('.tool-card, .procedure-card')) {
+                container.innerHTML = '<p class="empty-state">لا توجد عناصر في المفضلة حاليًا. أضف الأدوات والمنصات التي تستخدمها كثيرًا لتجدها هنا بسرعة.</p>';
+            }
         }
     });
 
-    window.ToolRegistry = { getTools, getCategories, createToolCard, renderTools };
+    window.ToolRegistry = { getTools, getCategories, getProcedures, createToolCard, renderTools };
     document.addEventListener('DOMContentLoaded', initPage);
 })();
