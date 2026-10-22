@@ -1,11 +1,11 @@
-const VERSION = 'v13';
+const VERSION = 'v14';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
 
 const PRECACHE = [
     './', './index.html', OFFLINE_URL, './404.html', './manifest.webmanifest',
-    './assets/css/main.css', './assets/css/responsive.css', './assets/css/tools.css',
+    './assets/css/main.css', './assets/css/responsive.css', './assets/css/tools.css', './assets/css/tool-hero.css',
     './assets/css/calorie-calculator.css', './assets/js/calorie-calculator.js',
     './assets/css/currency-converter.css', './assets/js/currency-converter.js',
     './assets/css/unit-converter.css', './assets/js/unit-converter.js',
