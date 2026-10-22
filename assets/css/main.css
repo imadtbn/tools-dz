@@ -897,3 +897,80 @@ section {
 [data-theme="dark"] #main-header .site-brand-icon-header {
   border-color: rgba(129, 199, 132, .45);
 }
+
+
+/* Centered card icons with a subtle red pulse for tool and platform cards. */
+.tool-card,
+.category-card,
+.procedure-card {
+  align-items: stretch;
+}
+
+.tool-card > .card-icon,
+.category-card > .card-icon,
+.procedure-card > .card-icon {
+  align-self: center;
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 auto;
+  margin: 0 auto 1rem;
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(211, 47, 47, 0.2);
+  background: var(--surface-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 0 5px rgba(211, 47, 47, 0.045);
+}
+
+.tool-card > .card-icon::before,
+.category-card > .card-icon::before,
+.procedure-card > .card-icon::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  border: 1.5px solid rgba(211, 47, 47, 0.6);
+  border-radius: 50%;
+  animation: card-icon-red-pulse 3.2s ease-out infinite;
+  pointer-events: none;
+}
+
+.tool-card > .card-icon i,
+.category-card > .card-icon i,
+.procedure-card > .card-icon i {
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+}
+
+@keyframes card-icon-red-pulse {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.52;
+  }
+  48% {
+    transform: scale(1.08);
+    opacity: 0.16;
+  }
+  52% {
+    transform: scale(1.08);
+    opacity: 0.16;
+  }
+}
+
+.tool-card:hover > .card-icon,
+.category-card:hover > .card-icon,
+.procedure-card:hover > .card-icon {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-card > .card-icon::before,
+  .category-card > .card-icon::before,
+  .procedure-card > .card-icon::before {
+    animation: none;
+    opacity: 0.45;
+    transform: none;
+  }
+}
