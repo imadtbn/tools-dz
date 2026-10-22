@@ -33,6 +33,8 @@ for (const tool of tools.filter(tool => tool.status === 'active')) {
 }
 
 for await (const filename of glob('**/*.html', { exclude: ['node_modules/**'] })) {
+  // Google Search Console verification documents are not rendered site pages.
+  if (/^google[a-f0-9]+\.html$/i.test(path.basename(filename))) continue;
   const html = await readFile(filename, 'utf8');
   if (!/<html[^>]+lang="ar"[^>]+dir="rtl"/.test(html)) errors.push(`${filename}: missing Arabic RTL root`);
   if (!/<link rel="canonical"/.test(html) && !['404.html', 'offline.html'].includes(filename)) errors.push(`${filename}: missing canonical URL`);
