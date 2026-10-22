@@ -3,8 +3,16 @@ const Favorites = {
     getKey: () => 'tools_dz_favorites',
 
     getAll: function() {
-        const data = localStorage.getItem(this.getKey());
-        return data ? JSON.parse(data) : [];
+        try {
+            const data = localStorage.getItem(this.getKey());
+            const favorites = data ? JSON.parse(data) : [];
+            return Array.isArray(favorites)
+                ? favorites.filter(id => typeof id === 'string')
+                : [];
+        } catch (error) {
+            console.warn('Could not read favorites from localStorage', error);
+            return [];
+        }
     },
 
     add: function(toolId) {
@@ -35,3 +43,6 @@ const Favorites = {
         }
     }
 };
+
+// Expose the API globally because tools.js uses window.Favorites.
+window.Favorites = Favorites;
