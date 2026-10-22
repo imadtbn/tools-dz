@@ -59,20 +59,35 @@
                 next[event.target.dataset.progressKey] = event.target.checked;
                 saveProgress(next);
             });
+
+            // Handle favorite clicks on this page directly from the rendered cards.
+            container.addEventListener('click', event => {
+                const button = event.target.closest('button.fav-btn');
+                if (!button || !container.contains(button)) return;
+
+                event.preventDefault();
+                if (!window.Favorites) {
+                    button.title = 'تعذر تحميل نظام المفضلة. أعد تحميل الصفحة.';
+                    return;
+                }
+
+                try {
+                    const isFavorite = window.Favorites.toggle(button.dataset.id);
+                    button.textContent = isFavorite ? '⭐' : '☆';
+                    button.setAttribute('aria-pressed', String(isFavorite));
+                    button.setAttribute('aria-label', isFavorite ? 'إزالة من المفضلة' : 'إضافة المنصة إلى المفضلة');
+                    button.title = isFavorite ? 'إزالة من المفضلة' : 'إضافة إلى المفضلة';
+                } catch (error) {
+                    console.error('Could not update platform favorite', error);
+                    button.title = 'تعذر حفظ التغيير على هذا الجهاز.';
+                }
+            });
         } catch (error) {
             console.error(error);
             container.innerHTML = '<p class="empty-state error-state">تعذر تحميل الأدلة الآن. أعد المحاولة عند توفر الاتصال.</p>';
         }
     }
 
-    document.addEventListener('click', event => {
-        const button = event.target.closest('.fav-btn');
-        if (!button || !window.Favorites || !document.getElementById('procedures-container')?.contains(button)) return;
-        const isFavorite = window.Favorites.toggle(button.dataset.id);
-        button.textContent = isFavorite ? '⭐' : '☆';
-        button.setAttribute('aria-pressed', String(isFavorite));
-        button.setAttribute('aria-label', isFavorite ? 'إزالة من المفضلة' : 'إضافة المنصة إلى المفضلة');
-    });
 
     document.addEventListener('DOMContentLoaded', init);
 })();
