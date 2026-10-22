@@ -836,8 +836,14 @@ section {
   box-shadow: 0 2px 8px rgba(20, 55, 38, .1);
 }
 
-#main-header .logo-title,
-#main-header .logo a > span:not(.site-brand-icon) {
+#main-header .logo-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+#main-header .logo-title {
   display: block;
   color: var(--primary-color);
   font-size: clamp(1.15rem, 2vw, 1.65rem);
@@ -846,19 +852,22 @@ section {
   white-space: nowrap;
 }
 
-#main-header .logo-subtitle,
-#main-header .logo a > p {
+#main-header .logo-subtitle {
   display: block;
   margin: .18rem 0 0;
   color: var(--text-muted);
   font-size: clamp(.68rem, 1vw, .85rem);
   line-height: 1.35;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 #main-header #main-nav {
   flex: 1 1 auto;
   margin-inline: auto;
+}
+
+#main-header .mobile-menu-toggle {
+  display: none;
 }
 
 #main-header .header-actions {

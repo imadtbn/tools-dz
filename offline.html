@@ -6,24 +6,54 @@
     <title>غير متصل بالشبكة - Tools DZ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/tool-hero.css">
 </head>
 <body>
     <header id="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <h1>Tools DZ</h1>
-                </a>
-            </div>
-        </div>
-    </header>
+  <div class="container">
+    <div class="logo">
+      <a href="./index.html" class="logo-link" aria-label="Tools DZ - الصفحة الرئيسية">
+        <span class="logo-copy">
+          <span class="logo-title">Tools DZ</span>
+          <span class="logo-subtitle">منصة الأدوات الجزائرية</span>
+        </span>
+      </a>
+    </div>
+    <nav id="main-nav" aria-label="التنقل الرئيسي">
+      <ul>
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./pages/tools.html">جميع الأدوات</a></li>
+          <li><a href="./pages/categories.html">التصنيفات</a></li>
+          <li><a href="./pages/procedures.html">منصات وخدمات رقمية</a></li>
+          <li><a href="./pages/favorites.html">المفضلة</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="mobile-menu-toggle" aria-label="فتح القائمة" aria-controls="main-nav" aria-expanded="false">☰</button>
+    <div class="header-actions">
+      <button id="theme-toggle" type="button" aria-label="تغيير المظهر" title="تغيير المظهر">🌙</button>
+    </div>
+  </div>
+</header>
     <main class="container text-center">
-        <h2>أنت حالياً غير متصل بالإنترنت</h2>
-        <p>Tools DZ يعمل حاليًا دون اتصال لبعض الأدوات التي لا تتطلب اتصالاً بالإنترنت.</p>
+        <section class="tool-hero page-hero" aria-labelledby="page-hero-title">
+  <span class="tool-hero-badge"><i class="fa-solid fa-wifi" aria-hidden="true"></i> حالة الاتصال</span>
+  <h1 id="page-hero-title">أنت حالياً غير متصل بالإنترنت</h1>
+  <p>Tools DZ يعمل حاليًا دون اتصال لبعض الأدوات التي لا تتطلب اتصالاً بالإنترنت.</p>
+  <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+    <a href="./index.html">الرئيسية</a>
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    <a href="./pages/tools.html">جميع الأدوات</a>
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    <span aria-current="page">أنت حالياً غير متصل بالإنترنت</span>
+  </nav>
+</section>
         <div class="actions">
             <a href="./index.html" class="btn">العودة للرئيسية</a>
             <a href="./pages/tools.html" class="btn btn-secondary">عرض الأدوات المحلية</a>
         </div>
     </main>
+<script src="./assets/js/app.js"></script>
+    <script src="./assets/js/theme.js"></script>
 </body>
 </html>

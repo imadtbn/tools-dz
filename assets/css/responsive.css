@@ -231,14 +231,12 @@
     height: 38px;
   }
 
-  #main-header .logo-title,
-  #main-header .logo a > span:not(.site-brand-icon) {
+  #main-header .logo-title {
     font-size: clamp(.9rem, 3.2vw, 1.15rem);
     line-height: 1.15;
   }
 
-  #main-header .logo-subtitle,
-  #main-header .logo a > p {
+  #main-header .logo-subtitle {
     font-size: clamp(.58rem, 2.1vw, .72rem);
     line-height: 1.2;
     white-space: normal;
@@ -263,8 +261,9 @@
 
   #main-header .header-actions {
     order: 3;
-    flex: 0 0 38px;
-    width: 38px;
+    flex: 0 0 auto;
+    width: auto;
+    gap: .3rem;
     margin: 0;
   }
 
@@ -296,8 +295,7 @@
     gap: .3rem;
   }
 
-  #main-header .logo-subtitle,
-  #main-header .logo a > p {
+  #main-header .logo-subtitle {
     display: none;
   }
 

@@ -5,48 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة غير موجودة - Tools DZ</title>
-    <!-- Use inline styles or absolute path scripts to ensure 404 works anywhere -->
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f5f7fa;
-            color: #263238;
-        }
-
-        h1 {
-            color: #2e7d32;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #2e7d32;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
-    <!-- Try to load main css assuming github pages root or standard relative -->
-    <link rel="stylesheet" href="/tools-dz/assets/css/main.css"
-        onerror="this.onerror=null;this.href='/assets/css/main.css';">
+    <link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/tool-hero.css">
 </head>
 
 <body>
     <header id="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <h1>Tools DZ</h1>
-                </a>
-            </div>
-        </div>
-    </header>
+  <div class="container">
+    <div class="logo">
+      <a href="./index.html" class="logo-link" aria-label="Tools DZ - الصفحة الرئيسية">
+        <span class="logo-copy">
+          <span class="logo-title">Tools DZ</span>
+          <span class="logo-subtitle">منصة الأدوات الجزائرية</span>
+        </span>
+      </a>
+    </div>
+    <nav id="main-nav" aria-label="التنقل الرئيسي">
+      <ul>
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./pages/tools.html">جميع الأدوات</a></li>
+          <li><a href="./pages/categories.html">التصنيفات</a></li>
+          <li><a href="./pages/procedures.html">منصات وخدمات رقمية</a></li>
+          <li><a href="./pages/favorites.html">المفضلة</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="mobile-menu-toggle" aria-label="فتح القائمة" aria-controls="main-nav" aria-expanded="false">☰</button>
+    <div class="header-actions">
+      <button id="theme-toggle" type="button" aria-label="تغيير المظهر" title="تغيير المظهر">🌙</button>
+    </div>
+  </div>
+</header>
     <main class="container text-center">
-        <h2>عذرًا، لم نجد هذه الصفحة</h2>
-        <p>قد تكون الصفحة التي تبحث عنها قد تم نقلها أو حذفها.</p>
+        <section class="tool-hero page-hero" aria-labelledby="page-hero-title">
+  <span class="tool-hero-badge"><i class="fa-solid fa-compass" aria-hidden="true"></i> مساعدة في التنقل</span>
+  <h1 id="page-hero-title">عذرًا، لم نجد هذه الصفحة</h1>
+  <p>قد تكون الصفحة التي تبحث عنها قد تم نقلها أو حذفها.</p>
+  <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+    <a href="./index.html">الرئيسية</a>
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    <a href="./pages/tools.html">جميع الأدوات</a>
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    <span aria-current="page">عذرًا، لم نجد هذه الصفحة</span>
+  </nav>
+</section>
 
         <section class="ads-container ads-container--content" aria-label="إعلان">
             <span class="ads-label">إعلان</span>
@@ -68,6 +71,8 @@
             <a href="./pages/tools.html" class="btn btn-secondary">عرض أشهر الأدوات</a>
         </div>
     </main>
+<script src="./assets/js/app.js"></script>
+    <script src="./assets/js/theme.js"></script>
 </body>
 
 </html>
