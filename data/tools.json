@@ -463,5 +463,36 @@
         "lastVerified": "2026-10-14"
       }
     ]
+  },
+  {
+    "id": "budget-manager",
+    "name": "ميزانيتي الذكية",
+    "description": "خطط لراتبك ومداخيلك ووزّع مصاريف الغذاء والسكن والدراسة والسيارة والترفيه والادخار والطوارئ.",
+    "category": "finance",
+    "url": "/tools/budget-manager.html",
+    "icon": "<i class=\"fa-solid fa-wallet\"></i>",
+    "keywords": [
+      "ميزانية",
+      "مصاريف",
+      "راتب",
+      "ادخار",
+      "طوارئ",
+      "إدارة المال",
+      "budget"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "budget-manager",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-22",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "salary-calculator",
+      "loan-calculator",
+      "car-cost-calculator"
+    ],
+    "dataSources": []
   }
 ]
