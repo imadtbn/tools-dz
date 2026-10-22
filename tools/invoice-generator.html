@@ -266,6 +266,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
     <!-- End Google Tag Manager -->
 
+  <link rel="stylesheet" href="../assets/css/tool-hero.css">
 </head>
 
 <body>
@@ -287,14 +288,20 @@
 
     <main class="container">
         <div class="tool-page-container" style="max-width: 900px;">
-            <div class="tool-header no-print">
-                <h1>مولد الفواتير 🧾</h1>
-                <p>قم بملء البيانات واضغط على طباعة لحفظ الفاتورة كـ PDF أو طباعتها مباشرة.</p>
-                <div style="margin-top: 15px;">
-                    <button class="btn" onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
-                    <button class="btn btn-secondary" id="add-row-btn">➕ إضافة منتج</button>
+            <section class="tool-header tool-hero no-print" aria-labelledby="tool-page-title">
+                <span class="tool-hero-badge"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> الأعمال والفوترة</span>
+                <h1 id="tool-page-title">مولد الفواتير</h1>
+                <p>أنشئ فاتورة قابلة للتعديل، وأضف المنتجات ثم اطبعها أو احفظها بصيغة PDF.</p>
+                <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+                <a href="../index.html">الرئيسية</a><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <a href="../pages/tools.html">جميع الأدوات</a><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <span aria-current="page">مولد الفواتير</span>
+            </nav>
+                <div class="tool-hero-actions">
+                    <button class="btn" onclick="window.print()"><i class="fa-solid fa-print" aria-hidden="true"></i> طباعة / حفظ PDF</button>
+                    <button class="btn btn-secondary" id="add-row-btn"><i class="fa-solid fa-plus" aria-hidden="true"></i> إضافة منتج</button>
                 </div>
-            </div>
+            </section>
 
             <section class="ads-container ads-container--content" aria-label="إعلان">
                 <span class="ads-label">إعلان</span>
