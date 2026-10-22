@@ -1,4 +1,4 @@
-const VERSION = 'v23';
+const VERSION = 'v24';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
