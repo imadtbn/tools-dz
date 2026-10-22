@@ -9,6 +9,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#187a50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="../manifest.webmanifest">
     <title>المفضلة - Tools DZ</title>
     <link rel="canonical" href="https://imadtbn.github.io/tools-dz/pages/favorites.html">
     <meta property="og:url" content="https://imadtbn.github.io/tools-dz/pages/favorites.html">
@@ -18,6 +22,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/ads.css">
+    <link rel="stylesheet" href="../assets/css/tool-hero.css">
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
@@ -63,19 +68,35 @@
             <div class="logo">
                 <a href="../index.html">
                     <span>Tools DZ</span>
+                    <p>منصة الأدوات الجزائرية</p>
                 </a>
             </div>
-            <nav id="main-nav">
+            <div class="header-actions">
+                <button id="theme-toggle" type="button" aria-label="تفعيل الوضع الداكن" title="تغيير المظهر">🌙</button>
+            </div>
+            <nav id="main-nav" aria-label="التنقل الرئيسي">
                 <ul>
                     <li><a href="../index.html">الرئيسية</a></li>
                     <li><a href="tools.html">جميع الأدوات</a></li>
                     <li><a href="categories.html">التصنيفات</a></li>
                     <li><a href="procedures.html">منصات وخدمات رقمية</a></li>
-                    <li><a href="favorites.html">المفضلة</a></li>
+                    <li><a href="favorites.html" aria-current="page">المفضلة</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <main class="container favorites-page">
+        <section class="tool-hero favorites-hero" aria-labelledby="favorites-page-title">
+            <span class="tool-hero-badge"><i class="fa-solid fa-heart" aria-hidden="true"></i> مساحتك الشخصية</span>
+            <h1 id="favorites-page-title">أدواتك المفضلة</h1>
+            <p>اجمع الأدوات التي تستخدمها كثيرًا في مكان واحد، وارجع إليها بسرعة وقتما تحتاجها.</p>
+            <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+                <a href="../index.html">الرئيسية</a>
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <span aria-current="page">المفضلة</span>
+            </nav>
+        </section>
 
     <section class="ads-container ads-container--content" aria-label="إعلان">
         <span class="ads-label">إعلان</span>
@@ -92,10 +113,8 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    <main class="container">
-        <h1 style="margin: 20px 0;">الأدوات المفضلة ⭐</h1>
         <div id="favorites-container" class="grid-container">
-            <p style="grid-column: 1 / -1; text-align: center; color: var(--text-muted);">جاري تحميل المفضلة...</p>
+            <p class="favorites-loading" role="status">جاري تحميل المفضلة...</p>
         </div>
     </main>
 
