@@ -289,6 +289,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WG6CX4F5');</script>
     <!-- End Google Tag Manager -->
 
+  <link rel="stylesheet" href="../assets/css/tool-hero.css">
 </head>
 
 <body>
@@ -312,14 +313,20 @@
 
     <main class="container">
         <div class="tool-page-container" style="max-width: 100%;">
-            <div class="tool-header no-print">
-                <h1>مولد السيرة الذاتية (CV) 🧑‍💼</h1>
-                <p>اضغط على النصوص للتعديل، وقم بكتابة محتواك، ثم اضغط على طباعة / PDF.</p>
-                <div style="margin-top: 15px;">
-                    <button class="btn" onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
-                    <button class="btn btn-secondary" onclick="window.location.reload()">🔄 إعادة تعيين</button>
+            <section class="tool-header tool-hero no-print" aria-labelledby="tool-page-title">
+                <span class="tool-hero-badge"><i class="fa-solid fa-id-card" aria-hidden="true"></i> العمل والمسار المهني</span>
+                <h1 id="tool-page-title">مولد السيرة الذاتية (CV)</h1>
+                <p>أنشئ سيرتك الذاتية وعدّل بياناتك مباشرة، ثم اطبعها أو احفظها بصيغة PDF.</p>
+                <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+                <a href="../index.html">الرئيسية</a><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <a href="../pages/tools.html">جميع الأدوات</a><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <span aria-current="page">مولد السيرة الذاتية (CV)</span>
+            </nav>
+                <div class="tool-hero-actions">
+                    <button class="btn" onclick="window.print()"><i class="fa-solid fa-print" aria-hidden="true"></i> طباعة / حفظ PDF</button>
+                    <button class="btn btn-secondary" onclick="window.location.reload()"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i> إعادة تعيين</button>
                 </div>
-            </div>
+            </section>
 
             <section class="ads-container ads-container--content" aria-label="إعلان">
                 <span class="ads-label">إعلان</span>
