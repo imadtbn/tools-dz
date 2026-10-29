@@ -596,5 +596,33 @@
       "https://interieur.gov.dz/category/الإجراءات-الإدارية/",
       "https://services.interieur.gov.dz/ar/"
     ]
+  },
+  {
+    "id": "hijri-calendar",
+    "name": "الرزنامة الهجرية والميلادية",
+    "description": "حوّل بين التاريخين الهجري والميلادي، وتصفح الرزنامة الشهرية وشارك بطاقة إسلامية.",
+    "category": "daily-life",
+    "url": "/tools/hijri-calendar.html",
+    "icon": "<i class=\"fa-solid fa-moon\"></i>",
+    "keywords": [
+      "التاريخ الهجري",
+      "التاريخ الميلادي",
+      "التقويم الإسلامي",
+      "الرزنامة",
+      "hijri calendar",
+      "gregorian"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "hijri-calendar",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-29",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "age-calculator"
+    ],
+    "dataSources": []
   }
 ]
