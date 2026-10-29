@@ -55,6 +55,7 @@
       if (n === 1) return 'دينار جزائري واحد';
       if (n === 2) return 'ديناران جزائريان';
       if (n >= 3 && n <= 10) return integerWords(n) + ' دنانير جزائرية';
+      if (n >= 100 && n % 100 === 0) return integerWords(n) + ' دينار جزائري';
       return integerWords(n) + ' دينارًا جزائريًا';
     }
     if (n === 0) return '';
