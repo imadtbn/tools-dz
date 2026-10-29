@@ -108,4 +108,8 @@
     <loc>https://imadtbn.github.io/tools-dz/tools/number-to-words.html</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://imadtbn.github.io/tools-dz/tools/inventory-manager.html</loc>
+    <priority>0.9</priority>
+  </url>
 </urlset>
