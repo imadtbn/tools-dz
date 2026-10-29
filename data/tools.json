@@ -525,5 +525,40 @@
       "salary-calculator"
     ],
     "dataSources": []
+  },
+  {
+    "id": "inventory-manager",
+    "name": "مسير المخزون والأرباح للمحلات الصغيرة",
+    "description": "سجّل المنتجات والمشتريات والمبيعات، راقب المخزون والتنبيهات، احسب الأرباح وصدّر التقارير محليًا دون خادم.",
+    "category": "work",
+    "url": "/tools/inventory-manager.html",
+    "icon": "<i class=\"fa-solid fa-boxes-stacked\"></i>",
+    "keywords": [
+      "المخزون",
+      "تسيير المخزون",
+      "المبيعات",
+      "المشتريات",
+      "الأرباح",
+      "المحلات",
+      "التجار",
+      "الحرفيون",
+      "inventory",
+      "stock",
+      "profit"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "inventory-manager",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-29",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "invoice-generator",
+      "number-to-words",
+      "budget-manager"
+    ],
+    "dataSources": []
   }
 ]
