@@ -79,10 +79,14 @@
       if (commas > 1) {
         const last = s.lastIndexOf(',');
         s = s.slice(0, last).replace(/,/g, '') + '.' + s.slice(last + 1);
+      } else if (/^\d{1,3},\d{3}$/.test(s)) {
+        s = s.replace(',', '');
       } else s = s.replace(',', '.');
     } else if (dots > 1) {
       const last = s.lastIndexOf('.');
       s = s.slice(0, last).replace(/\./g, '') + '.' + s.slice(last + 1);
+    } else if (/^\d{1,3}\.\d{3}$/.test(s)) {
+      s = s.replace('.', '');
     }
     if (!/^\d+(?:\.\d{0,2})?$/.test(s)) throw new Error('استخدم منزلتين عشريتين كحد أقصى لتمثيل السنتيم.');
     const [wholeText, fractionText = ''] = s.split('.');
