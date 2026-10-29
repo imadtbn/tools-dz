@@ -560,5 +560,41 @@
       "budget-manager"
     ],
     "dataSources": []
+  },
+  {
+    "id": "admin-procedures-assistant",
+    "name": "مساعد الوثائق والإجراءات الإدارية",
+    "description": "دليل تفاعلي للوثائق والخطوات والجهة المختصة، مع قوائم تحقق تحفظ محليًا وتُطبع، اعتمادًا على مصادر رسمية.",
+    "category": "work",
+    "url": "/tools/admin-procedures-assistant.html",
+    "icon": "<i class=\"fa-solid fa-clipboard-check\"></i>",
+    "keywords": [
+      "الإجراءات الإدارية",
+      "الوثائق المطلوبة",
+      "مساعد المواطن",
+      "وزارة الداخلية",
+      "بطاقة التعريف",
+      "شهادة الإقامة",
+      "شهادة الميلاد",
+      "جواز السفر",
+      "عقد الزواج",
+      "administrative procedures"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "admin-procedures-assistant",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-29",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "number-to-words",
+      "inventory-manager"
+    ],
+    "dataSources": [
+      "https://interieur.gov.dz/category/الإجراءات-الإدارية/",
+      "https://services.interieur.gov.dz/ar/"
+    ]
   }
 ]
