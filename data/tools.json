@@ -494,5 +494,36 @@
       "car-cost-calculator"
     ],
     "dataSources": []
+  },
+  {
+    "id": "number-to-words",
+    "name": "محول الأرقام إلى الحروف بالدينار الجزائري",
+    "description": "حوّل المبالغ الرقمية إلى الحروف العربية بالدينار الجزائري والسنتيم مع النسخ والطباعة.",
+    "category": "work",
+    "url": "/tools/number-to-words.html",
+    "icon": "<i class=\"fa-solid fa-money-bill-1-wave\"></i>",
+    "keywords": [
+      "الأرقام إلى حروف",
+      "المبلغ بالحروف",
+      "الدينار الجزائري",
+      "السنتيم",
+      "الفواتير",
+      "montant en lettres",
+      "DZD"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "number-to-words",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-29",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "invoice-generator",
+      "budget-manager",
+      "salary-calculator"
+    ],
+    "dataSources": []
   }
-]
+]\n
