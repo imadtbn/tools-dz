@@ -1,4 +1,4 @@
-const VERSION = 'v26';
+const VERSION = 'v27';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
@@ -12,11 +12,12 @@ const PRECACHE = [
     './assets/css/farm-planner.css', './assets/js/farm-planner.js', './assets/css/budget-manager.css', './assets/js/budget-manager.js',
     './assets/css/vaccine-tracker.css', './assets/js/vaccine-tracker.js',
     './assets/css/number-to-words.css', './assets/js/number-to-words.js',
-    './assets/css/inventory-manager.css', './assets/js/inventory-manager.js', './data/medical/vaccines/algeria.json',
+    './assets/css/inventory-manager.css', './assets/js/inventory-manager.js',
+    './assets/css/admin-procedures-assistant.css', './assets/js/admin-procedures-assistant.js', './data/procedures/admin-procedures.json', './data/medical/vaccines/algeria.json',
     './assets/js/app.js', './assets/js/theme.js', './assets/js/search.js',
     './assets/js/tools.js', './assets/js/favorites.js', './assets/js/procedures.js',
     './data/tools.json', './data/categories.json', './data/procedures/procedures.json',
-    './tools/number-to-words.html', './tools/inventory-manager.html', './tools/budget-manager.html', './tools/vaccine-tracker.html', './tools/currency-converter.html', './tools/unit-converter.html', './tools/farm-planner.html', './tools/calorie-calculator.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
+    './tools/number-to-words.html', './tools/inventory-manager.html', './tools/admin-procedures-assistant.html', './tools/budget-manager.html', './tools/vaccine-tracker.html', './tools/currency-converter.html', './tools/unit-converter.html', './tools/farm-planner.html', './tools/calorie-calculator.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
     './pages/procedures.html'
 ];
 
