@@ -64,8 +64,8 @@ $('im-products-body').addEventListener('click',e=>{
  const b=e.target.closest('button[data-action]');if(!b)return;
  const p=state.products.find(x=>x.id===b.dataset.id);if(!p)return;
  if(b.dataset.action==='delete'){
-  if(state.movements.some(m=>m.productId===p.id)){status('لا يمكن حذف منتج له حركات مسجلة. احتفظ بالسجل أو صدّر نسخة قبل أي حذف.',true);return;}
-  if(!confirm('حذف المنتج «'+p.name+'»؟'))return;
+  if(Number(p.stock)>0){status('لا يمكن حذف منتج ما زالت له كمية في المخزون. سجّل المبيعات أو صحّح الكمية أولًا.',true);return;}
+  if(!confirm('حذف المنتج «'+p.name+'» من قائمة المخزون؟ ستبقى حركاته السابقة في السجل.'))return;
   state.products=state.products.filter(x=>x.id!==p.id);save();render();status('تم حذف المنتج.');
  }else if(b.dataset.action==='edit'){
   const cost=prompt('سعر الشراء الحالي للوحدة (دج):',p.cost);if(cost===null)return;
@@ -79,8 +79,9 @@ function download(filename,content,type){const blob=new Blob(['\ufeff',content],
 $('im-export-json').addEventListener('click',()=>download('tools-dz-inventory-backup-'+today()+'.json',JSON.stringify({schemaVersion:1,exportedAt:new Date().toISOString(),products:state.products,movements:state.movements},null,2),'application/json;charset=utf-8'));
 $('im-export-csv').addEventListener('click',()=>{
  const rows=[['التاريخ','نوع الحركة','المنتج','الرمز','الكمية','سعر الوحدة (دج)','الإجمالي (دج)','الربح (دج)','ملاحظة']];
+ state.products.forEach(p=>rows.push([today(),'الرصيد الحالي',p.name,p.sku||'',p.stock,p.cost,p.stock*p.cost,'','قيمة المخزون الحالية بالتكلفة']));
+ rows.push(['','','','','','','','','']);
  state.movements.forEach(m=>{const p=state.products.find(x=>x.id===m.productId);rows.push([m.date,m.type==='sale'?'بيع':'شراء',m.productName,p?.sku||'',m.quantity,m.unitPrice,m.quantity*m.unitPrice,m.type==='sale'?(m.profit||0):'',m.note||'']);});
- if(!state.movements.length)state.products.forEach(p=>rows.push([today(),'رصيد المخزون',p.name,p.sku||'',p.stock,p.cost,p.stock*p.cost,'','']));
  const csv=rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
  download('tools-dz-inventory-report-'+today()+'.csv',csv,'text/csv;charset=utf-8');
 });
