@@ -530,7 +530,7 @@
     "id": "inventory-manager",
     "name": "مسير المخزون والأرباح للمحلات الصغيرة",
     "description": "سجّل المنتجات والمشتريات والمبيعات، راقب المخزون والتنبيهات، احسب الأرباح وصدّر التقارير محليًا دون خادم.",
-    "category": "work",
+    "category": "business",
     "url": "/tools/inventory-manager.html",
     "icon": "<i class=\"fa-solid fa-boxes-stacked\"></i>",
     "keywords": [
