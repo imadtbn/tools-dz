@@ -17,9 +17,9 @@ function filterList(){
 }
 function renderList(){
  const list=filterList();
+ if(!list.some(p=>p.id===selectedId)) selectedId=list[0]?.id||null;
  $('apa-results-count').textContent='عدد الإجراءات: '+list.length;
  $('apa-procedure-list').innerHTML=list.length?list.map(p=>'<button type="button" class="apa-choice" data-procedure-id="'+esc(p.id)+'" aria-pressed="'+(p.id===selectedId)+'"><strong>'+esc(p.title)+'</strong><small>'+esc(p.categoryLabel)+'</small></button>').join(''):'<p class="apa-empty">لم نعثر على إجراء مطابق. جرّب كلمة بحث أخرى.</p>';
- if(!list.some(p=>p.id===selectedId)){selectedId=list[0]?.id||null;renderDetail();}
 }
 function renderDetail(){
  const p=current(),root=$('apa-detail-content');
@@ -53,8 +53,8 @@ function exportCurrent(p){
 $('apa-procedure-list').addEventListener('click',e=>{
  const b=e.target.closest('[data-procedure-id]');if(!b)return;selectedId=b.dataset.procedureId;renderList();renderDetail();
 });
-$('apa-search').addEventListener('input',renderList);
-$('apa-category').addEventListener('change',renderList);
+$('apa-search').addEventListener('input',()=>{renderList();renderDetail();});
+$('apa-category').addEventListener('change',()=>{renderList();renderDetail();});
 async function init(){
  progress=loadProgress();
  try{
