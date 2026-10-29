@@ -104,4 +104,4 @@
     <loc>https://imadtbn.github.io/tools-dz/tools/budget-manager.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
+  <url>\n    <loc>https://imadtbn.github.io/tools-dz/tools/number-to-words.html</loc>\n    <priority>0.9</priority>\n  </url>\n</urlset>
