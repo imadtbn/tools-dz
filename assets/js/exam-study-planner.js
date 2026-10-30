@@ -30,15 +30,13 @@ if(days<0){$('setup-message').textContent='تاريخ الامتحان يجب أ
 const oldDone=keepDone?new Set(tasks.filter(t=>t.done).map(t=>t.id)):new Set();
 const dailySlots=Math.max(1,Math.floor(hours*60/mins));
 const totalDays=days+1,weighted=valid.map(s=>({...s,score:(s.level==='hard'?3:s.level==='medium'?2:1)*Number(s.weight||1)}));
-const totalWeight=weighted.reduce((a,s)=>a+s.score,0);
-const sessions=[];
+const sessions=[],credit=Object.fromEntries(weighted.map(s=>[s.id,0]));
 for(let di=0;di<totalDays;di++){
 const day=new Date(start);day.setDate(day.getDate()+di);
 for(let slot=0;slot<dailySlots;slot++){
-const idx=(di*dailySlots+slot)%Math.max(1,weighted.length);
-const ranked=weighted.slice().sort((a,b)=>((di*dailySlots+slot+a.id.length)%weighted.length)-((di*dailySlots+slot+b.id.length)%weighted.length));
-const target=ranked[0]; // rotate subject selection deterministically
-const subject=weighted[(di*dailySlots+slot)%weighted.length];
+weighted.forEach(s=>credit[s.id]+=s.score);
+const subject=weighted.reduce((best,s)=>credit[s.id]>credit[best.id]?s:best,weighted[0]);
+credit[subject.id]-=weighted.reduce((sum,s)=>sum+s.score,0);
 const duration=Math.min(mins,Math.round(hours*60/dailySlots));
 sessions.push({id:uid(),date:iso(day),subjectId:subject.id,subject:subject.name,minutes:duration,kind:slot%3===0?'مراجعة الدرس':slot%3===1?'حل تمارين':'استرجاع واختبار قصير',done:false});
 }
