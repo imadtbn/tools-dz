@@ -654,5 +654,36 @@
       "cv-builder"
     ],
     "dataSources": []
+  },
+  {
+    "id": "meal-planner",
+    "name": "مخطط الوجبات وقائمة المشتريات",
+    "description": "خطط وجبات أسبوعية حسب عدد أفراد الأسرة، وأنشئ قائمة مشتريات تلقائية وقدّر الميزانية بالأسعار التي تدخلها واحفظ خططك السابقة.",
+    "category": "daily-life",
+    "url": "/tools/meal-planner.html",
+    "icon": "<i class=\"fa-solid fa-basket-shopping\"></i>",
+    "keywords": [
+      "مخطط الوجبات",
+      "وجبات أسبوعية",
+      "قائمة المشتريات",
+      "قائمة التسوق",
+      "ميزانية الطعام",
+      "الأسرة",
+      "meal planner",
+      "shopping list"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "meal-planner",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-30",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "budget-manager",
+      "calorie-calculator"
+    ],
+    "dataSources": []
   }
 ]
