@@ -1,2 +1,115 @@
-/* Compatibility helpers and shared controls for migrated health tools. */
-(()=>{'use strict';const byId=id=>document.getElementById(id);const formatNumber=value=>Number(value).toLocaleString('ar-DZ-u-nu-latn',{maximumFractionDigits:2});const getNumber=id=>{const el=byId(id);return el?Number(el.value):NaN;};const showError=(id,message)=>{const el=byId(id);if(el){el.textContent=message;el.hidden=false;}};const clearError=id=>{const el=byId(id);if(el){el.textContent='';el.hidden=true;}};const validRange=(v,min,max)=>Number.isFinite(Number(v))&&Number(v)>=min&&Number(v)<=max;const shareResult=async(title,text)=>{const singleArgument=text===undefined;const message=singleArgument?String(title||''):String(text||'');const data={title:singleArgument?'Tools DZ':String(title||'Tools DZ'),text:message};try{if(navigator.share)await navigator.share(data);else if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(data.text);}catch(_){}};window.CalorieApp={formatNumber,getNumber,showError,clearError,validRange,shareResult,icon:n=>'<span aria-hidden="true">'+String(n||'•')+'</span>'};const year=byId('current-year');if(year)year.textContent=new Date().getFullYear();const toggle=document.querySelector('.mobile-menu-toggle'),nav=byId('main-nav');if(toggle&&nav)toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});const theme=byId('theme-toggle');if(theme){const saved=localStorage.getItem('tools-dz-theme');if(saved==='dark')document.documentElement.setAttribute('data-theme','dark');theme.addEventListener('click',()=>{const dark=document.documentElement.getAttribute('data-theme')!=='dark';document.documentElement.setAttribute('data-theme',dark?'dark':'light');localStorage.setItem('tools-dz-theme',dark?'dark':'light');theme.textContent=dark?'☀️':'🌙';});}})();
+/* Shared runtime for migrated health tools. */
+(() => {
+  'use strict';
+
+  const byId = id => document.getElementById(id);
+  const formatNumber = value => Number(value).toLocaleString('ar-DZ-u-nu-latn', { maximumFractionDigits: 2 });
+  const getNumber = id => {
+    const el = byId(id);
+    if (!el || el.value.trim() === '') return NaN;
+    return Number(el.value);
+  };
+  const showError = (id, message) => {
+    const el = byId(id);
+    if (el) { el.textContent = message; el.hidden = false; }
+  };
+  const clearError = id => {
+    const el = byId(id);
+    if (el) { el.textContent = ''; el.hidden = true; }
+  };
+  const validRange = (value, min, max) =>
+    Number.isFinite(Number(value)) && Number(value) >= min && Number(value) <= max;
+
+  const shareResult = async (title, text) => {
+    const singleArgument = text === undefined;
+    const message = singleArgument ? String(title || '') : String(text || '');
+    const payload = {
+      title: singleArgument ? 'Tools DZ' : String(title || 'Tools DZ'),
+      text: message
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(payload);
+        return true;
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(message);
+        return true;
+      }
+    } catch (_) {
+      return false;
+    }
+    return false;
+  };
+
+  window.CalorieApp = {
+    formatNumber, getNumber, showError, clearError, validRange, shareResult,
+    icon: value => '<span aria-hidden="true">' + String(value || '•') + '</span>'
+  };
+
+  // The migrated pages use .reveal, but unlike the source project they do not
+  // load its scroll-reveal controller. Never leave essential forms invisible.
+  document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+
+  // Provide a consistent report-sharing action on every calculator/screening.
+  const setupReportSharing = panel => {
+    if (panel.querySelector('[data-health-share]')) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn health-report-share';
+    button.dataset.healthShare = 'true';
+    button.textContent = 'مشاركة التقرير';
+    button.setAttribute('aria-label', 'مشاركة التقرير الصحي');
+    button.hidden = true;
+    panel.appendChild(button);
+
+    const resultNodes = () => [...panel.querySelectorAll('.result-content, [id$="-result"]')];
+    const hasResult = () => resultNodes().some(node => !node.hidden && node.textContent.trim().length > 0);
+    const updateButton = () => { button.hidden = !hasResult(); };
+    const observer = new MutationObserver(updateButton);
+    observer.observe(panel, { subtree: true, attributes: true, attributeFilter: ['hidden', 'class'] });
+    updateButton();
+
+    button.addEventListener('click', async () => {
+      const report = resultNodes()
+        .filter(node => !node.hidden)
+        .map(node => node.innerText || node.textContent || '')
+        .join('\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+      if (!report) return;
+      const original = button.textContent;
+      const shared = await shareResult('تقرير صحي من Tools DZ', report);
+      if (shared) {
+        button.textContent = navigator.share ? 'تم فتح المشاركة' : 'تم نسخ التقرير';
+        window.setTimeout(() => { button.textContent = original; }, 2200);
+      }
+    });
+  };
+  document.querySelectorAll('.result-panel').forEach(setupReportSharing);
+
+  const year = byId('current-year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = byId('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('is-open', open);
+    });
+  }
+
+  const theme = byId('theme-toggle');
+  if (theme) {
+    const saved = localStorage.getItem('tools-dz-theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    theme.addEventListener('click', () => {
+      const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      localStorage.setItem('tools-dz-theme', dark ? 'dark' : 'light');
+      theme.textContent = dark ? '☀️' : '🌙';
+    });
+  }
+})();
