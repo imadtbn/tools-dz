@@ -685,5 +685,446 @@
       "calorie-calculator"
     ],
     "dataSources": []
+  },
+  {
+    "id": "child-bmi-calculator",
+    "name": "حاسبة مؤشر كتلة الجسم للأطفال والمراهقين",
+    "description": "احسب مؤشر كتلة الجسم للأطفال والمراهقين وفق العمر والجنس مع مقارنة مرجعية توعوية.",
+    "category": "health",
+    "url": "/tools/child-bmi-calculator.html",
+    "icon": "<i class=\"fa-solid fa-child\"></i>",
+    "keywords": [
+      "مؤشر كتلة الجسم للأطفال",
+      "BMI للأطفال",
+      "نمو الطفل"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "child-bmi-calculator",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "ideal-weight-calculator",
+    "name": "حاسبة الوزن المرجعي حسب الطول",
+    "description": "اعرض نطاقًا تقديريًا للوزن المرجعي حسب الطول والجنس مع توضيح حدود المؤشر.",
+    "category": "health",
+    "url": "/tools/ideal-weight-calculator.html",
+    "icon": "<i class=\"fa-solid fa-weight-scale\"></i>",
+    "keywords": [
+      "الوزن المثالي",
+      "الوزن الصحي",
+      "الطول"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "ideal-weight-calculator",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "fertile-window",
+    "name": "حاسبة نافذة الخصوبة والإباضة",
+    "description": "تقدير نافذة الخصوبة وموعد الإباضة اعتمادًا على تاريخ الدورة وطولها المعتاد.",
+    "category": "health",
+    "url": "/tools/fertile-window.html",
+    "icon": "<i class=\"fa-solid fa-calendar-heart\"></i>",
+    "keywords": [
+      "الإباضة",
+      "الخصوبة",
+      "الدورة الشهرية"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "fertile-window",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "infant-growth-calculator",
+    "name": "متابعة نمو الرضع والطول",
+    "description": "قارن قياسات طول الرضيع ووزنه بمخططات نمو منظمة الصحة العالمية حسب العمر والجنس.",
+    "category": "health",
+    "url": "/tools/infant-growth-calculator.html",
+    "icon": "<i class=\"fa-solid fa-baby\"></i>",
+    "keywords": [
+      "نمو الرضع",
+      "طول الطفل",
+      "مخططات النمو"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "infant-growth-calculator",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "pregnancy-calorie-calculator",
+    "name": "تقدير احتياجات الطاقة أثناء الحمل",
+    "description": "تقدير توعوي لاحتياجات الطاقة خلال الحمل حسب الثلث وخط الأساس، دون اعتباره وصفة غذائية.",
+    "category": "health",
+    "url": "/tools/pregnancy-calorie-calculator.html",
+    "icon": "<i class=\"fa-solid fa-person-pregnant\"></i>",
+    "keywords": [
+      "سعرات الحمل",
+      "التغذية أثناء الحمل"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "pregnancy-calorie-calculator",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "pregnancy-due-date",
+    "name": "حاسبة موعد الولادة المتوقع",
+    "description": "احسب موعد الولادة المتوقع تقديريًا انطلاقًا من تاريخ آخر دورة شهرية.",
+    "category": "health",
+    "url": "/tools/pregnancy-due-date.html",
+    "icon": "<i class=\"fa-solid fa-calendar-days\"></i>",
+    "keywords": [
+      "موعد الولادة",
+      "الحمل",
+      "آخر دورة"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "pregnancy-due-date",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "water-calculator",
+    "name": "حاسبة الاحتياج اليومي التقريبي للماء",
+    "description": "قدّر احتياج السوائل اليومي بصورة عامة حسب الوزن والنشاط مع تنبيهات للحالات التي تتطلب توجيهًا طبيًا.",
+    "category": "health",
+    "url": "/tools/water-calculator.html",
+    "icon": "<i class=\"fa-solid fa-droplet\"></i>",
+    "keywords": [
+      "شرب الماء",
+      "الترطيب",
+      "كمية الماء"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "water-calculator",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "anxiety-screening",
+    "name": "استبيان القلق التوعوي",
+    "description": "استبيان ذاتي مبسط لاستكشاف مؤشرات القلق خلال الفترة الأخيرة؛ لا يقدم تشخيصًا نفسيًا.",
+    "category": "health",
+    "url": "/tools/anxiety-screening.html",
+    "icon": "<i class=\"fa-solid fa-brain\"></i>",
+    "keywords": [
+      "القلق",
+      "الصحة النفسية",
+      "استبيان القلق"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "anxiety-screening",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "asthma-control",
+    "name": "تقييم توعوي للتحكم بالربو",
+    "description": "أسئلة توعوية لمراجعة مؤشرات التحكم بالربو، ولا تغني عن متابعة الطبيب أو خطة العلاج.",
+    "category": "health",
+    "url": "/tools/asthma-control.html",
+    "icon": "<i class=\"fa-solid fa-lungs\"></i>",
+    "keywords": [
+      "الربو",
+      "التنفس",
+      "التحكم بالربو"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "asthma-control",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "depression-screening",
+    "name": "استبيان المزاج والصحة النفسية",
+    "description": "استبيان توعوي لمراجعة مؤشرات المزاج خلال الفترة الأخيرة، وليس أداة تشخيص.",
+    "category": "health",
+    "url": "/tools/depression-screening.html",
+    "icon": "<i class=\"fa-solid fa-heart\"></i>",
+    "keywords": [
+      "المزاج",
+      "الاكتئاب",
+      "الصحة النفسية"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "depression-screening",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "diabetes-awareness",
+    "name": "قائمة التوعية اليومية بالسكري",
+    "description": "قائمة مساعدة لتنظيم العادات والمتابعة اليومية المرتبطة بالتوعية بمرض السكري.",
+    "category": "health",
+    "url": "/tools/diabetes-awareness.html",
+    "icon": "<i class=\"fa-solid fa-droplet\"></i>",
+    "keywords": [
+      "السكري",
+      "التوعية بالسكري",
+      "متابعة يومية"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "diabetes-awareness",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "eating-awareness",
+    "name": "تقييم الوعي بعادات الأكل",
+    "description": "أسئلة توعوية للتفكير في أنماط الأكل والعلاقة بالطعام دون إصدار تشخيص.",
+    "category": "health",
+    "url": "/tools/eating-awareness.html",
+    "icon": "<i class=\"fa-solid fa-utensils\"></i>",
+    "keywords": [
+      "عادات الأكل",
+      "التغذية",
+      "الوعي الغذائي"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "eating-awareness",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "sleep-assessment",
+    "name": "تقييم عادات النوم",
+    "description": "تقييم توعوي لعادات النوم وجودته مع إرشادات عامة لتحسين روتين النوم.",
+    "category": "health",
+    "url": "/tools/sleep-assessment.html",
+    "icon": "<i class=\"fa-solid fa-moon\"></i>",
+    "keywords": [
+      "النوم",
+      "الأرق",
+      "جودة النوم"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "sleep-assessment",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "visual-acuity-screening",
+    "name": "اختبار حدة البصر التقريبي",
+    "description": "اختبار منزلي تقريبي للتوعية بحدة البصر، ولا يعوض فحص النظر لدى المختص.",
+    "category": "health",
+    "url": "/tools/visual-acuity-screening.html",
+    "icon": "<i class=\"fa-solid fa-eye\"></i>",
+    "keywords": [
+      "حدة البصر",
+      "اختبار النظر",
+      "العين"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "visual-acuity-screening",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "pilgrim-health-checklist",
+    "name": "قائمة الاستعداد الصحي للحج",
+    "description": "قائمة تنظيمية لمراجعة الاستعداد الصحي قبل الحج مع تذكير بالرجوع إلى الإرشادات الطبية الرسمية.",
+    "category": "health",
+    "url": "/tools/pilgrim-health-checklist.html",
+    "icon": "<i class=\"fa-solid fa-kaaba\"></i>",
+    "keywords": [
+      "صحة الحاج",
+      "الحج",
+      "الاستعداد الصحي"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "pilgrim-health-checklist",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "prediabetes-risk",
+    "name": "تقييم عوامل خطر ما قبل السكري",
+    "description": "استبيان توعوي لمراجعة بعض عوامل خطر ما قبل السكري، ولا يثبت الإصابة أو ينفيها.",
+    "category": "health",
+    "url": "/tools/prediabetes-risk.html",
+    "icon": "<i class=\"fa-solid fa-heart-pulse\"></i>",
+    "keywords": [
+      "ما قبل السكري",
+      "مقاومة الإنسولين",
+      "عوامل الخطر"
+    ],
+    "featured": false,
+    "new": true,
+    "slug": "prediabetes-risk",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
+  },
+  {
+    "id": "health-tools-directory",
+    "name": "دليل الأدوات الصحية",
+    "description": "استعرض الحاسبات والأدوات الصحية والتوعوية المتاحة في Tools DZ.",
+    "category": "health",
+    "url": "/tools/health-tools.html",
+    "icon": "<i class=\"fa-solid fa-heart-pulse\"></i>",
+    "keywords": [
+      "الأدوات الصحية",
+      "الصحة والأسرة",
+      "حاسبات طبية"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "health-tools",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "calorie-calculator",
+      "vaccine-tracker"
+    ],
+    "dataSources": []
   }
 ]

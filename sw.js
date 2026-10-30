@@ -1,4 +1,4 @@
-const VERSION = 'v31';
+const VERSION = 'v32';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
@@ -18,7 +18,29 @@ const PRECACHE = [
     './assets/js/tools.js', './assets/js/favorites.js', './assets/js/procedures.js',
     './data/tools.json', './data/categories.json', './data/procedures/procedures.json',
     './tools/hijri-calendar.html', './tools/number-to-words.html', './tools/inventory-manager.html', './tools/admin-procedures-assistant.html', './tools/budget-manager.html', './tools/vaccine-tracker.html', './tools/currency-converter.html', './tools/unit-converter.html', './tools/farm-planner.html', './tools/calorie-calculator.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
-    './pages/procedures.html'
+    './pages/procedures.html',
+    './assets/css/health-tools.css',
+    './assets/js/health-runtime.js',
+    './assets/js/health-calculators.js',
+    './data/cdc-bmi-for-age.json',
+    './data/who-infant-growth.json',
+    './tools/health-tools.html',
+    './tools/child-bmi-calculator.html',
+    './tools/ideal-weight-calculator.html',
+    './tools/fertile-window.html',
+    './tools/infant-growth-calculator.html',
+    './tools/pregnancy-calorie-calculator.html',
+    './tools/pregnancy-due-date.html',
+    './tools/water-calculator.html',
+    './tools/anxiety-screening.html',
+    './tools/asthma-control.html',
+    './tools/depression-screening.html',
+    './tools/diabetes-awareness.html',
+    './tools/eating-awareness.html',
+    './tools/sleep-assessment.html',
+    './tools/visual-acuity-screening.html',
+    './tools/pilgrim-health-checklist.html',
+    './tools/prediabetes-risk.html'
 ];
 
 self.addEventListener('install', event => {
