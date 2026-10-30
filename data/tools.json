@@ -624,5 +624,35 @@
       "age-calculator"
     ],
     "dataSources": []
+  },
+  {
+    "id": "exam-study-planner",
+    "name": "مخطط المراجعة الذكي للبكالوريا والبيام",
+    "description": "وزّع المواد وساعات المراجعة على الأيام حسب الصعوبة والأولوية، وتابع الإنجاز وأعد جدولة الحصص المتأخرة واطبع برنامجك.",
+    "category": "students",
+    "url": "/tools/exam-study-planner.html",
+    "icon": "<i class=\"fa-solid fa-graduation-cap\"></i>",
+    "keywords": [
+      "مخطط المراجعة",
+      "جدول مراجعة البكالوريا",
+      "البيام",
+      "BEM",
+      "BAC",
+      "تنظيم الدراسة",
+      "مراجعة يومية",
+      "جدول المراجعة"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "exam-study-planner",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-30",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "cv-builder"
+    ],
+    "dataSources": []
   }
 ]
