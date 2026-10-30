@@ -1649,3 +1649,31 @@ details p { color: var(--ink-soft); padding: 0 0 18px; margin: 0; font-size: .9r
   .site-header .language-current,
   .site-header .language-chevron { display: none; }
 }
+
+
+/* Health report action: visible, touch-friendly, and consistent across tools. */
+.health-report-share {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 18px;
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 13px;
+  background: rgba(255,255,255,.13);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.health-report-share:hover {
+  background: rgba(255,255,255,.23);
+  transform: translateY(-1px);
+}
+.health-report-share:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+.health-report-share[hidden] { display: none !important; }
