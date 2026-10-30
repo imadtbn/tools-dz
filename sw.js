@@ -1,4 +1,4 @@
-const VERSION = 'v30';
+const VERSION = 'v31';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
@@ -13,7 +13,7 @@ const PRECACHE = [
     './assets/css/vaccine-tracker.css', './assets/js/vaccine-tracker.js',
     './assets/css/number-to-words.css', './assets/js/number-to-words.js',
     './assets/css/inventory-manager.css', './assets/js/inventory-manager.js',
-    './assets/css/exam-study-planner.css', './assets/js/exam-study-planner.js', './tools/exam-study-planner.html', './assets/css/admin-procedures-assistant.css', './assets/js/admin-procedures-assistant.js', './assets/css/hijri-calendar.css', './assets/js/hijri-calendar.js', './data/procedures/admin-procedures.json', './data/medical/vaccines/algeria.json',
+    './assets/css/meal-planner.css', './assets/js/meal-planner.js', './tools/meal-planner.html', './assets/css/exam-study-planner.css', './assets/js/exam-study-planner.js', './tools/exam-study-planner.html', './assets/css/admin-procedures-assistant.css', './assets/js/admin-procedures-assistant.js', './assets/css/hijri-calendar.css', './assets/js/hijri-calendar.js', './data/procedures/admin-procedures.json', './data/medical/vaccines/algeria.json',
     './assets/js/app.js', './assets/js/theme.js', './assets/js/search.js',
     './assets/js/tools.js', './assets/js/favorites.js', './assets/js/procedures.js',
     './data/tools.json', './data/categories.json', './data/procedures/procedures.json',
