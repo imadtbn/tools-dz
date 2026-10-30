@@ -725,7 +725,7 @@
       "الطول"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "ideal-weight-calculator",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -751,7 +751,7 @@
       "الدورة الشهرية"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "fertile-window",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -802,7 +802,7 @@
       "التغذية أثناء الحمل"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "pregnancy-calorie-calculator",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -828,7 +828,7 @@
       "آخر دورة"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "pregnancy-due-date",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -880,7 +880,7 @@
       "استبيان القلق"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "anxiety-screening",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -906,7 +906,7 @@
       "التحكم بالربو"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "asthma-control",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -932,7 +932,7 @@
       "الصحة النفسية"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "depression-screening",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -958,7 +958,7 @@
       "متابعة يومية"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "diabetes-awareness",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -984,7 +984,7 @@
       "الوعي الغذائي"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "eating-awareness",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -1010,7 +1010,7 @@
       "جودة النوم"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "sleep-assessment",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -1036,7 +1036,7 @@
       "العين"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "visual-acuity-screening",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -1062,7 +1062,7 @@
       "الاستعداد الصحي"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "pilgrim-health-checklist",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
@@ -1088,7 +1088,7 @@
       "عوامل الخطر"
     ],
     "featured": false,
-    "new": true,
+    "new": false,
     "slug": "prediabetes-risk",
     "version": "1.0.0",
     "updatedAt": "2026-10-31",
