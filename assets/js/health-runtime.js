@@ -123,13 +123,14 @@
 
   const theme = byId('theme-toggle');
   if (theme) {
-    const saved = localStorage.getItem('tools-dz-theme');
+    let saved = null;
+    try { saved = localStorage.getItem('tools-dz-theme'); } catch (_) { /* Storage may be unavailable in restricted browsers. */ }
     if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
     theme.textContent = saved === 'dark' ? '☀️' : '🌙';
     theme.addEventListener('click', () => {
       const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      localStorage.setItem('tools-dz-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('tools-dz-theme', dark ? 'dark' : 'light'); } catch (_) { /* Keep theme usable without persistence. */ }
       theme.textContent = dark ? '☀️' : '🌙';
     });
   }
