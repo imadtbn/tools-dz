@@ -133,3 +133,15 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Shared health directory overflow and advertisement safeguards. */
+html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+.health-tools-page, .health-tools-page > *, .health-directory-section,
+.health-directory-section > *, #main-footer, #main-footer .container { min-width: 0; max-width: 100%; }
+.health-tools-page .catalog-hero { overflow-wrap: anywhere; }
+.health-top-ad { width: min(100%, 1232px); max-width: 100%; margin: 14px auto 8px; padding-inline: clamp(8px, 2.5vw, 16px); }
+.health-top-ad .ads-box, .health-top-ad ins.adsbygoogle { width: 100%; max-width: 100%; min-width: 0; overflow: clip; }
+@media (max-width: 600px) {
+  .health-tools-page { width: calc(100% - 1rem); }
+  .health-top-ad { padding-inline: 6px; }
+}
