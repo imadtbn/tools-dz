@@ -11,11 +11,11 @@
   };
   const showError = (id, message) => {
     const el = byId(id);
-    if (el) { el.textContent = message; el.hidden = false; }
+    if (el) { el.textContent = message; el.hidden = false; el.classList.add('show'); }
   };
   const clearError = id => {
     const el = byId(id);
-    if (el) { el.textContent = ''; el.hidden = true; }
+    if (el) { el.textContent = ''; el.hidden = true; el.classList.remove('show'); }
   };
   const validRange = (value, min, max) =>
     Number.isFinite(Number(value)) && Number(value) >= min && Number(value) <= max;
@@ -97,7 +97,27 @@
     toggle.addEventListener('click', () => {
       const open = toggle.getAttribute('aria-expanded') !== 'true';
       toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('active', open);
       nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+    });
+  }
+
+  if (toggle && nav) {
+    nav.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        nav.classList.remove('active', 'is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'فتح القائمة');
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && nav.classList.contains('active')) {
+        nav.classList.remove('active', 'is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'فتح القائمة');
+        toggle.focus();
+      }
     });
   }
 
@@ -105,6 +125,7 @@
   if (theme) {
     const saved = localStorage.getItem('tools-dz-theme');
     if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    theme.textContent = saved === 'dark' ? '☀️' : '🌙';
     theme.addEventListener('click', () => {
       const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
