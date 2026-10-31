@@ -210,7 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const hero = document.querySelector('main .tool-hero, main .hero-section, main .home-hero, main .page-hero, main .farm-hero, main .catalog-hero, main .hero');
         if (hero) {
-            hero.insertAdjacentElement('afterend', wrapper);
+            const topAd = hero.nextElementSibling?.classList.contains('health-top-ad')
+                ? hero.nextElementSibling
+                : null;
+            (topAd || hero).insertAdjacentElement('afterend', wrapper);
         } else {
             const main = document.querySelector('main');
             const header = document.getElementById('main-header');
