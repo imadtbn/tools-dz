@@ -1677,3 +1677,12 @@ details p { color: var(--ink-soft); padding: 0 0 18px; margin: 0; font-size: .9r
   outline-offset: 3px;
 }
 .health-report-share[hidden] { display: none !important; }
+
+
+/* Fail-safe: health tool forms and content must remain readable even if an observer script fails. */
+.reveal,
+.reveal.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
