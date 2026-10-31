@@ -65,7 +65,12 @@
 
     const resultNodes = () => [...panel.querySelectorAll('.result-content, [id$="-result"]')];
     const hasResult = () => resultNodes().some(node => !node.hidden && node.textContent.trim().length > 0);
-    const updateButton = () => { button.hidden = !hasResult(); };
+    const updateButton = () => {
+      const shouldHide = !hasResult();
+      // Avoid mutating the observed subtree when the state has not changed.
+      // Re-writing the same hidden attribute can retrigger MutationObserver indefinitely.
+      if (button.hidden !== shouldHide) button.hidden = shouldHide;
+    };
     const observer = new MutationObserver(updateButton);
     observer.observe(panel, { subtree: true, attributes: true, attributeFilter: ['hidden', 'class'] });
     updateButton();
