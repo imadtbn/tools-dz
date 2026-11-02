@@ -44,8 +44,8 @@
 .qibla-north-pointer{transform:rotate(0deg)}
 .qibla-north-pointer span{position:absolute;top:0;left:calc(50% - 2px);width:4px;height:15%;background:#6d8792;border-radius:4px}
 .qibla-needle{transform:rotate(0deg)}
-.qibla-needle-tip{position:absolute;left:calc(50% - 8px);top:7%;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:43% solid #d6a33b;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
-.qibla-needle-tail{position:absolute;left:calc(50% - 6px);bottom:8%;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:31% solid #8e9b92}
+.qibla-needle-tip{position:absolute;left:calc(50% - 8px);top:7%;width:16px;height:43%;background:#d6a33b;clip-path:polygon(50% 0,100% 100%,0 100%);filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
+.qibla-needle-tail{position:absolute;left:calc(50% - 6px);bottom:8%;width:12px;height:31%;background:#8e9b92;clip-path:polygon(0 0,100% 0,50% 100%)}
 .qibla-compass-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--surface-color);border:2px solid var(--primary-color);color:var(--primary-color);box-shadow:0 2px 8px rgba(0,0,0,.12);font-size:1.15rem}
 .qibla-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
 .qibla-metric{padding:.8rem .6rem;border-radius:12px;background:var(--bg-color);text-align:center;min-width:0}
