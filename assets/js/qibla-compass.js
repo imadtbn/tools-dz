@@ -27,6 +27,7 @@
     $('qibla-location-summary').innerHTML = '<i class="fa-solid fa-location-dot" aria-hidden="true"></i><span></span>';
     $('qibla-location-summary').querySelector('span').textContent = state.name + ' — اتجاه القبلة ' + format(state.bearing,1) + '° من الشمال الحقيقي (' + directionName(state.bearing) + ').';
     $('qibla-heading-value').textContent = state.heading === null ? 'غير متاح' : format(state.heading,0) + '°';
+    $('qibla-dial').style.transform = 'rotate(' + (-(state.heading ?? 0)) + 'deg)';
     $('qibla-needle').style.transform = 'rotate(' + (state.bearing - (state.heading ?? 0)) + 'deg)';
     $('qibla-north-pointer').style.transform = 'rotate(' + (-(state.heading ?? 0)) + 'deg)';
     $('qibla-compass').setAttribute('aria-label', 'اتجاه القبلة ' + format(state.bearing,1) + ' درجة من الشمال الحقيقي' + (state.heading === null ? '' : '، اتجاه الهاتف ' + format(state.heading,0) + ' درجة'));
