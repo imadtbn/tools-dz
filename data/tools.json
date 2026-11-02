@@ -1126,5 +1126,43 @@
       "vaccine-tracker"
     ],
     "dataSources": []
+  },
+  {
+    "id": "qibla-compass",
+    "name": "بوصلة القبلة وتحديد الشمال",
+    "description": "حدد اتجاه القبلة من موقعك الحالي أو ابحث عن اسم المدينة، مع بوصلة تفاعلية وحساب زاوية القبلة والمسافة إلى الكعبة.",
+    "category": "daily-life",
+    "url": "/tools/qibla-compass.html",
+    "icon": "<i class=\"fa-solid fa-compass\"></i>",
+    "keywords": [
+      "القبلة",
+      "تحديد القبلة",
+      "بوصلة",
+      "الشمال",
+      "اتجاه الصلاة",
+      "qibla",
+      "compass",
+      "مكة"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "qibla-compass",
+    "version": "1.0.0",
+    "updatedAt": "2026-11-02",
+    "status": "active",
+    "offlineReady": false,
+    "requiresNetwork": true,
+    "relatedTools": [
+      "hijri-calendar",
+      "meal-planner",
+      "health-tools"
+    ],
+    "dataSources": [
+      {
+        "name": "Open-Meteo Geocoding API",
+        "url": "https://open-meteo.com/en/docs/geocoding-api",
+        "lastVerified": "2026-11-02"
+      }
+    ]
   }
 ]
