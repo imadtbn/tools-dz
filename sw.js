@@ -1,9 +1,10 @@
-const VERSION = 'v42';
+const VERSION = 'v43';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
 
 const PRECACHE = [
+    './tools/qibla-compass.html', './assets/css/qibla-compass.css', './assets/js/qibla-compass.js',
     './', './index.html', OFFLINE_URL, './404.html', './manifest.webmanifest',
     './assets/css/main.css', './assets/css/responsive.css', './assets/css/tools.css', './assets/css/tool-hero.css',
     './assets/css/calorie-calculator.css', './assets/js/calorie-calculator.js',
