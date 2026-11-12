@@ -1154,8 +1154,7 @@
     "requiresNetwork": true,
     "relatedTools": [
       "hijri-calendar",
-      "meal-planner",
-      "health-tools"
+      "meal-planner"
     ],
     "dataSources": [
       {
@@ -1191,7 +1190,7 @@
     "requiresNetwork": false,
     "relatedTools": [
       "vaccine-tracker",
-      "health-tools"
+      "child-bmi-calculator"
     ],
     "dataSources": []
   }
