@@ -1154,8 +1154,7 @@
     "requiresNetwork": true,
     "relatedTools": [
       "hijri-calendar",
-      "meal-planner",
-      "health-tools"
+      "meal-planner"
     ],
     "dataSources": [
       {
@@ -1164,5 +1163,35 @@
         "lastVerified": "2026-11-02"
       }
     ]
+  },
+  {
+    "id": "medication-tracker",
+    "name": "متابعتي للأدوية",
+    "description": "نظّم علاجات أفراد العائلة وتابع مواعيد الجرعات والجرعات الفائتة مع تقارير ونسخ احتياطية محلية.",
+    "category": "health",
+    "url": "/tools/medication-tracker.html",
+    "icon": "<i class=\"fa-solid fa-pills\"></i>",
+    "keywords": [
+      "الأدوية",
+      "متابعة الأدوية",
+      "مواعيد الدواء",
+      "الجرعات",
+      "العلاج",
+      "medication tracker",
+      "medicine reminder"
+    ],
+    "featured": true,
+    "new": true,
+    "slug": "medication-tracker",
+    "version": "1.0.0",
+    "updatedAt": "2026-11-12",
+    "status": "active",
+    "offlineReady": true,
+    "requiresNetwork": false,
+    "relatedTools": [
+      "vaccine-tracker",
+      "child-bmi-calculator"
+    ],
+    "dataSources": []
   }
 ]

@@ -1,9 +1,10 @@
-const VERSION = 'v43';
+const VERSION = 'v44';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
 
 const PRECACHE = [
+    './tools/medication-tracker.html', './assets/css/medication-tracker.css', './assets/js/medication-tracker.js',
     './tools/qibla-compass.html', './assets/css/qibla-compass.css', './assets/js/qibla-compass.js',
     './', './index.html', OFFLINE_URL, './404.html', './manifest.webmanifest',
     './assets/css/main.css', './assets/css/responsive.css', './assets/css/tools.css', './assets/css/tool-hero.css',
