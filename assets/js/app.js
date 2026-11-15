@@ -354,8 +354,19 @@ document.addEventListener('DOMContentLoaded', () => {
             'tools.html': 'fa-screwdriver-wrench',
             'categories.html': 'fa-layer-group',
             'procedures.html': 'fa-landmark',
-            'favorites.html': 'fa-heart'
+            'favorites.html': 'fa-heart',
+            'sitemap.html': 'fa-sitemap'
         };
+
+        const footerList = footer.querySelector('.footer-links ul');
+        if (footerList && !footerList.querySelector('a[href*="sitemap.html"]')) {
+            const item = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = resolveUrl('/pages/sitemap.html');
+            link.textContent = 'خريطة الموقع';
+            item.appendChild(link);
+            footerList.appendChild(item);
+        }
 
         footer.querySelectorAll('.footer-links a[href]').forEach(link => {
             const url = new URL(link.getAttribute('href'), document.baseURI);
