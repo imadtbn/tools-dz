@@ -1,4 +1,4 @@
-const VERSION = 'v45';
+const VERSION = 'v46';
 const STATIC_CACHE = `tools-dz-static-${VERSION}`;
 const RUNTIME_CACHE = `tools-dz-runtime-${VERSION}`;
 const OFFLINE_URL = './offline.html';
@@ -20,7 +20,7 @@ const PRECACHE = [
     './assets/js/tools.js', './assets/js/favorites.js', './assets/js/procedures.js',
     './data/tools.json', './data/categories.json', './data/procedures/procedures.json',
     './tools/hijri-calendar.html', './tools/number-to-words.html', './tools/inventory-manager.html', './tools/admin-procedures-assistant.html', './tools/budget-manager.html', './tools/vaccine-tracker.html', './tools/currency-converter.html', './tools/unit-converter.html', './tools/farm-planner.html', './tools/calorie-calculator.html', './pages/tools.html', './pages/categories.html', './pages/favorites.html',
-    './pages/procedures.html',
+    './pages/procedures.html', './pages/sitemap.html',
     './assets/css/health-tools.css', './assets/css/health-directory.css',
     './assets/js/health-runtime.js',
     './assets/js/health-calculators.js',
