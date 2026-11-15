@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة الموقع | Tools DZ - دليل جميع الصفحات والأدوات</title>
+    <meta name="description" content="تصفح خريطة موقع Tools DZ للوصول السريع إلى جميع الأدوات الرقمية والتصنيفات والخدمات والصفحات التعريفية.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#4caf50">
+    <link rel="canonical" href="https://imadtbn.github.io/tools-dz/pages/sitemap.html">
+    <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/tools-dz/pages/sitemap.html">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/tool-hero.css">
+    <style>
+        .sitemap-page { padding-top: 1.5rem; padding-bottom: 3rem; }
+        .sitemap-intro { margin-bottom: 1.5rem; }
+        .sitemap-summary { display:flex; flex-wrap:wrap; gap:.65rem; margin:1rem 0 1.5rem; }
+        .sitemap-stat { display:inline-flex; align-items:center; gap:.45rem; padding:.55rem .85rem; border:1px solid var(--border-color); border-radius:999px; background:var(--surface-color); color:var(--text-muted); font-size:.9rem; }
+        .sitemap-stat strong { color:var(--primary-color); font-variant-numeric:tabular-nums; }
+        .sitemap-group { margin:1.25rem 0; padding:clamp(1rem,3vw,1.5rem); border:1px solid var(--border-color); border-radius:var(--border-radius); background:var(--surface-color); box-shadow:var(--box-shadow); }
+        .sitemap-group h2 { display:flex; align-items:center; gap:.65rem; margin:0 0 1rem; color:var(--text-color); font-size:1.2rem; }
+        .sitemap-group h2 i { color:var(--primary-color); }
+        .sitemap-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:.55rem; }
+        .sitemap-list a { display:flex; align-items:center; gap:.55rem; min-width:0; padding:.7rem .8rem; border:1px solid transparent; border-radius:10px; background:var(--bg-color); color:var(--text-color); overflow-wrap:anywhere; transition:var(--transition); }
+        .sitemap-list a:hover, .sitemap-list a:focus-visible { border-color:var(--primary-color); color:var(--primary-color); transform:translateY(-1px); }
+        .sitemap-list a i { flex:0 0 auto; color:var(--primary-color); }
+        .sitemap-loading, .sitemap-error { padding:1.25rem; text-align:center; color:var(--text-muted); }
+        .sitemap-error { color:var(--error-color); }
+        @media(max-width:480px) { .sitemap-list { grid-template-columns:minmax(0,1fr); } }
+    </style>
+</head>
+<body>
+<header id="main-header">
+    <div class="container">
+        <div class="logo"><a href="../index.html" class="logo-link" aria-label="Tools DZ - الصفحة الرئيسية"><span class="logo-copy"><span class="logo-title">Tools DZ</span><span class="logo-subtitle">منصة الأدوات الجزائرية</span></span></a></div>
+        <nav id="main-nav" aria-label="التنقل الرئيسي">
+            <ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="tools.html">جميع الأدوات</a></li>
+                <li><a href="categories.html">التصنيفات</a></li>
+                <li><a href="procedures.html">منصات وخدمات رقمية</a></li>
+                <li><a href="favorites.html">المفضلة</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="mobile-menu-toggle" aria-label="فتح القائمة" aria-controls="main-nav" aria-expanded="false">☰</button>
+        <div class="header-actions"><button id="theme-toggle" type="button" aria-label="تغيير المظهر" title="تغيير المظهر">🌙</button></div>
+    </div>
+</header>
+<main class="container sitemap-page">
+    <section class="tool-hero catalog-hero sitemap-intro" aria-labelledby="sitemap-title">
+        <span class="tool-hero-badge"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> دليل التصفح</span>
+        <h1 id="sitemap-title">خريطة الموقع</h1>
+        <p>جميع صفحات وأدوات Tools DZ في مكان واحد، للوصول السريع إلى ما تبحث عنه.</p>
+        <nav class="tool-breadcrumb" aria-label="مسار التنقل">
+            <a href="../index.html">الرئيسية</a>
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            <span aria-current="page">خريطة الموقع</span>
+        </nav>
+    </section>
+    <div class="sitemap-summary" id="sitemap-summary" aria-live="polite"><span class="sitemap-stat"><i class="fa-solid fa-spinner fa-spin"></i> جارٍ تحميل الصفحات</span></div>
+    <div id="sitemap-content" aria-live="polite"><p class="sitemap-loading">يتم تجهيز خريطة الموقع...</p></div>
+</main>
+<footer id="main-footer">
+    <div class="container">
+        <div class="footer-info">
+            <h4 style="color:#4caf50;">Tools DZ</h4>
+            <p>منصة أدوات رقمية تساعد المستخدم الجزائري في الحساب والتحويل وإنجاز المهام اليومية والعمل والدراسة.</p>
+        </div>
+        <div class="footer-links"><ul>
+            <li><a href="about.html">حول المنصة</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a href="terms.html">شروط الاستخدام</a></li>
+            <li><a href="disclaimer.html">إخلاء المسؤولية</a></li>
+        </ul></div>
+        <div class="footer-copyright"><p>&copy; <span id="current-year"></span> Tools DZ. جميع الحقوق محفوظة.</p></div>
+    </div>
+</footer>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script>
+(() => {
+    const BASE = 'https://imadtbn.github.io/tools-dz';
+    const content = document.getElementById('sitemap-content');
+    const summary = document.getElementById('sitemap-summary');
+    const staticPages = {
+        '/': 'الرئيسية',
+        '/pages/tools.html': 'جميع الأدوات',
+        '/pages/categories.html': 'التصنيفات',
+        '/pages/procedures.html': 'منصات وخدمات رقمية',
+        '/pages/about.html': 'حول المنصة',
+        '/pages/contact.html': 'اتصل بنا',
+        '/pages/privacy.html': 'سياسة الخصوصية',
+        '/pages/terms.html': 'شروط الاستخدام',
+        '/pages/disclaimer.html': 'إخلاء المسؤولية',
+        '/pages/favorites.html': 'المفضلة',
+        '/pages/sitemap.html': 'خريطة الموقع',
+        '/tools/health-tools.html': 'الأدوات الصحية'
+    };
+    const groups = [
+        { key: 'main', title: 'الصفحات الرئيسية والتعريفية', icon: 'fa-compass', match: path => path === '/' || path.startsWith('/pages/') },
+        { key: 'tools', title: 'الأدوات والحاسبات الرقمية', icon: 'fa-screwdriver-wrench', match: path => path.startsWith('/tools/') && path !== '/tools/health-tools.html' },
+        { key: 'health', title: 'الأدوات الصحية', icon: 'fa-heart-pulse', match: path => path === '/tools/health-tools.html' || /-(calculator|screening|assessment|control|risk|checklist|growth|window|date)$/.test(path.split('/').pop().replace('.html','')) && path.startsWith('/tools/') }
+    ];
+    const slugTitle = path => path.split('/').pop().replace(/\.html$/i,'').split('-').map(word => word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
+    const safe = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    const iconFor = path => path.startsWith('/tools/') ? 'fa-toolbox' : 'fa-file-lines';
+    function render(urls, tools) {
+        const toolNames = new Map((tools || []).map(tool => [new URL(tool.url, BASE).pathname, tool.name]));
+        const unique = [...new Set(urls)].filter(path => staticPages[path] || path.startsWith('/tools/'));
+        const buckets = groups.map(group => ({...group, items: unique.filter(group.match)})).filter(group => group.items.length);
+        summary.innerHTML = '<span class="sitemap-stat"><i class="fa-solid fa-list-check"></i> إجمالي الصفحات: <strong>' + unique.length + '</strong></span><span class="sitemap-stat"><i class="fa-solid fa-toolbox"></i> الأدوات: <strong>' + unique.filter(path => path.startsWith('/tools/')).length + '</strong></span>';
+        content.innerHTML = buckets.map(group => '<section class="sitemap-group" aria-labelledby="group-' + group.key + '"><h2 id="group-' + group.key + '"><i class="fa-solid ' + group.icon + '" aria-hidden="true"></i>' + group.title + '<span class="sitemap-stat">' + group.items.length + '</span></h2><ul class="sitemap-list">' + group.items.map(path => {
+            const label = staticPages[path] || toolNames.get(path) || slugTitle(path);
+            const href = path === '/' ? '../index.html' : '../' + path.replace(/^\//,'');
+            return '<li><a href="' + safe(href) + '"><i class="fa-solid ' + iconFor(path) + '" aria-hidden="true"></i><span>' + safe(label) + '</span></a></li>';
+        }).join('') + '</ul></section>').join('');
+    }
+    Promise.all([
+        fetch('../sitemap.xml', {cache:'no-cache'}).then(response => { if (!response.ok) throw new Error('sitemap'); return response.text(); }),
+        fetch('../data/tools.json').then(response => response.ok ? response.json() : [])
+    ]).then(([xml, tools]) => {
+        const documentXml = new DOMParser().parseFromString(xml, 'application/xml');
+        if (documentXml.querySelector('parsererror')) throw new Error('invalid sitemap');
+        const urls = [...documentXml.querySelectorAll('url loc')].map(node => new URL(node.textContent.trim()).pathname);
+        render(urls, tools);
+    }).catch(() => {
+        content.innerHTML = '<p class="sitemap-error">تعذر تحميل خريطة الصفحات حاليًا. يمكنك المحاولة مجددًا بعد تحديث الصفحة.</p>';
+        summary.innerHTML = '';
+    });
+})();
+</script>
+</body>
+</html>
