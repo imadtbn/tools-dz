@@ -204,4 +204,4 @@
     <loc>https://imadtbn.github.io/tools-dz/tools/medication-tracker.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
+  <url>\n    <loc>https://imadtbn.github.io/tools-dz/pages/sitemap.html</loc>\n    <priority>0.7</priority>\n  </url>\n</urlset>
