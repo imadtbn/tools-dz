@@ -101,16 +101,18 @@
         '/pages/sitemap.html': 'خريطة الموقع',
         '/tools/health-tools.html': 'الأدوات الصحية'
     };
+    let healthPaths = new Set();
     const groups = [
         { key: 'main', title: 'الصفحات الرئيسية والتعريفية', icon: 'fa-compass', match: path => path === '/' || path.startsWith('/pages/') },
-        { key: 'tools', title: 'الأدوات والحاسبات الرقمية', icon: 'fa-screwdriver-wrench', match: path => path.startsWith('/tools/') && path !== '/tools/health-tools.html' },
-        { key: 'health', title: 'الأدوات الصحية', icon: 'fa-heart-pulse', match: path => path === '/tools/health-tools.html' || /-(calculator|screening|assessment|control|risk|checklist|growth|window|date)$/.test(path.split('/').pop().replace('.html','')) && path.startsWith('/tools/') }
+        { key: 'tools', title: 'الأدوات والحاسبات الرقمية', icon: 'fa-screwdriver-wrench', match: path => path.startsWith('/tools/') && !healthPaths.has(path) && path !== '/tools/health-tools.html' },
+        { key: 'health', title: 'الأدوات الصحية', icon: 'fa-heart-pulse', match: path => path === '/tools/health-tools.html' || healthPaths.has(path) }
     ];
     const slugTitle = path => path.split('/').pop().replace(/\.html$/i,'').split('-').map(word => word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
     const safe = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
     const iconFor = path => path.startsWith('/tools/') ? 'fa-toolbox' : 'fa-file-lines';
     function render(urls, tools) {
         const toolNames = new Map((tools || []).map(tool => [new URL(tool.url, BASE).pathname, tool.name]));
+        healthPaths = new Set((tools || []).filter(tool => tool.category === 'health').map(tool => new URL(tool.url, BASE).pathname));
         const unique = [...new Set(urls)].filter(path => staticPages[path] || path.startsWith('/tools/'));
         const buckets = groups.map(group => ({...group, items: unique.filter(group.match)})).filter(group => group.items.length);
         summary.innerHTML = '<span class="sitemap-stat"><i class="fa-solid fa-list-check"></i> إجمالي الصفحات: <strong>' + unique.length + '</strong></span><span class="sitemap-stat"><i class="fa-solid fa-toolbox"></i> الأدوات: <strong>' + unique.filter(path => path.startsWith('/tools/')).length + '</strong></span>';
