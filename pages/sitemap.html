@@ -128,7 +128,7 @@
     ]).then(([xml, tools]) => {
         const documentXml = new DOMParser().parseFromString(xml, 'application/xml');
         if (documentXml.querySelector('parsererror')) throw new Error('invalid sitemap');
-        const urls = [...documentXml.querySelectorAll('url loc')].map(node => new URL(node.textContent.trim()).pathname);
+        const urls = [...documentXml.querySelectorAll('url loc')].map(node => { const pathname = new URL(node.textContent.trim()).pathname; return pathname.replace(/^\\/tools-dz(?=\\/|$)/, '') || '/'; });
         render(urls, tools);
     }).catch(() => {
         content.innerHTML = '<p class="sitemap-error">تعذر تحميل خريطة الصفحات حاليًا. يمكنك المحاولة مجددًا بعد تحديث الصفحة.</p>';
