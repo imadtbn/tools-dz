@@ -16,11 +16,11 @@ const staticPages = [
 ];
 const entries = [
   ...staticPages,
-  ...tools.filter(tool => tool.status === 'active').map(tool => [tool.url.replace(/^\\//, ''), tool.featured ? '0.9' : '0.8'])
+  ...tools.filter(tool => tool.status === 'active').map(tool => [tool.url.replace(/^\//, ''), tool.featured ? '0.9' : '0.8'])
 ];
-const urls = entries.map(([pagePath, priority]) => '  <url>\\n    <loc>' + base + pagePath + '</loc>\\n    <priority>' + priority + '</priority>\\n  </url>').join('\\n');
-const xml = '<?xml version="1.0" encoding="UTF-8"?>\\n' +
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
-  urls + '\\n</urlset>\\n';
+const urls = entries.map(([pagePath, priority]) => '  <url>\n    <loc>' + base + pagePath + '</loc>\n    <priority>' + priority + '</priority>\n  </url>').join('\n');
+const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  urls + '\n</urlset>\n';
 await writeFile('sitemap.xml', xml);
 console.log('Generated sitemap with ' + entries.length + ' URLs.');
