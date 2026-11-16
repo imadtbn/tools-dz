@@ -38,7 +38,7 @@ for await (const filename of glob('**/*.html', { exclude: ['node_modules/**'] })
   const html = await readFile(filename, 'utf8');
   if (!/<html[^>]+lang="ar"[^>]+dir="rtl"/.test(html)) errors.push(`${filename}: missing Arabic RTL root`);
   if (!/<link rel="canonical"/.test(html) && !['404.html', 'offline.html'].includes(filename)) errors.push(`${filename}: missing canonical URL`);
-  const refs = [...html.matchAll(/(?:href|src)="([^"#]+)"/g)].map(match => match[1]);
+  // Ignore JavaScript-generated HTML fragments; validate only literal references in the document markup.\n  const markup = html.replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script\\s*>/gi, '');\n  const refs = [...markup.matchAll(/(?:href|src)="([^"#]+)"/g)].map(match => match[1]);
   for (const ref of refs) {
     if (/^(https?:|mailto:|tel:|data:|javascript:)/.test(ref) || ref.includes('${')) continue;
     const clean = ref.split('?')[0];
