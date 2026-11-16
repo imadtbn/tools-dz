@@ -11,15 +11,16 @@ const staticPages = [
   ['pages/contact.html', '0.4'],
   ['pages/privacy.html', '0.3'],
   ['pages/terms.html', '0.3'],
-  ['pages/disclaimer.html', '0.3']
+  ['pages/disclaimer.html', '0.3'],
+  ['pages/sitemap.html', '0.7']
 ];
 const entries = [
   ...staticPages,
-  ...tools.filter(tool => tool.status === 'active').map(tool => [tool.url.replace(/^\//, ''), tool.featured ? '0.9' : '0.8'])
+  ...tools.filter(tool => tool.status === 'active').map(tool => [tool.url.replace(/^\\//, ''), tool.featured ? '0.9' : '0.8'])
 ];
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries.map(([path, priority]) => `  <url>\n    <loc>${base}${path}</loc>\n    <priority>${priority}</priority>\n  </url>`).join('\n')}
-</urlset>\n`;
+const urls = entries.map(([pagePath, priority]) => '  <url>\\n    <loc>' + base + pagePath + '</loc>\\n    <priority>' + priority + '</priority>\\n  </url>').join('\\n');
+const xml = '<?xml version="1.0" encoding="UTF-8"?>\\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n' +
+  urls + '\\n</urlset>\\n';
 await writeFile('sitemap.xml', xml);
-console.log(`Generated sitemap with ${entries.length} URLs.`);
+console.log('Generated sitemap with ' + entries.length + ' URLs.');
