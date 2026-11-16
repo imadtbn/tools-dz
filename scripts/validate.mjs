@@ -15,7 +15,7 @@ for (const tool of tools) {
   if (toolIds.has(tool.id)) errors.push(`Duplicate tool id: ${tool.id}`);
   toolIds.add(tool.id);
   if (!categoryIds.has(tool.category)) errors.push(`${tool.id}: unknown category ${tool.category}`);
-  try { await access(tool.url.replace(/^\//, '')); } catch { errors.push(`${tool.id}: missing page ${tool.url}`); }
+  try { await access(tool.url.replace(/^\\//, '')); } catch { errors.push(`${tool.id}: missing page ${tool.url}`); }
 }
 
 for (const tool of tools) {
@@ -34,23 +34,27 @@ for (const tool of tools.filter(tool => tool.status === 'active')) {
 
 for await (const filename of glob('**/*.html', { exclude: ['node_modules/**'] })) {
   // Google Search Console verification documents are not rendered site pages.
-  if (/^google[a-f0-9]+\.html$/i.test(path.basename(filename))) continue;
+  if (/^google[a-f0-9]+\\.html$/i.test(path.basename(filename))) continue;
   const html = await readFile(filename, 'utf8');
   if (!/<html[^>]+lang="ar"[^>]+dir="rtl"/.test(html)) errors.push(`${filename}: missing Arabic RTL root`);
   if (!/<link rel="canonical"/.test(html) && !['404.html', 'offline.html'].includes(filename)) errors.push(`${filename}: missing canonical URL`);
-  // Ignore JavaScript-generated HTML fragments; validate only literal references in the document markup.\n  const markup = html.replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script\\s*>/gi, '');\n  const refs = [...markup.matchAll(/(?:href|src)="([^"#]+)"/g)].map(match => match[1]);
+
+  // Ignore JavaScript-generated HTML fragments; validate literal document markup only.
+  const markup = html.replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script\\s*>/gi, '');
+  const refs = [...markup.matchAll(/(?:href|src)="([^"#]+)"/g)].map(match => match[1]);
+
   for (const ref of refs) {
     if (/^(https?:|mailto:|tel:|data:|javascript:)/.test(ref) || ref.includes('${')) continue;
     const clean = ref.split('?')[0];
     const target = clean.startsWith('/tools-dz/')
-      ? clean.replace(/^\/tools-dz\//, '')
-      : clean.startsWith('/') ? clean.replace(/^\//, '') : path.normalize(path.join(path.dirname(filename), clean));
+      ? clean.replace(/^\\/tools-dz\\//, '')
+      : clean.startsWith('/') ? clean.replace(/^\\//, '') : path.normalize(path.join(path.dirname(filename), clean));
     try { await access(target); } catch { errors.push(`${filename}: broken local reference ${ref}`); }
   }
 }
 
 if (errors.length) {
-  console.error(errors.join('\n'));
+  console.error(errors.join('\\n'));
   process.exit(1);
 }
 console.log(`Validated ${tools.length} tools, ${categories.length} categories, ${procedures.length} procedures and all HTML references.`);
